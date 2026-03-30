@@ -1,0 +1,52 @@
+name: Laravel Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Server
+        run: |
+          ssh -o IdentitiesOnly=yes ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+            cd ${{ secrets.SERVER_PATH }}
+
+            echo "📥 Pull latest code"
+            git pull origin main
+
+            echo "📦 Install dependencies"
+            composer install --no-dev --optimize-autoloader
+
+            echo "⚡ Run migrations"
+            php artisan migrate --force
+
+            echo "🧹 Clear cache"
+            php artisan config:clear
+            php artisan cache:clear
+            php artisan route:clear
+            php artisan view:clear
+
+            echo "🚀 Optimize"
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+
+            echo "🔐 Fix permissions"
+            chmod -R 775 storage bootstrap/cache
+
+            echo "✅ Done"
+          EOF
