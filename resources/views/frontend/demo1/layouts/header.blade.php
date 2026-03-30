@@ -112,10 +112,10 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
     @endif
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="{{asset('favicon.ico')}}">
     <!--<link rel="manifest" href="/manifest.json">-->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/public/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{asset('ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
     <style>
         #header{
