@@ -3,6 +3,11 @@
 @section('admin-content')
 @php $counters = get_top_counter(); @endphp
     <div class="row">
+      <div class="col-md-12">
+        <h2>Last 5 Login Users</h2>
+      </div>
+    </div>
+    <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="x_panel">
             <div class="x_title">
