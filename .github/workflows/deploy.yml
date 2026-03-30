@@ -1,4 +1,4 @@
-name: Laravel Deploy
+name: Laravel Selective Deploy
 
 on:
   push:
@@ -20,19 +20,18 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to Server
+      - name: Sync selected folders (exclude public/storage)
+        run: |
+          rsync -avz --delete \
+            --exclude='public/storage' \
+            -e "ssh -o IdentitiesOnly=yes" \
+            app config routes resources public \
+            ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/stagirf4/terezaestates.stagingshop.com
+
+      - name: Run Laravel commands (no migrations)
         run: |
           ssh -o IdentitiesOnly=yes ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
             cd /home/stagirf4/terezaestates.stagingshop.com
-
-            echo "📥 Pull latest code"
-            git pull origin main
-
-            echo "📦 Install dependencies"
-            composer install --no-dev --optimize-autoloader
-
-            echo "⚡ Run migrations"
-            php artisan migrate --force
 
             echo "🧹 Clear cache"
             php artisan optimize:clear
@@ -43,5 +42,5 @@ jobs:
             echo "🔐 Fix permissions"
             chmod -R 775 storage bootstrap/cache
 
-            echo "✅ Deployment finished"
+            echo "✅ Done"
           EOF
