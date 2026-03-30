@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900');
+
+$font-stack: 'Montserrat', sans-serif;
+$font-stack-1: 'Playfair Display', serif;
+$pcolor: #2192d1; //Blue
+$pcolord: #0670ab; //Blue darker
+$pcolorl: #6ac8fd; //Blue lighter
+$scolor: #163645;
+$tcolor: #3d97af;
+$hover1: #25314a;
+$hover2: #2f576a;
+$hover3: #22687b;
+
+//#1ABB9C
+$blue: #5bc0de;
+$red: #d9534f;
+$green: #18bd0f;
+
+$blueHover: #81cae0;
+$redHover: #e47f7c;
+$greenHover: #4dde45;
+
+.green {
+    color: #2192d1;
+}
+
+.bg-green {
+    background: $pcolor!important;
+    border: 1px solid $pcolord!important;
+    color: #fff;
+}
+
+.table-active-btn{
+    /*
+    a{
+        border-radius: 4px;
+        padding: 4px 10px;
+        font-size: 12px;
+        &.tab-edit{
+            color: #fff;
+            background-color: $blue;
+            &:hover{
+                background-color: $blueHover;
+            }
+        }
+        &.tab-reactive{
+            color: #fff;
+            background-color: $blue;
+            &:hover{
+                background-color: $blueHover;
+            }
+        }
+        &.tab-archive{
+            color: #fff;
+            background-color: $red;
+            &:hover{
+                background-color: $redHover;
+            }
+        }
+        &.tab-view{
+            color: #fff;
+            background-color: $green;
+            &:hover{
+                background-color: $greenHover;
+            }
+        }
+    }
+    */
+    .btn{
+        display: inline-block;
+        margin: 0;
+        display:  inline;
+    }
+    button.btn::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+    button.btn {
+      #width:0px;
+      overflow: visible;
+    }
+
+    button.btn, a.btn {
+      display: inline-block;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-width: 0;
+    }
+
+}
+
+.datepicker{
+    cursor: pointer;
+}
+
+.fill{
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.ref-link{
+    a{
+        font-weight: 700;
+        color: #2192d1;
+        &:hover{
+            color:#51ade0;
+        }
+    }
+}
+
+/*-----------------------------------------
+* GO CENTER
+-----------------------------------------*/
+.go-center{
+    white-space: nowrap;
+    margin: 0;
+    text-align: center;
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        margin: 0 0 0 -3px;
+    }
+    img, h1, h2, > div{
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

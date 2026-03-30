@@ -1,0 +1,123 @@
+/* purgecss start ignore */
+/* Style - 1
+----------------------------------------- */
+
+span.select2-selection__rendered,span#select2--container {
+    text-transform: uppercase;
+}
+
+.select2.select2-container.select2-container--default.select2-style-1{
+    width: 100% !important;
+    //Single...
+    .select2-selection--single{
+        height: 26px;
+        border: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        outline: none;
+        .select2-selection__placeholder {
+            color: $gray;
+            font-weight: 500;
+        }
+        .select2-selection__rendered{
+            line-height: 26px;
+            text-align: left;
+            padding-left: 24px;
+            padding-right: 30px;
+            font-weight: 500;
+            font-size: 13px;
+            color: $gray;
+        }
+        .select2-selection__arrow{
+            width: 10px;
+            b{
+                &:before{
+                    font-style: normal;
+                    position: relative;
+                    //top: 2px;
+                    //font-family: 'Font Awesome 5 Free';
+                    //content: "\f107";
+                    //color: #3b3d3d;
+                    //font-size: 14px;
+                    //font-weight: 900;
+                    top: 11px;
+                    content: " ";
+                    width: 6px;
+                    height: 4px;
+                    display: block;
+                    background-image: url('../images/select2-caret.png');
+
+                }
+                border-width: 0;
+                width: 7px;
+                height: 26px;
+                left: -16px;
+                margin-left: 0;
+                top: 0;
+            }
+        }
+    }
+    &.select2-container--open .select2-selection--single .select2-selection__arrow b{
+        @include objectRotate(180deg);
+    }
+
+    &.-h-36{
+        .select2-selection--single{
+            height: 36px;
+            .select2-selection__rendered{
+                line-height: 36px;
+            }
+            .select2-selection__arrow{
+                b{
+                    height: 36px;
+                    &:before{
+                        top: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-container--default{
+    .select2-results__option--highlighted[aria-selected]{
+        background-color: $secondary1;
+    }
+    .select2-results__option[aria-selected]{
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    .select2-results__option.select2-option--heading{
+        font-weight: 700;
+    }
+    .select2-results__option.select2-option--province{
+        text-indent: 15px;
+    }
+}
+.search-form-home--item{
+    span#select2-sort-u1-containers {
+        padding: 0 30px 0 15px;
+        border: 1px solid #cccccc;
+        line-height: 2.3;
+        text-transform: capitalize;
+    }
+    &.-country{
+        padding: 0 30px 0 15px;
+        border: none;
+        line-height: 1.9;
+        text-transform: capitalize;
+    }
+}
+/* Overrides
+----------------------------------------- */
+.select2-group--style-1{
+    .select2.select2-container.select2-container--default.select2-style-2 .select2-selection--single .select2-selection__arrow b {
+        left: -90px;
+    }
+    @media (max-width: 767px){  //md
+        .select2.select2-container.select2-container--default.select2-style-2 .select2-selection--single .select2-selection__arrow b {
+            left: -75px;
+        }
+    }
+}
+/* purgecss end ignore */

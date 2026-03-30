@@ -1,0 +1,342 @@
+
+
+/* SELECT 2 - BASE STYLE
+-----------------------------------------*/
+.select2-container--open .select2-dropdown{
+    //min-width: 200px !important;
+}
+.select2-results {
+    //padding: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+    background-color: $secondary_color1;
+    outline: transparent;
+    &:hover{
+        color: #fff;
+        background-color: $secondary_color1;
+    }
+}
+
+/*-----------------------------------------
+* SELECT 2 STYLE - 1
+-----------------------------------------*/
+.select-style-1{
+    text-align: left;
+
+    @include placeholderStyle1($dark, 14px, 500);
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"]{
+        height: 45px;
+        padding: 0;
+        width: 100%;
+        color: $dark;
+        border: 0;
+        font-weight: 500;
+    }
+
+    textarea{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /** height **/
+    .select2-container--default{
+        width: 100% !important;
+        .select2-selection--single .select2-selection__arrow,
+        .select2-selection--single{
+            min-height: 45px;
+        }
+        .select2-selection--multiple{
+            line-height: 13px;
+            border: 0;
+            background-color: transparent;
+        }
+        /** text **/
+        .select2-selection--single{
+            border: 0;
+            border-radius: 0px;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid $gray27;
+            .select2-selection__rendered{
+                line-height: 45px;
+                font-size: 13px;
+                color: $white;
+                font-weight: 500;
+                padding: 0px 12px 0px 0px;
+            }
+            .select2-selection__arrow{
+                right: 0;
+                width: 11px;
+                b {
+                    &:before{
+                        font-style: normal;
+                        position: relative;
+                        font-family: 'Font Awesome 5 Free';
+                        content: "\f107";
+                        color: $white;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                    border-width: 0;
+                    width: 10px;
+                    height: 22px;
+                    left: 0;
+                    margin-left: 0;
+                    top: 11px;
+                }
+            }
+
+        }
+
+        /** multiple **/
+        .select2-selection--multiple{
+            border-radius: 0;
+            //padding: 0px 9px;
+            width: 100%;
+            .select2-selection__rendered{
+                display: block;
+                padding: 0;
+            }
+            .select2-search__field{
+                //min-height: 54px;
+                min-height: 45px;
+            }
+            .select2-selection__choice{
+                font-size: 15px;
+                color: #fff;
+                background-color: $secondary_color1;
+                font-weight: 400;
+                line-height: 33px;
+                height: 33px;
+                padding: 0px 25px 0px 16px;
+                min-width: 130px;
+                overflow: hidden;
+                max-width: 100%;
+                text-overflow: ellipsis;
+                border: 0;
+                border-radius: 10px;
+                position: relative;
+                margin-top: 3px;
+            }
+            .select2-selection__choice__remove{
+                color: #fff;
+                font-size: 27px;
+                position: absolute;
+                right: 5px;
+            }
+        }
+
+        &.select2-container--focus .select2-selection--multiple {
+        //    border: solid #cdcdcd 1px;
+            outline: 0;
+        }
+        &.select2-container--open .select2-selection--single .select2-selection__arrow b{
+            @include objectRotate(180deg);
+        }
+
+
+        &.multiple{
+            .select2-selection {
+                //padding-right: 30px !important;
+                //padding-right: 16px !important;
+                padding-right: 0 !important; //windows...
+                &:after {
+                    @include objectRotate(0deg);
+                    font-family: 'Font Awesome 5 Free';
+                    content: "\f107";
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: 700;
+                    position: absolute;
+                    right: 0;
+                    top: 17px;
+                    width: 9px;
+                    height: 11px;
+                }
+                .select2-search.select2-search--inline{
+                    width: 100%;
+                }
+            }
+
+            &.select2-container--open{
+                .select2-selection:after{
+                    @include objectRotate(180deg);
+                }
+            }
+
+        }
+
+
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered li{
+        @include placeholderStyle1($white, 15px, 500);
+    }
+
+    .select2-search__field{
+        line-height: 39px;
+    }
+
+    /** multiple **/
+    .select2-container .select2-search--inline{
+        @include placeholderStyle1($white, 13px, 500);
+        .select2-search__field {
+          margin-top: 0px;
+          padding: 0;
+          display: block;
+          font-weight: 400;
+          width: 100% !important;
+          border-bottom: 1px solid $gray27;
+          opacity: 1 !important;
+          &::placeholder{
+          font-size:13px !important;
+          }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        @include placeholderStyle1($white, 13px, 500);
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            font-size: 13px;
+            opacity: 1 !important;
+            .select2-search--inline{
+                @include placeholderStyle1($white, 13px, 500);
+            }
+        }
+        .select2-search__field{
+            @include placeholderStyle1($white, 13px, 500);
+            line-height: 39px;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__rendered li{
+            @include placeholderStyle1($white, 13px, 500);
+        }
+
+        .select2-container--default{
+            .select2-selection--single .select2-selection__arrow,
+            .select2-selection--single{
+                min-height: 42px;
+            }
+            .select2-selection--single{
+                .select2-selection__rendered{
+                    line-height: 42px;
+                }
+                .select2-selection__arrow b {
+                    top: 9px;
+                }
+            }
+
+            /** multiple **/
+            .select2-selection--multiple{
+                .select2-search__field{
+                    min-height: 41px;
+                }
+            }
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"]{
+            height: 42px;
+        }
+
+        button[type='submit']{
+            height: 42px !important;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+            height: 42px;
+        }
+    }
+    &.-dark{
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: $dark;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow b:before {
+            color: $dark;
+        }
+        .select2-container--default.multiple .select2-selection:after{
+            color: $dark;
+        }
+        .select2-container--default.multiple .select2-search--inline{
+            @include placeholderStyle1($dark, 15px, 500);
+        }
+    }
+
+    &.-light-border{
+        .select2-container--default .select2-selection--single{
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+}
+
+.select2-container--default.multiple{
+    .select2-results__option:before {
+        font-family: "Font Awesome 5 Free";
+        color: #999;
+        content: "\F0C8";
+        width: 25px;
+        height: 25px;
+        padding-right: 10px;
+    }
+    .select2-results__option[aria-selected=true]{
+        //background-color: transparent;
+        //color: #000;
+    }
+    .select2-results__option[aria-selected=true]:before {
+        content: "\F14A";
+    }
+}
+
+.select-style-no-border{
+    .select2-container{
+        width: 100% !important;
+    }
+    .select2-container--default .select2-selection--single {
+        border: 0;
+        border-radius: 0;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: $gray8;
+        font-weight: 600;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: $gray8 transparent transparent transparent;
+        border-style: solid;
+        border-width: 6px 5px 0 5px;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered{
+        padding-right: 26px;
+        padding-left: 0;
+        padding-left: 7px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 31px;
+    }
+
+    @media (max-width: 1199px) {
+        @include placeholderStyle1($white, 13px, 500);
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            font-size: 12px;
+        }
+        .select2-search__field{
+            @include placeholderStyle1($white, 13px, 500);
+            line-height: 39px;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__rendered li{
+            @include placeholderStyle1($white, 13px, 500);
+        }
+
+    }
+
+}

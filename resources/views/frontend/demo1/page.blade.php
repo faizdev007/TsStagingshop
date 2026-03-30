@@ -1,0 +1,55 @@
+@push('body_class')generic-page {{$route}} @endpush
+
+@extends('frontend.demo1.layouts.frontend')
+
+@section('main_content')
+	@if(!empty($route))
+		@switch($route)
+			@case('contact-us')
+				@include('frontend.demo1.page-templates.contact')
+				@break;
+			@case('about-us')
+				@include('frontend.demo1.page-templates.about-us')
+				@break;
+			@case('news')
+				@include('frontend.demo1.page-templates.news')
+				@break;
+			@case('article')
+				@include('frontend.demo1.page-templates.article')
+				@break;
+			@case('list-with-us')
+				@include('frontend.demo1.page-templates.list-with-us')
+				@break;
+			@case('valuation')
+				@include('frontend.demo1.page-templates.valuation')
+				@break;
+			@case('the-team')
+				@include('frontend.demo1.page-templates.team')
+				@break;
+			@case('communities')
+				@include('frontend.demo1.page-templates.communities')
+				@break;
+			@case('testimonials')
+				@include('frontend.demo1.page-templates.testimonials')
+				@break;
+			@case('buyers-guide')
+			@case('preparing-buy')
+			@case('choosing-a-real-estate-agent')
+			@case('time-go-shopping')
+			@case('escrow-inspections-appraisal')
+			@case('moving-in')
+				@include('frontend.demo1.page-templates.buyers-guide')
+				@break;
+			@case('property-management')
+			@case('property-consulting')
+			@case('commercial-real-estate-services')
+			@case('services')
+				@include('frontend.demo1.page-templates.services')
+				@break;
+			@default
+                @include('frontend.demo1.page-templates.generic')
+		@endswitch
+	@else
+		@include('frontend.demo1.page-templates.generic')
+	@endif
+@endsection

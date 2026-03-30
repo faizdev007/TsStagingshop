@@ -1,0 +1,229 @@
+/*---------------------------------------------------
+* FONTS
+---------------------------------------------------*/
+//@font-face {
+//  font-family: 'Big Caslon Medium';
+//  src: url(../../fonts/Big+Caslon+Medium.eot);
+//  src: url(../../fonts/Big+Caslon+Medium.eot?#iefix) format('embedded-opentype'),
+//       url(../../fonts/Big+Caslon+Medium.otf) format('otf'),
+//       url(../../fonts/Big+Caslon+Medium.svg#Big%20Caslon%20Medium) format('svg'),
+//       url(../../fonts/Big+Caslon+Medium.ttf) format('truetype'),
+//       url(../../fonts/Big+Caslon+Medium.woff) format('woff'),
+//       url(../../fonts/Big+Caslon+Medium.woff2) format('woff2');
+//}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+$font1: 'Work Sans', sans-serif;
+$font2: 'Cormorant', sans-serif;
+$font3: 'Cormorant Infant', sans-serif;
+$font4: "Playfair Display";
+
+/* Adobe Font Kit (Loading)
+------------------------------------------  */
+
+.f-one {
+    font-family: $font1;
+}
+
+.f-two {
+    font-family: $font2;
+}
+
+.f-three {
+    font-family: $font3;
+}
+.f-four {
+    font-family: $font4;
+}
+
+.f-light, .f-300 {
+    font-weight: 300;
+}
+
+.f-playfair{
+  font-family: "Playfair Display",
+}
+
+
+.f-regular {
+    font-weight: 400;
+}
+
+.f-medium, .f-500 {
+    font-weight: 500;
+}
+
+.f-semibold, .f-600 {
+    font-weight: 600;
+}
+
+.f-bold, .f-700 {
+    font-weight: 700;
+}
+
+.f-black, .f-900 {
+    font-weight: 900;
+}
+
+.f-normal {
+    font-style: normal !important;
+}
+
+.f-italic {
+    font-style: italic;
+}
+
+// Fonts...
+$baseFontSize: 14;
+
+/* Fonts Utilities
+------------------------------------------  */
+.f-line-height-1{
+    line-height: 1em;
+}
+.f-line-height-102{
+    line-height: 1.2em;
+}
+.f-line-height-105{
+    line-height: 1.5em;
+}
+
+.f-align-justify{
+    text-align: justify;
+}
+
+//
+/* Fonts
+------------------------------------------  */
+@for $i from 8 through 30 {
+    .f-#{$i}{
+        font-size: $i + px;
+    }
+}
+
+
+/* Fonts
+------------------------------------------  */
+//.f-8 {
+//  font-size: 8px;
+//}
+//
+//.f-9 {
+//  font-size: 9px;
+//}
+//
+//.f-10 {
+//  font-size: 10px;
+//}
+//
+//.f-11 {
+//  font-size: 11px;
+//}
+//
+//.f-12 {
+//  font-size: 12px;
+//}
+//
+//.f-13 {
+//  font-size: 13px;
+//}
+//
+//.f-14 {
+//  font-size: 14px;
+//}
+//
+//.f-15 {
+//  font-size: 15px;
+//}
+//
+//.f-16 {
+//  font-size: 16px;
+//}
+//
+//.f-17 {
+//  font-size: 17px;
+//}
+//
+//.f-18 {
+//  font-size: 18px;
+//}
+//
+//.f-19 {
+//  font-size: 19px;
+//}
+//
+//.f-20 {
+//  font-size: 20px;
+//}
+//
+//.f-21 {
+//  font-size: 21px;
+//}
+//
+//.f-22 {
+//  font-size: 22px;
+//}
+//
+//.f-23 {
+//  font-size: 23px;
+//}
+//
+//.f-24 {
+//  font-size: 24px;
+//}
+//
+//.f-25 {
+//  font-size: 25px;
+//}
+//
+//.f-26 {
+//  font-size: 26px;
+//}
+//
+//.f-27 {
+//  font-size: 27px;
+//}
+//
+//.f-28 {
+//  font-size: 28px;
+//}
+//
+//.f-29 {
+//  font-size: 29px;
+//}
+//
+//.f-30 {
+//  font-size: 30px;
+//}
+
+.f-32 {
+  font-size: 32px;
+}
+
+.f-40 {
+  font-size: 40px;
+}
+.f-45 {
+  font-size: 45px;
+}
+
+.f-50 {
+  font-size: 50px;
+}
+
+.f-53 {
+  font-size: 53px;
+}
+
+.f-60 {
+  font-size: 60px;
+}
+
+.f-65 {
+  font-size: 65px;
+}

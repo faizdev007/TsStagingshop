@@ -1,0 +1,399 @@
+/* Page TItle 1
+-----------------------------------------*/
+.page-title{
+
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/page-title/banner-generic.jpg');
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: ' ';
+        display: block;
+        background-color: rgb(0 0 0 / 20%);
+        z-index: 1;
+    }
+
+    .-wrap{
+        z-index: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 490px;
+    }
+
+    .-inner-wrap{
+        width: 100%;
+    }
+
+    &.-no-cover{
+        &::before {
+            display: none;
+        }
+    }
+
+    &.-placeholder{
+        background-image: url('../images/page-title/banner-placeholder.jpg');
+    }
+
+    &.-generic{
+        &::before {
+            background-color: rgb(0 0 0 / 50%);
+        }
+    }
+
+    &.-communities{
+        background-image: url('../images/page-title/banner-communities.jpg');
+        padding-top: 100px;
+        &::before {
+            background-color: rgb(0 0 0 / 20%);
+        }
+    }
+
+    &.-news{
+        background-image: url('../images/page-title/banner-news.jpg');
+    }
+
+    &.-luxury-listings{
+        background-image: url('../images/page-title/banner-luxury-listings.jpg');
+        &::before {
+            background-color: rgb(0 0 0 / 20%);
+        }
+    }
+
+    &.-list-with-us{
+        background-image: url('../images/page-title/banner-list-with-us.jpg');
+        .-wrap{
+            min-height: 534px;
+            padding: 30px 10px;
+        }
+        .-page-title-heading{
+            margin-bottom: 50px;
+        }
+        &::before {
+            background-color: rgb(0 0 0 / 20%);
+        }
+    }
+
+    &.-buyers-guide{
+        background-image: url('../images/page-title/banner-buyers-guide.jpg');
+    }
+
+    &.-brown-harris-stevens {
+        background-image: url('../images/page-title/banner-worldwide.jpg');
+    }
+
+    &.-the-team{
+        background-image: url('/public/assets/images/page-title/banner-the-team.jpg');
+    }
+
+    .-page-title-heading{
+        position: relative;
+        margin-bottom: 0;
+        letter-spacing: 0;
+        .-border{
+            width: 148px;
+            height: 2px;
+            background-color: $primary_color1;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .border-remove-title{
+            display: none;
+        }
+    }
+
+    .-page-title-desc{
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.4em;
+    }
+
+    .arrow-down-section{
+        position: absolute;
+        bottom: -36px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .-pt-cta{
+        text-align: center;
+        margin-top: 28px;
+        a{
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            max-width: 255px;
+            color: $white;
+            font-weight: 700;
+            border: 1px solid $primary_color1;
+            border-radius: $radiusBtn;
+            padding: 10px 5px;
+            margin-left: 7px;
+            margin-right: 7px;
+            &:hover{
+                background-color: $primary_color1;
+            }
+        }
+    }
+
+    /* Page TItle
+    -----------------------------------------*/
+
+    &.-style-2{
+        .-inner-wrap {
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            margin-bottom: 123px;
+        }
+        .-wrap{
+            background-size: cover;
+            background-position: center;
+            min-height: 490px;
+            &.-contact{
+                background-image: url('../images/page-title/banner-contact.jpg');
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: ' ';
+                display: block;
+                background-color: rgb(0 0 0 / 43%);
+                z-index: 1;
+            }
+        }
+    }
+
+    @media (max-width: 1199px){
+        .-page-title-heading{
+            font-size: 55px;
+        }
+        .-page-subtitle-heading{
+            font-size: 22px;
+        }
+        .-wrap{
+            min-height: 400px;
+        }
+        &.-list-with-us{
+            margin-bottom: 65px;
+            .-wrap{
+                min-height: 400px;
+            }
+        }
+    }
+
+    @media (max-width: 991px){
+        .-page-title-heading{
+            font-size: 45px;
+        }
+        .-page-subtitle-heading{
+            font-size: 20px;
+        }
+        .-page-title-desc{
+            font-size: 14px;
+        }
+        .-wrap{
+            min-height: 355px;
+        }
+        &.-style-2 .-wrap {
+            min-height: 395px;
+        }
+        &.-list-with-us{
+            .-page-title-heading{
+                margin-bottom: 35px;
+            }
+            .-wrap{
+                min-height: 355px;
+            }
+        }
+    }
+
+    @media (max-width: 767px){
+        .-page-title-heading{
+            font-size: 40px;
+        }
+        .-page-subtitle-heading{
+            font-size: 14px;
+        }
+        .-wrap{
+            min-height: 320px;
+        }
+        &.-list-with-us{
+            .-wrap{
+                min-height: 320px;
+            }
+        }
+        .arrow-down-section {
+            bottom: -30px;
+        }
+
+    }
+
+    @media (max-width: 600px){
+        .-page-title-heading{
+            font-size: 35px;
+            letter-spacing: 2px;
+        }
+        .-page-title-desc{
+            font-size: 13px;
+        }
+        .-wrap{
+            min-height: 275px;
+        }
+        &.-list-with-us{
+            .-page-title-heading{
+                margin-bottom: 25px;
+            }
+            .-wrap{
+                min-height: 275px;
+            }
+        }
+        .-pt-cta a{
+            max-width: 200px;
+            padding: 5px 5px;
+        }
+    }
+
+    @media (max-width: 550px){
+        &.-style-2 .-wrap {
+            min-height: 335px;
+        }
+    }
+
+
+    @media (max-width: 500px){
+        .-page-title-heading{
+            font-size: 25px;
+            letter-spacing: 0px;
+            .-border{
+                width: 75px;
+            }
+        }
+        .-wrap{
+            min-height: 215px;
+        }
+        &.-list-with-us{
+            .-wrap{
+                min-height: 215px;
+            }
+        }
+        &.-communities {
+            padding-top: 63px;
+        }
+        .arrow-down-section {
+            bottom: -25px;
+        }
+        .-pt-cta{
+            margin-top: 15px;
+            a{
+                max-width: 170px;
+                font-size: 12px;
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+        }
+
+    }
+
+    @media (max-width: 414px){
+        .-wrap{
+            min-height: 170px;
+        }
+        .-pt-cta{
+            margin-top: 15px;
+            a{
+                max-width: 200px;
+                margin-bottom: 5px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+
+/*
+-----------------------------------------*/
+.pw-arrow-down-cta{
+    text-align: center;
+    color: $white;
+    background-color: $secondary_color1;
+    padding: 13px 10px;
+    border-radius: 100%;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    font-size: 35px;
+    &:hover{
+        color: $white;
+        background-color: $secondary_color1_hover;
+    }
+    @media (max-width: 767px){
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+    @media (max-width: 500px){
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        padding: 7px 10px;
+    }
+}
+.search-page{
+    .page-title{
+        &::before {       
+            background-color: rgb(0 0 0 / 20%);  
+        }
+    }
+}
+.generic-page{
+    
+  .page-title 
+.-wrap{
+    min-height:490px;margin:auto;
+    @media (max-width: 500px){
+        min-height:170px
+    }
+   }  
+}
+.generic-page:not(.contact-page){    
+  .page-title 
+    .-wrap{
+         max-width: 1000px;        
+   }  
+}
+.team-page 
+{ 
+.page-title 
+.-wrap{min-height:490px;
+@media (max-width: 500px){
+
+    min-height:170px
+   }
+   }
+
+}
+.valuation-page{
+    
+.page-title 
+.-wrap{min-height:510px;
+@media (max-width: 500px){
+
+    min-height:170px
+   }
+   }
+}

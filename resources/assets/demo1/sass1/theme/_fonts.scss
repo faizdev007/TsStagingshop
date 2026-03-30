@@ -1,0 +1,183 @@
+/*---------------------------------------------------
+* FONTS
+---------------------------------------------------*/
+/*---------------------------------------------------
+* FONTS
+---------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@500&display=swap');
+$font1: 'Work Sans', sans-serif;
+$font2: 'Cormorant', sans-serif;
+$font3: 'Cormorant Infant', sans-serif;
+
+/* Adobe Font Kit (Loading)
+------------------------------------------  */
+.f-one {
+    font-family: $font1;
+}
+
+.f-two {
+    font-family: $font2;
+}
+
+.f-three {
+    font-family: $font3;
+}
+
+.f-light, .f-300 {
+    font-weight: 300;
+}
+
+.f-regular {
+    font-weight: 400;
+}
+
+.f-medium, .f-500 {
+    font-weight: 500;
+}
+
+.f-semibold, .f-600 {
+    font-weight: 600;
+}
+
+.f-bold, .f-700 {
+    font-weight: 700;
+}
+
+.f-black, .f-900 {
+    font-weight: 900;
+}
+
+.f-normal {
+    font-style: normal !important;
+}
+
+.f-italic {
+    font-style: italic;
+}
+
+// Fonts...
+$baseFontSize: 14;
+
+/* Fonts Utilities
+------------------------------------------  */
+.f-line-height-1{
+    line-height: 1em;
+}
+.f-line-height-102{
+    line-height: 1.2em;
+}
+.f-line-height-105{
+    line-height: 1.5em;
+}
+
+.f-align-justify{
+    text-align: justify;
+}
+
+//
+/* Fonts
+------------------------------------------  */
+@for $i from 8 through 30 {
+    .f-#{$i}{
+        font-size: $i + px;
+    }
+}
+
+.f-32{
+    font-size: 32px;
+}
+.f-40{
+    font-size: 40px;
+}
+.f-50{
+    font-size: 50px;
+}
+.f-53{
+    font-size: 53px;
+}
+.f-60{
+    font-size: 60px;
+}
+.f-65{
+    font-size: 65px;
+}
+
+
+/* Adobe Font Kit (Loading)
+------------------------------------------  */
+
+.wf-loading {
+  visibility: hidden;
+}
+
+.wf-active {
+  visibility: visible;
+}
+
+
+.f-ls-n1 {
+  letter-spacing: -1px;
+}
+
+// Fonts...
+$baseFontSize: 14;
+
+@mixin font-size($size)
+{
+  font-size: $size + px;
+}
+
+@mixin font-size-important($size)
+{
+  font-size: $size + px + '!important';
+}
+
+@for $j from 9 through 99
+{
+  .f-#{$j} {
+    @include font-size(#{$j});
+  }
+}
+
+/*-----------------------------------------
+* RESPONSIVE
+-----------------------------------------*/
+
+//fonts...
+@for $j from 1 through 1000
+{
+    .f-lg-#{$j} {
+        @include breakpoint(lg){
+            @include font-size-important(#{$j});
+        }
+    }
+}
+
+@for $j from 1 through 1000
+{
+    .f-md-#{$j} {
+        @include breakpoint(md){
+            @include font-size-important(#{$j});
+        }
+    }
+}
+
+@for $j from 1 through 1000
+{
+    .f-sm-#{$j} {
+        @include breakpoint(sm){
+            @include font-size-important(#{$j});
+        }
+    }
+}
+
+@for $j from 1 through 1000
+{
+    .f-xs-#{$j} {
+        @include breakpoint(xs){
+            @include font-size-important(#{$j});
+        }
+    }
+}

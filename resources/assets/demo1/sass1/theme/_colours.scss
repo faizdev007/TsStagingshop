@@ -1,0 +1,421 @@
+/*---------------------------------------------------
+* MAIN COLORS
+---------------------------------------------------*/
+// Colours
+$red: #dc1c2e;
+$red-2: #d12136;
+$red-3: #b22b2e;
+$blue: #043fa3;
+$blue-2: #003da5;
+$blue-3: #007dc3;
+$light-blue: #a4d7f4;
+$green: #7fbe2b;
+$orange: #f68b1e;
+
+$red_hover: lighten( $red, 10% );
+$red-2_hover: lighten( $red-2, 10% );
+$red-3_hover: lighten( $red-3, 10% );
+$blue_hover: lighten( $blue, 10% );
+$blue-2_hover: lighten( $blue-2, 10% );
+$blue-3_hover: lighten( $blue-3, 10% );
+$blue-3a_hover: lighten( $blue-3, 50% );
+$green_hover: lighten( $green, 5%);
+$orange_hover: lighten( $orange, 5%);
+
+// Primary
+$primary_color1: $green;
+$primary_color1_hover: $green_hover;
+$primary_color1_hover1: rgba(246,139,30,.56);
+
+$primary_color2: $primary_color1;
+$primary_color2_hover: lighten( $primary_color1, 10% );
+$primary_color2_hover_b: lighten( $primary_color1, 100% );
+
+// Secondary
+$secondary_color1: #448ccb;
+$secondary_color1_hover: lighten( $secondary_color1, 5%);
+$secondary_color2: #5893b3;
+
+$third_color1: $secondary_color1;
+$third_color1_hover: $secondary_color1_hover;
+
+//Text color
+$text_color1: #444444;
+$text_color2: #aaaaaa;
+$text_color3: #777777;
+$text_color4: #f3f3f3;
+
+// Light
+$white: #fff;
+
+// Dark
+$dark: #252525;
+$dark_gray: #163d47;
+$dark_gray_hover: #484848;
+$darkblue: #011833;
+$darkblue_hover: lighten( $darkblue, 10% );
+
+$black: #000;
+$black-2: #111;
+
+//$red: #eb2328;
+//$red-2: #b22b2e;
+
+$gray: #404041;
+$lightgray: #909090;
+
+$gray2: #f8f9fb;
+$gray3: #414141;
+$gray4: #b4babd;
+$gray5: #626366;
+$gray6: #f2f5f7;
+$gray7: #f3f3f3;
+$gray8: #2e2e2e;
+$gray9: #7d7d7d;
+$gray10: #b1b1b1;
+$gray11: #dcddde;
+$gray12: #979797;
+$gray13: #949ca1;
+$gray14: #f6f8f9;
+$gray15: #545454;
+$gray16: #424242;
+$gray17: #7a7979;
+$gray18: #e1e1e1;
+$gray19: #848484;
+$gray20: #f7f7f7;
+$gray21: #efefef;
+$gray22: #515151;
+$gray23: #2d2d2d;
+$gray24: #eaeaea;
+$gray25: #797979;
+$gray26: #7f7f7f;
+$gray27: #838280;
+$gray28: #242424;
+$gray29: #343434;
+
+$gray5_hover: lighten( $gray5, 10% );
+
+$radiusBtn: 5px;
+
+/*---------------------------------------------------
+* HEADER
+---------------------------------------------------*/
+$header_row: $primary_color1;
+$header_menu: $secondary_color1;
+$header_link: $gray;
+$header_link_active: $red;
+
+/*---------------------------------------------------
+* Footer
+---------------------------------------------------*/
+$footer_background: $gray;
+$footer_link: #444444;
+
+.c-primary {
+  color: $primary_color1;
+}
+
+.c-primary_hover {
+    &:hover{
+        color: $primary_color1_hover;
+    }
+}
+
+.c-bg-primary {
+  background-color: $primary_color1;
+}
+
+.c-bg-primary-hover {
+  &:hover{
+    background-color: $primary_color1_hover;
+  }
+}
+
+.c-bg-primary2 {
+  background-color: $primary_color2;
+}
+
+.c-bg-primary2-hover-b {
+//  background-color: $primary_color2_hover_b;
+}
+
+.c-bg-grey {
+  background: $lightgray;
+}
+
+.c-white {
+  color: $white;
+}
+
+.c-bg-white {
+  background: $white;
+}
+
+.c-bg-white-80{
+  background: rgba(255, 255, 255, 0.80);
+}
+
+.c-bg-dark{
+  background: $dark;
+}
+
+.c-bg-blue,
+.c-bg-secondary {
+  background: $secondary_color1;
+}
+
+.c-secondary1 {
+  color: $secondary_color1;
+}
+
+.c-secondary2 {
+  color: $secondary_color2;
+}
+
+.c-bg-secondary2 {
+  background: $secondary_color2;
+}
+
+.c-bg-text-color4{
+  background: $text_color4;
+}
+
+.c-bg-light-gray {
+  background: $lightgray;
+}
+
+.c-bg-gray-2 {
+  background: $gray2;
+}
+.c-bg-gray-3 {
+  background: $gray3;
+}
+.c-bg-gray-4 {
+  background: $gray4;
+}
+.c-bg-gray-5 {
+  background: $gray5;
+}
+.c-bg-gray-6 {
+  background: $gray6;
+}
+.c-bg-gray-7{
+  background: $gray7;
+}
+.c-bg-gray-8{
+  background: $gray8;
+}
+.c-bg-gray-9{
+  background-color: $gray9;
+}
+.c-bg-gray-10{
+  background-color: $gray10;
+}
+.c-bg-gray-12{
+  background-color: $gray21;
+}
+.c-bg-gray-20{
+  background-color: $gray20;
+}
+.c-bg-gray-24{
+  background-color: $gray24;
+}
+
+.c-bg-gray-text_color4{
+  background-color: $text_color4;
+}
+
+.c-dark-gray {
+  color: $dark_gray;
+}
+
+.c-bg-dark-gray {
+  background: $dark_gray;
+}
+
+.c-bg-dark {
+  background: $dark;
+}
+
+.c-bg-green {
+  background-color: $green;
+}
+
+.c-bg-green-hover{
+  &:hover{
+      background-color: $green_hover;
+  }
+}
+
+.c-bg-blue {
+  background: $blue;
+}
+
+.c-bg-blue-2 {
+  background: $blue-2;
+}
+
+.c-bg-blue-3 {
+  background: $blue-3;
+}
+
+.c-bg-red{
+    background-color: $red;
+}
+
+.c-bg-red-hover{
+    &:hover{
+        background-color: $red_hover;
+    }
+}
+
+.c-bg-red-2{
+    background-color: $red-2;
+}
+
+.c-bg-red-2-hover{
+    &:hover{
+        background-color: $red-2_hover;
+    }
+}
+
+.c-bg-black{
+    background-color: $black;
+}
+
+.c-bg-black-2{
+    background-color: $black-2;
+}
+
+.c-dark {
+  color: $dark;
+}
+
+.c-light-gray {
+  color: $lightgray;
+}
+
+.c-gray{
+  color: $gray;
+}
+
+.c-gray-3{
+  color: $gray3;
+}
+
+.c-gray-4{
+  color: $gray4;
+}
+
+.c-gray-5{
+  color: $gray5;
+}
+
+.c-gray-6{
+  color: $gray6;
+}
+
+.c-gray-7{
+  color: $gray7;
+}
+
+.c-gray-8{
+  color: $gray8;
+}
+.c-gray-9{
+  color: $gray9;
+}
+.c-gray-10{
+  color: $gray10;
+}
+.c-gray-11{
+  color: $gray11;
+}
+.c-gray-12{
+  color: $gray12;
+}
+.c-gray-13{
+  color: $gray13;
+}
+.c-gray-14{
+  color: $gray14;
+}
+.c-gray-15{
+  color: $gray15;
+}
+.c-gray-16{
+  color: $gray16;
+}
+.c-gray-17{
+  color: $gray17;
+}
+.c-gray-19{
+  color: $gray19;
+}
+.c-gray-25{
+  color: $gray25;
+}
+.c-gray-26{
+  color: $gray26;
+}
+.c-text-black{
+    color: $black;
+}
+
+.c-text-black-2{
+    color: $black-2;
+}
+
+.c-text-primary-2{
+    color: $primary_color2;
+}
+
+.c-text-blue{
+    color: $blue;
+}
+
+.c-text-blue-2{
+    color: $blue-2;
+}
+
+.c-text-blue-3{
+    color: $blue-3;
+}
+
+.c-text-red{
+    color: $red;
+}
+
+.c-text-red-hover:hover{
+    color: $red;
+}
+
+.c-text-red-2{
+    color: $red-2;
+}
+
+.c-text-red-3{
+    color: $red-3;
+}
+
+.c-text-light-blue{
+    color: $light-blue;
+}
+
+.c-text-1 {
+  color: $text_color1;
+}
+
+.c-text-2 {
+  color: $text_color2;
+}
+
+.c-text-3 {
+  color: $text_color3;
+}
+
+.c-hover-1{
+    &:hover{
+        color: $primary_color1_hover;
+    }
+}

@@ -1,0 +1,86 @@
+/* Property Grid Style - 1
+----------------------------------------- */
+.property-grid--style-1{
+
+    .property-grid--item{
+        .property-grid--image-item{
+            @include transitionData(.2s);
+            //@include OpacityPW(1);
+            @include scale(1);
+            &:hover{
+                //@include OpacityPW(.75);
+                @include scale(1.2);
+            }
+        }
+        .property-grid--content{
+            padding: 20px;
+            .property-grid--content-title{
+                min-height: 38px;
+            }
+            .property-grid--content-body{
+                min-height: 84px;
+            }
+        }
+        .property-grid--attr{
+            min-height: 24px;
+            .property-grid--attr-item{
+                display: inline-block;
+                >span{
+                    vertical-align: baseline;
+                }
+            }
+        }
+        .property-grid--featured-ribbon {
+            position: absolute;
+            z-index: 99;
+            top: 15px;
+            background-color: $light-brown;
+            color: white;
+            text-transform: uppercase;
+            padding: 5px 30px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+
+    @media(max-width: 1199px){
+        .property-grid--item .property-grid--content .property-grid--content-body {
+            min-height: 108px;
+        }
+    }
+
+    @media(max-width: 767px){
+        .property-grid--item .property-grid--content .property-grid--content-title,
+        .property-grid--item .property-grid--content .property-grid--content-body {
+            min-height: 0;
+        }
+    }
+
+}
+
+.property-grid-thumb--slick{
+    @extend .slick-arrow-variables;
+    .slick-arrow{
+        @include transitionData(.2s);
+        @include OpacityPW(.5);
+        &:hover{
+            @include OpacityPW(1);
+        }
+    }
+    .slick-arrow:before{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background-size: 56px;
+        background-position: center;
+        font-family: none !important;
+        color: transparent !important;
+    }
+    .slick-prev:before{
+                    background-image: url('/public/assets/demo1/images/conrad-images/slide-arrow-left.png');
+                }
+                .slick-next:before{
+                    background-image: url('/public/assets/demo1/images/conrad-images/slide-arrow-right.png');
+                }
+}

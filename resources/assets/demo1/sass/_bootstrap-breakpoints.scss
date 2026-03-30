@@ -1,0 +1,30 @@
+/*-----------------------------------------
+* OVERRIDE BOOTSTRAP
+-----------------------------------------*/
+@media(min-width: 1400px){
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1226px;
+        //max-width: 1036px;
+    }
+}
+@mixin breakpoint($point){
+
+  @if ($point == lg)
+  {
+    @media (max-width: 1199px){ @content }
+  }
+  @else if ($point == md)
+  {
+    @media (max-width: 991px){ @content }
+  }
+
+  @else if ($point == sm)
+  {
+    @media (max-width: 767px){ @content }
+  }
+
+  @else if ($point == xs)
+  {
+    @media  (max-width: 500px){ @content }
+  }
+}

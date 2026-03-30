@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?t8egh5');
+  src:  url('fonts/icomoon.eot?t8egh5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?t8egh5') format('truetype'),
+    url('fonts/icomoon.woff?t8egh5') format('woff'),
+    url('fonts/icomoon.svg?t8egh5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bed:before {
+  content: "\e908";
+}
+.icon-map-2:before {
+  content: "\e909";
+}
+.icon-shower:before {
+  content: "\e90a";
+}
+.icon-service-01:before {
+  content: "\e905";
+}
+.icon-property-star:before {
+  content: "\e906";
+}
+.icon-click:before {
+  content: "\e907";
+}
+.icon-arrow-left-style-1:before {
+  content: "\e903";
+}
+.icon-arrow-right-style-1:before {
+  content: "\e904";
+}
+.icon-marker:before {
+  content: "\e902";
+}
+.icon-demo-2-keys:before {
+  content: "\e900";
+}
+.icon-house:before {
+  content: "\e901";
+}

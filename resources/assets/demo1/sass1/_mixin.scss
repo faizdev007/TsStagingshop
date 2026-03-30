@@ -1,0 +1,141 @@
+@mixin linearGradient($left, $right, $leftP, $rightP){
+    background: -moz-linear-gradient(90deg,  $left $leftP,  $right $rightP, $right 80%);
+    background: -webkit-linear-gradient(90deg, $left $leftP,  $right $rightP, $right 80%);
+    background: linear-gradient(90deg, $left $leftP,  $right $rightP, $right 80%);
+}
+
+@mixin hozizontalGradient($color1, $p1, $color2, $p2){
+    background: -webkit-linear-gradient($color1 $p1, $color2 $p2);
+    background: -o-linear-gradient($color1 $p1, $color2 $p2);
+    background: linear-gradient($color1 $p1, $color2 $p2);
+}
+@mixin objectRotate($degree){
+    -ms-transform: rotate($degree); /* IE 9 */
+    -webkit-transform: rotate($degree); /* Chrome, Safari, Opera */
+    transform: rotate($degree);
+}
+
+@mixin placeholderStyle1($color, $size, $weight){
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+  }
+}
+
+@mixin placeholderStyle2($color, $size){
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $size;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $size;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $size;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $size;
+  }
+}
+
+
+@mixin placeholderStyle3($color, $size, $uppercase: true){
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+}
+
+@mixin transitionData($seconds){
+  -webkit-transition: all $seconds ease-in-out;
+  -moz-transition: all $seconds ease-in-out;
+  -o-transition: all $seconds ease-in-out;
+  transition: all $seconds ease-in-out;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin setWidth($width) {
+  -ms-flex: $width;
+  flex: $width;
+  max-width: $width;
+}
+
+@mixin OpacityPW($value){
+    $IEValue: $value*100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
+}
+
+@mixin OpacityPWi($value){
+    $IEValue: $value*100;
+    opacity: $value !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue) !important;
+}
+
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+     -moz-transform: scale($ratio);
+      -ms-transform: scale($ratio);
+       -o-transform: scale($ratio);
+          transform: scale($ratio);
+}

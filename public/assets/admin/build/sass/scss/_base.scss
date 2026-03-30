@@ -1,0 +1,65 @@
+.control-form{
+    margin-bottom: 15px;
+    label{
+        .link-1{
+            font-weight: 400;
+            text-decoration: underline;
+        }
+    }
+    &.-disable{
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: ' ';
+          display: block;
+          background: rgb(204 204 204 / 5%);
+          z-index: 1;
+        }
+    }
+}
+
+.form-control {
+    height: 38px;
+}
+
+
+.no-data{
+    font-size: 21px;
+    padding: 10px 0px
+}
+
+#refresh-page{
+    display: none;
+    position: relative;
+    top: -3px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.pw-thumbnail-75{
+    max-width: 75px;
+}
+
+.jscroll-added{
+    .pagination,
+    thead{
+        display: none;
+    }
+}
+
+.ajs-button.btn.btn-primary{
+    background-color: #337ab7 !important;
+}
+.ajs-button.btn.btn-primary:hover{
+    background-color: #235682 !important;
+}
+
+.dz-hide-error-message{
+    .dz-error-message{
+        display: none !important;
+    }
+}

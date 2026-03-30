@@ -1,0 +1,164 @@
+/* Testimonials
+----------------------------------------- */
+.testimonial--section{
+    .testimonial--wrap{
+        background-image: url('/public/assets/demo1/images/conrad-images/testimonial-bg.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 385px;
+        width: 100%;
+        margin: auto;
+        padding: 30px 65px 58px 65px;
+        .testimonial--controls{
+            left: 0;
+            bottom: 40px;
+            width: 100%;
+            span{
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+    @media(max-width: 767px){
+        .testimonial--wrap{
+            height: 308px;
+            .testimonial--controls{
+                bottom: 25px;
+            }
+        }
+    }
+    @media(max-width: 500px){
+        .testimonial--wrap{
+            padding: 30px 30px 58px 30px;
+        }
+    }
+}
+
+/* Blog Snippet
+----------------------------------------- */
+.blog-snippet--section{
+    .blog-snippet--content{
+        padding: 35px;
+    }
+    .blog-snippet--img-inner{
+        height: 320px;
+    }
+    @media(max-width: 414px){
+        .blog-snippet--content {
+            padding: 20px;
+        }
+        .blog-snippet--img-inner{
+            height: 270px;
+        }
+        .column-reverse-mobile {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+/* Join Us
+----------------------------------------- */
+.join-us--section{
+    background-image: url('/public/assets/demo1/images/conrad-images/join-us-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    .join-us--wrap{
+        min-height: 590px;
+        .generic-header--section .generic-header--small.-left-liner {
+            padding-left: 143px;
+        }
+    }
+    @media(max-width: 767px){
+        .join-us--wrap{
+            min-height: 500px;
+        }
+    }
+}
+
+
+/* Blog Tags
+----------------------------------------- */
+.blog--tags{
+    a{
+        color: $gray-2;
+        text-decoration: none;
+        &:hover{
+            @include OpacityPW(.7);
+        }
+    }
+    span a{
+        font-size: 25px;
+        font-style: 500;
+    }
+}
+/* Testimonials
+----------------------------------------- */
+.testimonials{  
+
+.tm {
+    max-width:990px;
+    border:1px solid #eaeaea;
+    padding:20px;
+    background:#fff;  
+    @media(max-width: 767px){
+        margin: 0 20px;
+    }  
+}
+.tm p {
+    max-width: 78%;    
+    font-size: 21px;
+    line-height: 30px;    
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:48px;
+
+}
+
+.tm span {
+    position: relative;    
+    font-size: 21px;
+    color:#000;
+    line-height: 40px;
+    font-family: 'GothamMedium';    
+    display: block;
+    text-align: center;    
+    width: 100%;
+    padding-bottom:47px;
+    padding-top:1px;
+    text-transform: uppercase;
+}
+
+.tm_shadow{
+    margin:0;
+    margin-bottom:40px;
+    max-width: 990px;
+    background: url('/public/assets/demo1/images/conrad-images/testimonial-bg.jpg');
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 800px) {
+   
+    .tm p {
+        font-size: 16px;
+        max-width:100%;
+        margin:0px;
+        padding-top:0px;
+        padding-bottom: 0px;
+        line-height: 23px;
+    }
+    .tm span {
+        font-size: 18px;
+        padding-bottom:0px;
+        line-height: 25px;
+        padding-top: 15px;
+    }   
+    .tm_shadow {    
+        margin-bottom: 0px;
+    }   
+}
+}

@@ -1,0 +1,250 @@
+/*-------------------------------
+* LOGIN PAGE
+--------------------------------*/
+body.login {
+	background: url(../../images/login/bg-login.jpg) center top no-repeat #2D1F17;
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+	#login-row{
+    	float: left;
+    	width: 100%;
+    	padding: 45px 0 50px 0;
+    }
+    #login-row .logo{
+    	margin: 0 auto 40px auto;
+    	position: relative;
+    	display: block;
+    	max-width: 198px;
+    }
+    .login-panel{
+    	width: 481px;
+    	margin: 0 auto 75px auto;
+    	max-width: 100%;
+    	padding: 30px 40px 50px 40px;
+    	background: rgba(0,167,226,.8);
+		.invalid-feedback{
+			color: #ffd800;
+			position: relative;
+			top: -12px;
+			strong{
+				font-weight: 300;
+			}
+		}
+    }
+
+    .login-panel .custom-logo{
+    	margin: 0 auto 34px auto;
+    	position: relative;
+    	display: block;
+    	max-width: 100%;
+    }
+    .login-panel input{
+    	width: 100%;
+        min-height: 50px;
+        padding: 15px 22px;
+        border: none;
+        margin: 0 0 18px 0;
+        color: #0f94c1;
+        font-weight: 100;
+    }
+    .login-panel input[type="submit"]{
+    	background: #0f1315;
+    	color: #fff;
+    	font-weight: 100;
+    	font-size: 20px;
+    	transition: all 100ms ease-in;
+    	-moz-transition: all 100ms ease-in;
+    	-web-kit-transition: all 100ms ease-in;
+    }
+    .login-panel input[type="submit"]:hover{
+    	background: #353232;
+    }
+    .login-panel p{
+    	color: #fff;
+    	font-weight: 100;
+    	font-size: 18px;
+    }
+    .login-panel p a{
+    	color: #fff;
+    	text-decoration: underline;
+    }
+
+
+    #services-row{
+    	float: left;
+        width: 100%;
+        padding: 30px 0 60px 0;
+    	margin: 0 0 15px 0;
+        background: #fff;
+        text-align: center;
+    }
+    #services-row h2{
+    	margin: 0 0 30px 0;
+    }
+    #services-row h2{
+    	margin: 0 0 30px 0;
+    }
+    #services-row ul.services{
+    	float: left;
+    	width: 100%;
+    	margin: 0 0 75px 0;
+    	padding: 0;
+    	text-align: center;
+    }
+    #services-row ul.services li{
+    	margin: 0;
+    	padding: 0 15px;
+    	list-style: none;
+    	display: inline-block;
+    }
+    #services-row ul.services li img{
+    	display: block;
+    	margin: 0 auto 28px auto;
+    	-webkit-transition: all 0.3s ease-in-out;
+    	transition: all 0.3s ease-in-out;
+    }
+    #services-row ul.services li:hover img{
+    	transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.2, M12=0, M21=0, M22=1.2, SizingMethod='auto expand')";
+        filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.2, M12=0, M21=0, M22=1.2, SizingMethod='auto expand');
+    }
+    #services-row ul.services li span{
+    	font-size: 20px;
+    	color: #0098d6;
+    }
+    #services-row .more-btn{
+    	padding: 20px 30px;
+    	background: #0098d6;
+    	color: #fff;
+    	font-size: 24px;
+    	font-weight: 400;
+    	text-decoration: none !important;
+    	transition: all 100ms ease-in;
+    	-moz-transition: all 100ms ease-in;
+    	-web-kit-transition: all 100ms ease-in;
+    }
+    #services-row .more-btn:hover{
+    	background: #0f1315;
+    }
+
+    #footer-row{
+		float: left;
+        width: 100%;
+        padding: 30px 0 50px 0;
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+    }
+    ul.footer-social {
+  		padding-left: 0;
+  		margin-left: 0;
+		width: 100%;
+        float: left;
+        list-style: none;
+        text-align: center;
+    }
+    ul.footer-social li{
+    	display: inline-block;
+    	margin: 0 3px;
+    }
+    ul.footer-social li a{
+    	float: left;
+    	width: 37px;
+    	height: 37px;
+    }
+    // ul.footer-social li a.social-linkedIn {
+    //     background: url(../../images/login/social-linkedIn-sprite.png) no-repeat;
+    // }
+    // ul.footer-social li a.social-twitter {
+    //     background: url(../../images/login/social-twitter-sprite.png) no-repeat;
+    // }
+    // ul.footer-social li a.social-facebook {
+    //     background: url(../../images/login/social-facebook-sprite.png) no-repeat;
+    // }
+    ul.footer-social li a.social-gplus {
+        background: url(../../images/login/social-gplus-sprite.png) no-repeat;
+    }
+    ul.footer-social li a.social-pinterest {
+        background: url(../../images/login/social-pinterest-sprite.png) no-repeat;
+    }
+    // ul.footer-social li a.social-instagram {
+    //     background: url(assets/admin/build/images/login/social-instagram-sprite.png) no-repeat;
+    // }
+    ul.footer-social li a.social-youtube {
+        background: url(../../images/login/social-youtube-sprite.png) no-repeat;
+    }
+    ul.footer-social li a.social-tiktok {
+        background: url(../../images/login/social-tiktok-sprite.png) no-repeat;
+    }
+    ul.footer-social li a:hover{
+        background-position: 0 -37px;
+    }
+
+    .sn-floating {
+        position: fixed;
+        right: 0;
+        top: 25%;
+        z-index: 500;
+    }
+
+    /* MODAL CSS */
+
+    .modal-content{
+    	background-color: rgba(113,146,40,.8);
+    	border: 8px solid rgba(255,255,255,.8) !important;
+    	border-radius: 0;
+    }
+    .modal-header {
+        border-bottom: 1px solid #a8c566;
+    	margin: 0 9px
+    }
+    .modal-title {
+        color: #fff;
+    }
+    .close{
+    	color: #fff;
+    }
+    .modal-content textarea,
+    .modal-content input {
+    	width: 100%;
+        background-color: #fff;
+        height: 46px;
+        color: #777;
+        border: 0;
+        border-radius: 0;
+        padding: 12px 20px;
+        margin: 0 0 15px 0;
+    }
+    .modal-content textarea{
+    	height: 80px;
+    }
+    .modal-content input[type="submit"]{
+  		width: 100%;
+    	background: #0099d5;
+    	color: #fff;
+    	font-size: 16px;
+    	transition: all 100ms ease-in;
+        -moz-transition: all 100ms ease-in;
+        -web-kit-transition: all 100ms ease-in;
+    }
+    .modal-content input[type="submit"]:hover{
+    	background: #0f1315;
+    }
+    .modal-content p{
+    	color: #fff;
+        margin: 0 0 16px 0;
+    }
+}
+
+/*-------------------------------
+* DASHBOARD INDEX
+--------------------------------*/
+.dashboard-index{
+	.row.tile_count {
+    	border-bottom: 1px solid #e0e0e0;
+	}
+}

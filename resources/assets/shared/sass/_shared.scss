@@ -1,0 +1,283 @@
+body {
+  height: auto !important; // Fix for Google Translate
+  min-height: auto !important; // Fix for Google Translate
+}
+
+button {
+  cursor: pointer;
+}
+
+// Prevent Flash Of USC....
+.select-pw, .select-pw-ajax-locations, .select-pw-ajax-locations-light, .select-pw-light {
+    opacity: 0;
+}
+
+// Mixins
+@mixin background-opacity($color, $opacity: 0.3)
+{
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin text-shadow($x1:2px, $y1:2px, $blur1:5px, $color1:black, $x2:null, $y2:null, $blur2:null, $color2:null){
+    @if ($x2) {
+        text-shadow: $x1 $y1 $blur1 $color1, $x2 $y2 $blur2 $color2;
+    }
+    @else {
+        text-shadow: $x1 $y1 $blur1 $color1;
+    }
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+    // Direction has been omitted and happens to be a color-stop
+    @if is-direction($direction) == false {
+        $color-stops: $direction, $color-stops;
+        $direction: 180deg;
+    }
+
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+
+/* TRANSLATIONS
+------------------------------------- */
+
+.translate__dropdown {
+    .dropdown-menu {
+        min-width: auto;
+    }
+    @include breakpoint(xs)
+    {
+        float: left;
+        margin-top: 2em;
+    }
+}
+
+/* BESPOKE PAGE
+------------------------------------- */
+
+.quick-link__list {
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    @include breakpoint(xs)
+    {
+      display: block;
+    }
+    @include breakpoint(sm)
+    {
+      display: block;
+    }
+  }
+}
+
+.border-right {
+  border-right: 1px solid $secondary_color1;
+}
+.borders {
+  border-left: 1px solid $secondary_color1;
+  border-right: 1px solid $secondary_color1;
+  margin: -1px;
+}
+.border-left {
+  border-left: 1px solid $secondary_color1;
+  @include breakpoint(sm)
+  {
+    border-top: 1px solid $secondary_color1;
+    border-left: none !important;
+    padding-top: 2em;
+  }
+  @include breakpoint(xs)
+  {
+    border-top: 1px solid $secondary_color1;
+    padding-top: 2em;
+  }
+}
+
+.location-item {
+  &.-no-bg {
+    .cover {
+      background: none;
+    }
+  }
+}
+
+.property-controls {
+  .slick-dots {
+    margin: 0;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 10px;
+    li {
+      list-style: none;
+      margin: 0 0.25rem;
+      display: inline-block;
+    }
+    button
+    {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      background-color: $gray;
+      text-indent: -9999px;
+    }
+
+    li.slick-active button {
+      //background-color: $secondary_color1;
+    }
+  }
+}
+
+.properties-left {
+  background: url("../images/icons/icon-arrow-left.png") no-repeat;
+  width: 14px;
+  height: 22px;
+}
+.properties-right {
+  background: url("../images/icons/icon-arrow-right.png") no-repeat;
+  width: 14px;
+  height: 22px;
+}
+
+.quick-link__item {
+  //color: $white;
+  &:last-child {
+    &:after {
+      content: "";
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &:after {
+    content: "|";
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  @include breakpoint(xs)
+  {
+    &:after {
+      padding-left: 0;
+      padding-right: 0;
+      content: "";
+    }
+  }
+}
+
+/* Members Area
+------------------------------------------ */
+
+.member-notify {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  z-index: 999;
+  display: none;
+}
+
+/* Valuation Report Page
+------------------------------------------ */
+
+.valuation-report {
+    .property-alert-cta
+    {
+        display: none;
+    }
+}
+
+#list-property-modal {
+  .modal-content {
+    border-radius: 0;
+  }
+}
+
+/* Arrange a Viewing Widget
+------------------------------------------ */
+
+#viewing-modal {
+    .modal-dialog {
+        max-width: 800px;
+    }
+    .modal-content {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+        max-width: 14.285714285714285714285714285714% !important;
+        flex:none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+        max-width: 14.285714285714285714285714285714% !important;
+        flex:none !important;
+    }
+}
+
+.data-select-block:hover {
+    text-decoration: none;
+}
+
+.chosen-select {
+    display: none;
+}
+
+.date-selection:hover {
+    text-decoration: none;
+}
+
+
+
+
+/* Truncate string
+------------------------------------------ */
+
+.truncate-str {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/* Price Qualifier display
+------------------------------------------ */
+
+.u-price-qualifier-display{
+    //font-size: 12px;
+    @include breakpoint(md)
+    {
+        &.f-12{
+            font-size: 12px !important;
+        }
+    }
+    @include breakpoint(sm)
+    {
+        &.f-12{
+            font-size: 12px !important;
+        }
+    }
+    @include breakpoint(xs)
+    {
+        &.f-12{
+            font-size: 12px !important;
+        }
+    }
+}

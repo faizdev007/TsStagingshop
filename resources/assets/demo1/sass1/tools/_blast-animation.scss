@@ -1,0 +1,45 @@
+.-spin-i{
+    i{
+        -webkit-transition: 0.6s ease-out;
+        -moz-transition:  0.6s ease-out;
+        transition:  0.6s ease-out;
+    }
+    &:hover{
+        i{
+            -webkit-transform: rotateZ(720deg);
+            -moz-transform: rotateZ(720deg);
+            transform: rotateZ(720deg);
+        }
+    }
+}
+
+@media (min-width: 745px) {
+  .ba-animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    opacity: 0;
+  }
+}
+
+/** pulse **/
+@-webkit-keyframes pulse {
+  0% { -webkit-transform: scale(1); }
+  10% { -webkit-transform: scale(1.1); }
+  30% { -webkit-transform: scale(1); }
+ }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  10% { transform: scale(1.5); }
+  15% { transform: scale(1); }
+  20% { transform: scale(1.1); }
+  25% { transform: scale(1); }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  opacity: 1;
+}

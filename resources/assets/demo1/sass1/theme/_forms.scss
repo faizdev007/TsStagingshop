@@ -1,0 +1,441 @@
+/*  Form Group 1
+---------------------------------------*/
+.form-group-1{
+    @include placeholderStyle1($dark, 14px, 500);
+    margin-bottom: 10px;
+    input[type='text'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='email']{
+        border-radius: 0;
+        width: 100%;
+        height: 45px;
+        font-size: 15px;
+        border-bottom: 1px solid #dddddd;
+    }
+    input:-moz-read-only{
+        background-color: #ededed !important;
+        padding: 0 15px !important;
+        cursor: pointer;
+    }
+    input:read-only{
+        padding: 0 15px !important;
+        cursor: pointer;
+    }
+    textarea{
+        padding-top: 20px;
+        border-bottom: 1px solid #dddddd;
+    }
+    &.-labeled{
+        input[type='text'],
+        input[type='tel'],
+        input[type='password'],
+        input[type='email']{
+            height: 35px;
+        }
+    }
+    .f-label{
+        margin-bottom: 0;
+    }
+    &.-bordered{
+        input[type='text'],
+        input[type='email'],
+        input[type='tel'],
+        input[type='password'],
+        textarea{
+            border: 1px solid #e1e1e1;
+        }
+        .select2-selection .select2-selection__rendered{
+            border: 1px solid #e1e1e1;
+        }
+    }
+    &.-transparent-bg{
+        input[type='text'],
+        input[type='email'],
+        input[type='tel'],
+        input[type='password'],
+        textarea{
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+    .date-time-field{
+        position: relative;
+        &.-disabled{
+            @include placeholderStyle1($gray, 15px, 400);
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: ' ';
+                display: block;
+                background: rgba(0,0,0,.1);
+                z-index: 1;
+            }
+
+        }
+    }
+
+    @media (max-width: 1199px){
+
+        @include placeholderStyle1($gray, 13px, 500);
+        input[type='text'],
+        input[type='tel'],
+        input[type='password'],
+        input[type='email']{
+            height: 42px;
+            font-size: 12px;
+        }
+
+    }
+
+    @media (max-width: 767px){
+        input[type='text'],
+        input[type='tel'],
+        input[type='password'],
+        input[type='email']{
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 500px){
+        @include placeholderStyle1($gray, 12px, 500);
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            font-size: 12px;
+        }
+    }
+}
+
+/*  Form Group 2
+---------------------------------------*/
+.form-group-2{
+
+    @include placeholderStyle1($gray16, 15px, 400);
+    input[type='text'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='email'],
+    textarea{
+        background-color: $gray20;
+        border-radius: 3px;
+    }
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='email']{
+        height: 55px;
+    }
+
+}
+
+.text-consent{
+    a{
+        &:hover{
+            color: $primary_color1;
+        }
+    }
+}
+
+/* Slide form
+-----------------------------------------*/
+.slider-form-container{
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    .main-search-fields{
+        background-color: #1c383ca3;
+        padding: 14px 28px;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 991px){
+        bottom: 80px;
+    }
+
+    @media (max-width: 767px){
+        position: relative;
+        bottom: 0;
+        background-color: rgb(36 36 36 / 90%);
+        .main-search-fields{
+            background-color: rgb(36 36 36 / 0%);
+            padding: 14px 6px;
+        }
+    }
+}
+
+/*-----------------------------------------
+* Main Search FORM
+-----------------------------------------*/
+.main-search-fields{
+    margin: auto;
+    ul.field-layout{
+        @extend .clear-float;
+        margin: 0 -9px;
+        padding: 0;
+        &.-no-spacing{
+            margin: 0;
+            >li{
+                padding: 0;
+            }
+        }
+        >li{
+            display: inline-block;
+            float: left;
+            padding: 0 9px;
+            position: relative;
+            /*
+            &::before {
+                position: absolute;
+                top: 6px;
+                right: 0;
+                width: 100%;
+                height: 40px;
+                background-color: rgb(198 198 198 / 30%);
+                content: ' ';
+                display: block;
+                z-index: 1;
+            }
+            */
+            &.li-filter{
+            display:none;
+                a{
+             
+                        font-size: 12px;
+                        border-radius: 5px;
+                        line-height: 42px;
+                        font-weight: 600;
+                        text-align: right;
+                        text-transform: uppercase;
+                
+                }
+            }
+            &.li-mode{
+                width: 12%;
+            }
+            &.li-location{
+                width: 24%;
+            }
+            &.li-property-type{
+                width: 24%;
+            }
+            &.li-beds{
+                width: 13%;
+            }
+            &.li-bath{
+                width: 13%;
+            }
+            &.li-min-price{
+                width: 13%;
+            }
+            &.li-max-price{
+                width: 13%;
+            }
+            &.li-button{
+                width: 13%;
+                button[type="submit"]{
+                    color: $white;
+                    background-color: $primary_color1;
+                    &:hover{
+                        background-color: $primary_color1_hover;
+                    }
+                }
+            }
+            button[type="submit"]{
+                width: 100%;
+                height: 43px;
+                border-radius: $radiusBtn;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        ul.field-layout>li.li-button button[type=submit] {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        ul.field-layout{
+            >li{
+                margin-bottom: 15px;
+                &.li-mode{
+                    width: 33.33%;
+                }
+                &.li-location{
+                    width: 33.33%;
+                }
+                &.li-property-type{
+                    width: 33.33%;
+                }
+                &.li-beds{
+                    width: 20%;
+                }
+                &.li-bath{
+                    width: 20%;
+                }
+                &.li-min-price{
+                    width: 20%;
+                }
+                &.li-max-price{
+                    width: 20%;
+                }
+                &.li-button{
+                    width: 20%;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        ul.field-layout{
+         position: relative;
+            >li{
+                margin-bottom: 15px;
+                 display:none;
+                &.li-mode{
+                    width: 50%;
+                   
+                }
+                &.li-location{
+                    width: 85%;
+                    display:block
+                }
+                &.li-property-type{
+                    width: 33.33%;
+                }
+                &.li-beds{
+                    width: 33.33%;
+                }
+                &.li-bath{
+                    width: 33.33%;
+                }
+                &.li-min-price{
+                    width: 33.33%;
+                }
+                &.li-max-price{
+                    width: 33.33%;
+                }
+                &.li-button{
+                    width: 33.33%;
+                    display:block
+                }
+                &.li-filter{
+                        width:15%;
+                        display:block;
+                        position: absolute;
+                        top: 0px;
+                        right: 0;
+                }
+                &.show-fields{display:block}
+            }
+            
+        }
+    }
+    @media (max-width: 500px) {
+        ul.field-layout{
+            >li{
+                margin-bottom: 15px;
+                &.li-mode,
+                &.li-beds,
+                &.li-bath,
+                &.li-min-price,
+                &.li-property-type,
+                &.li-max-price{
+                    width: 50%;
+                }               
+                &.li-button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+  @media (min-width: 500px) {
+.search-page{
+   ul.field-layout{
+            >li{
+                margin-bottom: 15px;
+               &.li-mode{
+                        width: 12%;
+                    }
+                    &.li-location{
+                        width: 20%;
+                    }
+                    &.li-property-type{
+                        width: 14%;
+                    }
+                    &.li-beds{
+                        width: 12%;
+                    }
+                    &.li-bath{
+                        width: 9%;
+                    }
+                    &.li-min-price{
+                        width: 10%;
+                    }
+                    &.li-max-price{
+                        width: 10%;
+                    }
+            }
+        } 
+}
+}
+/* Multiple selection...
+------------------------------------*/
+.multiple-container-o{
+    .multiple-selected{
+        visibility: hidden;
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 100%;
+        //z-index: 100;
+        z-index: 2;
+        padding: 3px 6px;
+        border-radius: 2px;
+        border-bottom: 1px solid $gray27;
+        height: 38px;
+        label {
+            margin-bottom: 1px;
+            width: 100%;
+        }
+    }
+    &.has-selected{
+        .multiple-selected{
+            visibility: visible;
+            &.multiple--dark2{
+                label {
+                    text-align: center;
+                }
+            }
+        }
+        .select2-container .select2-selection--multiple .select2-selection__rendered{
+            visibility: hidden;
+        }
+    }
+    .select2-container .select2-selection--multiple .select2-selection__choice{
+        display: none;
+    }
+    .select2-container--dark2 .select2-search--inline .select2-search__field{
+        cursor: pointer;
+        margin-top: 0;
+    }
+    /*
+    &.multiple-container-o-dark{
+        .select2-container--default .select2-selection--multiple{
+            background-color: transparent;
+            border-bottom: 1px solid $gray27;
+        }
+    }
+    */
+    @media (max-width: 1199px) {
+        .multiple-selected{
+            height: 35px;
+        }
+    }
+}

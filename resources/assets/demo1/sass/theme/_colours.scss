@@ -1,0 +1,251 @@
+/*---------------------------------------------------
+* MAIN COLORS
+---------------------------------------------------*/
+$blue-green: #85d6cb;
+$blue-green-2: #7bb8b5;
+$blue-green-3: #8c959f;
+$blue-3 : #85d6cb;
+$light-brown: #d9b483;
+$light-brown-2: #f4e8da;
+$red: #e00000;
+$yellow: #fbbc05;
+
+// Primary
+$primary_color1: $light-brown;
+$primary_color1_hover: lighten($primary_color1, 10%);
+$primary_color2: $primary_color1;
+
+$secondary1: $light-brown;
+$secondary1_hover: lighten($secondary1, 10%);
+$secondary_color1_hover:lighten($secondary1, 10%);
+$secondary_color1: $secondary1;
+$secondary_color2: $secondary1;
+$text-1: #657381;
+$text-1_hover: lighten($text-1, 10%);
+$text_color4: #657381;
+$third_color1_hover: lighten($text-1, 10%);
+
+$secondary2: $text-1;
+$secondary2_hover: lighten($text-1, 10%);
+
+$white: #fff;
+$white-1: #b7bcc2;
+
+$darkgray: #666666;
+
+$dark_gray: #666666;
+$black: #000000;
+$black-2: #0f0f0f;
+$black-3: #252525;
+
+$gray: #252525; //
+$gray-2: #636363; //
+$gray-3: #757575; //
+$gray-4: #f2f2f2;
+$gray-5: #59595a;
+$gray-6: #d0d5d9;
+$gray-7: #97a0a8;
+$gray-8: #9d9d9d;
+$gray-9: #f1f1f1;
+$gray-10: #e3e3e3;
+$gray-11: #0b0b0b;
+
+/* Font colours
+---------------------------------------------------*/
+.c-primary,
+.c-primay{
+    color: $primary_color1;
+}
+
+.c-white{
+    color: $white;
+}
+
+.c-white-1{
+    color: $white-1;
+}
+
+.c-gray{
+    color: $gray;
+}
+
+.c-gray-2{
+    color: $gray-2;
+}
+
+.c-gray-5{
+    color: $gray-5;
+}
+
+.c-gray-7{
+    color: $gray-7;
+}
+
+.c-gray-8{
+    color: $gray-8;
+}
+.bg-gray-11{
+    background: $gray-11;
+}
+
+.c-text-1{
+    color: $text-1;
+}
+
+.c-yellow{
+    color: $yellow;
+}
+
+.c-light-brown{
+    color: $light-brown;
+}
+
+/* links
+---------------------------------------------------*/
+.c-white-1-link{
+    color:$white-1;
+    text-decoration: none;
+    &:hover{
+        color: $white-1;
+    }
+}
+
+.c-white-link{
+    color: $white;
+    text-decoration: none;
+    &:hover{
+        color: $white;
+    }
+}
+
+.c-white-link-normalized{
+    color: $white;
+    text-decoration: none;
+    &:hover{
+        color: $white;
+    }
+}
+
+.c-white-link-underline{
+    color: $white;
+    text-decoration: none;
+    &:hover{
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+.c-gray-link{
+    color: $gray;
+    text-decoration: none;
+    &:hover{
+        color: $gray;
+        text-decoration: none;
+    }
+}
+
+.c-gray-3-link{
+    color: $gray-3;
+    text-decoration: none;
+    &:hover{
+        color: $gray-3;
+    }
+}
+
+.c-gray-3-link--white{
+    color: $gray-3;
+    text-decoration: none;
+    &:hover{
+        color: $white;
+    }
+}
+
+.c-brown-light-link{
+    color:$light-brown;
+    text-decoration: none;
+    &:hover{
+        color: $light-brown;
+    }
+}
+
+.c-gray-5-link{
+    color: $gray-5;
+    text-decoration: none;
+    &:hover{
+        color: $gray-5;
+    }
+}
+
+.c-blue-green-3{
+    color: $blue-green-3;
+}
+
+.c-blue-green-link{
+    color: $primary_color1;
+    text-decoration: none;
+    &:hover{
+        color: $primary_color1;
+    }
+}
+
+.c-blue-green-link-2{
+    color: $blue-green-2;
+    text-decoration: none;
+    &:hover{
+        color: $blue-green-2;
+    }
+}
+
+.c-blue-green-link-3{
+    color: $blue-green-3;
+    text-decoration: none;
+    &:hover{
+        color: $blue-green-3;
+    }
+}
+
+.c-text-1{
+    color: $text-1;
+    text-decoration: none;
+    &:hover{
+        color: $text-1;
+    }
+}
+
+/* Background
+---------------------------------------------------*/
+.bg-gray{
+    background-color: $gray;
+}
+
+.bg-gray-4{
+    background-color: $gray-4;
+}
+
+.bg-gray-9{
+    background-color: $gray-9;
+}
+
+.bg-blue-green{
+    background-color: $primary_color1;
+}
+
+.bg-gray-blue{
+    background-color: $text-1;
+}
+
+.bg-white{
+    background-color: $white;
+}
+
+.bg-light-brown{
+    background-color: $light-brown;
+}
+
+.bg-darkgray{
+    background-color: $darkgray;
+}
+
+.bg-black-2{
+    background-color: $black-2;
+}

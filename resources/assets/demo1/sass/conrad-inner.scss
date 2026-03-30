@@ -1,0 +1,108 @@
+/* Testimonials
+-------------------------*/
+.tm {
+	max-width:990px;
+	border:1px solid #eaeaea;
+	padding:20px;
+	background:#fff;
+}
+.tm p {
+    max-width: 78%;
+    font-size: 21px;
+    line-height: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:48px;
+
+}
+
+.tm span {
+	position: relative;
+    font-size: 21px;
+    color:#000;
+    line-height: 40px;
+    font-family: 'GothamMedium';
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-bottom:47px;
+    padding-top:1px;
+    text-transform: uppercase;
+}
+
+.tm_shadow{
+	margin:0;
+	margin-bottom:40px;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+	.tm p {
+		font-size: 16px;
+		max-width:100%;
+		margin:0px;
+		padding-top:0px;
+		padding-bottom: 0px;
+		line-height: 23px;
+	}
+	.tm span {
+		font-size: 18px;
+		padding-bottom:0px;
+		line-height: 25px;
+		padding-top: 15px;
+	}
+	.tm_shadow {
+		margin-bottom: 0px;
+	}
+}
+
+
+/* Our Office
+-------------------------*/
+.office_row{
+	padding-bottom:20px;
+	justify-content: space-between;
+	display: flex;
+}
+.office_row .img_cont {
+	display:inline-block;
+	width:31.5%;
+	text-align:center;
+	height:200px;
+}
+
+.office_row .img_cont div {
+	height:100%;
+	width:100%;
+	background-size: cover;
+}
+.img_center {
+	padding-left:30px;
+	padding-right:30px;
+}
+
+@media only screen and (max-width: 800px) {
+	.office_row {
+		padding: 20px;
+		display: block;
+	}
+	.office_row .img_cont {
+		width:100%;
+		padding:15px;
+		height:533px;
+	}
+	.office_row{
+		padding:0px 10px 0px 10px;
+
+	}
+	.about-block {
+		padding-bottom:20px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.office_row .img_cont {
+		height:240px;
+	}
+}

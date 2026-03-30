@@ -1,0 +1,75 @@
+/*
+  Author: Terezaestates
+*/
+
+/*---------------------------------------------------------
+*
+---------------------------------------------------------*/
+@import 'tools/_bootstrap-breakpoints.scss';
+@import '_mixin.scss';
+@import '../vendor/fontawesome/css/all.min.css';
+@import '../vendor/bootstrap-4.3.1/customize/style.css';
+//@import '../vendor/select2/css/select2.min.css';
+@import "~select2/dist/css/select2.min.css";
+@import '../vendor/slick/slick.css';
+@import '../vendor/fancybox/jquery.fancybox.min.css';
+@import '../vendor/hover/hover-min.css';
+
+@import 'theme/_colours.scss';
+@import 'modules/_colours.scss';
+@import 'theme/_fonts.scss';
+@import 'tools/_mixin.scss';
+@import 'tools/_normalize.scss';
+@import 'tools/_blast-animation.scss';
+
+@import "../../shared/sass/shared";
+
+/*---------------------------------------------------------
+*
+---------------------------------------------------------*/
+@import 'modules/_header.scss';
+@import 'modules/_footer.scss';
+
+/*---------------------------------------------------------
+*
+---------------------------------------------------------*/
+@import 'modules/_components.scss';
+@import 'modules/_section-home-slider.scss';
+@import 'modules/_grid-property.scss';
+@import 'modules/_grid-news.scss';
+@import 'modules/_grid-lifestyle.scss';
+@import 'modules/_grid-communities.scss';
+@import 'modules/_sections.scss';
+@import 'modules/_section-heading-style-1.scss';
+@import 'modules/_section-page-title.scss';
+@import 'modules/_modals.scss';
+
+/*---------------------------------------------------------
+*
+---------------------------------------------------------*/
+@import 'widgets/_icomoon.scss';
+@import 'widgets/_select2.scss';
+@import 'widgets/_price_slider.scss';
+@import 'widgets/_slider.scss';
+
+/*---------------------------------------------------------
+*
+---------------------------------------------------------*/
+@import 'pages/_pages.scss';
+@import 'pages/_page-home.scss';
+@import 'pages/_property.scss';
+
+/*---------------------------------------------------------
+*
+---------------------------------------------------------*/
+@import 'theme/_inputs.scss';
+@import 'theme/_buttons.scss';
+@import 'theme/_border-radius.scss';
+@import 'theme/_forms.scss';
+
+@import '_members.scss';
+
+@import '_style.scss';
+@import "../../shared/sass/utils";
+@import 'theme/_main.scss';
+@import 'widgets/_property-grid.scss';

@@ -1,0 +1,38 @@
+/*-----------------------------------------
+* HTML DEFAULTS
+-----------------------------------------*/
+input{
+  -webkit-border-radius:0;
+  border-radius:0;
+}
+.slick-arrow,
+.slick-initialized .slick-slide,
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+a,
+a:focus,
+input,
+select,
+button,
+textarea{
+  outline: inherit;
+}
+input,
+input[type='submit'],
+button{
+  &:focus{
+      outline: inherit;
+  }
+}
+a:focus{
+  text-decoration: none;
+}
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+/*-----------------------------------------
+* VIDEO JS
+-----------------------------------------*/
+.mejs-overlay-loading { display: none; }

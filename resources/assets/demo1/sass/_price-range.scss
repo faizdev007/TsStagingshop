@@ -1,0 +1,187 @@
+.price-range-slider {
+    width: 100%;
+    float: left;
+    padding: 10px 15px 20px;
+    background: #ffffff;
+
+}
+
+.price-range-slider.price-range-slider {
+    display: inline-block;
+    position: unset;
+    top: unset;
+    background-color: #f2f2f2;
+    padding-top: 0;
+    max-width: 300px;
+}
+
+.price-range-slider.filter-range-down {
+    padding-bottom: 0;
+}
+
+.price-range-slider.filter-range-down .clear {
+    background: transparent;
+    padding: 0 10px;
+    display: inline-block;
+    line-height: 40px;
+}
+
+.price-range-slider.filter-range-down .submit {
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.price-range-slider.filter-range-down .submit-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+}
+
+.price-range-slider .range-value {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.price-range-slider .range-value #filter-amount2,
+.price-range-slider .range-value #amount2 {
+    text-align: right;
+}
+
+.price-range-slider .range-value input {
+    width: 50%;
+    display: inline-block;
+    background: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: initial;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    margin: 20px 0 20px 0;
+}
+
+.price-range-slider .range-value input:focus {
+    outline: 0;
+    border: 0;
+}
+#alert-search-range .price-range-slider .range-bar {
+     border: none;
+      border: 0px;
+}
+
+#alert-search-range .price-range-label input#amounts,#alert-search-range .price-range-label input#amounts2 {border: none;background: none;width: 120px;}
+
+.property-alert .price-range-label {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+#alert-search-range .price-range-slider .range-bar {
+     border: none;
+      border: 0px;
+}
+
+.price-range-slider .range-bar {
+    border: none;
+    background: #000;
+    height: 3px;
+    width: 96%;
+    margin-left: 8px;
+}
+
+.price-range-slider .range-bar .ui-slider-range {
+    background: #91989f;
+}
+
+.price-range-slider .range-bar .ui-slider-handle {
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    border: 2px solid $primary_color2;
+    height: 17px;
+    width: 17px;
+    top: -0.52em;
+    cursor: pointer;
+}
+
+.price-range-slider .range-bar .ui-slider-handle {
+    background:  $primary_color2;
+}
+
+.price-range-slider .range-bar .ui-slider-handle:focus {
+    border: 0;
+    outline: 0;
+}
+
+/* .filters-price */
+.filters-price {
+    appearance: none;
+  
+}
+
+
+.filters-price .range-value input {
+    color: #202023 !important;
+}
+
+
+
+.filters-price {
+    max-width: 280px;
+    line-height: 64px;
+}
+
+.filters-price .dropdown {
+    z-index: 99;
+    display: none;
+    position: absolute;
+    top: 100%;
+       @media (max-width: 767px){
+        right: 0;
+        }
+}
+
+.filters-price {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    padding: 0 15px;
+    // background-image: url(../images/common/angles/down-dark.svg); // Image doesn't exist, so I've uncommented this. RH
+    background-position: 95% 30px;
+    background-repeat: no-repeat;
+}
+
+.filters-price span {
+    display: inline-block;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    line-height: 1.71;
+    letter-spacing: -0.3px;
+    padding-bottom: 5px;
+  
+}
+.select.filters-single.filters-price.search_form_mobile{
+        background: #ffffff;
+        line-height: 26px;
+        text-align: left;
+        padding-left: 24px;
+        padding-right: 30px;
+        font-weight: 600;
+        font-size: 13px;
+        color: #252525;
+        border: none;
+    }
+.filters-price.active .dropdown {
+    display: block;
+}

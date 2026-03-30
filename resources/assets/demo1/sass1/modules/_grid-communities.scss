@@ -1,0 +1,174 @@
+/*-----------------------------------------
+* Communities Grid
+-----------------------------------------*/
+.communities-grid{
+    $height: 305px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    .-image-box{
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: ' ';
+            display: block;
+            background: rgb(17 17 17 / 30%);
+            z-index: 1;
+          }
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: $height;
+        }
+    }
+    .-label{
+        @include transitionData(.3s);
+        @include OpacityPW(1);
+        z-index: 1;
+        position: absolute;
+        bottom: 90px;
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    .-hb-title{
+        position: relative;
+        color: $white;
+        top: 40px;
+        font-size: 30px;
+        font-weight: 400;
+        border-bottom: 1px solid $white;
+        line-height: 1em;
+        padding-bottom: 15px;
+    }
+
+    .-hover-box{
+        @include transitionData(.3s);
+        position: absolute;
+        //bottom: -160px;
+        bottom: -$height;
+        z-index: 1;
+        color: $white;
+        width: 100%;
+        height: $height;
+        background: rgb(68 140 203 / 0%);
+        .-hb-wrap{
+            padding: 0 25px;
+        }
+
+        .-hb-shortlist{
+            @include OpacityPW(0);
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            a{
+                color: $white;
+                font-size: 25px;
+                &:hover{
+                    color: $primary_color1;
+                }
+            }
+        }
+        .-hb-cta{
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            width: 100%;
+            a{
+                background-color: transparent;
+                color: $white;
+                border: 1px solid $white;
+                border-radius: 50px;
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: 600;
+                display: inline-block;
+                width: 100%;
+                max-width: 160px;
+                text-align: center;
+                padding: 12px 10px;
+                &:hover{
+                    background-color: $primary_color1_hover;
+                }
+            }
+        }
+    }
+    &:hover{
+        .-label{
+            @include OpacityPW(0);
+        }
+        .-hover-box{
+            background: rgb(68 140 203 / 88%);
+            bottom: 0;
+            .-hb-shortlist{
+                @include OpacityPW(1);
+            }
+            .-hb-attr{
+                @include OpacityPW(1);
+            }
+        }
+    }
+
+    @media (max-width: 1329px){
+       .-hb-title{
+            font-size: 23px;
+        }
+    }
+
+    @media (max-width: 991px){
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 500px){
+        $height: 222px;
+        .-image-box img{
+            height: $height;
+        }
+        .-hover-box{
+            height: $height;
+            bottom: -$height;
+        }
+        .-hover-box .-hb-cta{
+            bottom: 20px;
+            a{
+                max-width: 120px;
+            }
+        }
+    }
+
+}
+
+/* Section style
+-----------------------------------------*/
+.communuties-box-1{
+    margin-bottom: 65px;
+    >.row{
+        margin-left: -6px;
+        margin-right: -6px;
+        >div{
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+    .communities-grid{
+        margin-bottom: 16px;
+    }
+    @media (max-width: 767px){
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (max-width: 550px){
+        >.row{
+            >div{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

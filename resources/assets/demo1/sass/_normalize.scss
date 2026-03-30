@@ -1,0 +1,63 @@
+/*-----------------------------------------
+* HTML DEFAULTS
+-----------------------------------------*/
+input{
+  -webkit-border-radius:0;
+  border-radius:0;
+}
+/* purgecss start ignore */
+.slick-arrow,
+.slick-initialized .slick-slide,
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+a,
+a:focus,
+input,
+select,
+button,
+textarea{
+  outline: inherit;
+}
+/* purgecss end ignore */
+input,
+input[type='submit'],
+button{
+  &:focus{
+      outline: inherit;
+  }
+}
+a:focus{
+  text-decoration: none;
+}
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
+.n-ul{
+  ul{
+    margin: 0;
+    padding: 0;
+    >li{
+      list-style-type: none;
+    }
+  }
+}
+
+/*-----------------------------------------
+* VIDEO JS
+-----------------------------------------*/
+.mejs-overlay-loading { display: none; }
+
+/*-----------------------------------------
+* NORMALIZE BOOTSTRAP GRID
+-----------------------------------------*/
+.n-row{
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+    .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

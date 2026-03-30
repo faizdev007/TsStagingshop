@@ -1,0 +1,151 @@
+/* Buttons / CTA's
+----------------------------------------- */
+.cta, .button
+{
+    @include transitionData(0.3s);
+    text-align: center;
+    padding: 13px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 38px;
+    padding-right: 38px;
+    border: 0;
+    letter-spacing: 1px;
+    &.-normal{
+        width: 100%;
+        max-width: 150px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &.-width-224{
+        width: 100%;
+        max-width: 224px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &.-width-full{
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &.-search{
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    &.-default{
+        border: 1px solid $secondary1;
+        color: $gray;
+        &:hover {
+            color: $white;
+            background-color: $secondary1;
+        }
+        &.-left-liner{
+            position: relative;
+            margin-left: 25px;
+            &::before {
+                position: absolute;
+                top: 22px;
+                left: -25px;
+                width: 40px;
+                height: 1px;
+                content: ' ';
+                display: block;
+                background: $light-brown;
+                z-index: 1;
+            }
+        }
+    }
+    &.-default-2{
+        border: 1px solid $white;
+        color: $white;
+        background-color: transparent;
+        letter-spacing: 1px;
+        padding-left: 55px;
+        padding-right: 55px;
+        &:hover {
+            color: $gray;
+            background-color: $secondary1;
+        }
+        &.-left-liner{
+            position: relative;
+            margin-left: 25px;
+            &::before {
+                position: absolute;
+                top: 22px;
+                left: -25px;
+                width: 40px;
+                height: 1px;
+                content: ' ';
+                display: block;
+                background: $white;
+                z-index: 1;
+            }
+        }
+    }
+    &.-default-3{
+        border: 1px solid $gray;
+        color: $gray;
+        background-color: transparent;
+        &:hover {
+            color: $white;
+            background-color: $gray
+        }
+        &.-left-liner{
+            position: relative;
+            margin-left: 25px;
+            &::before {
+                position: absolute;
+                top: 22px;
+                left: -25px;
+                width: 40px;
+                height: 1px;
+                content: ' ';
+                display: block;
+                background: $gray;
+                z-index: 1;
+            }
+        }
+    }
+    &.-primary {
+        background: $primary_color1;
+        color: $white;
+    }
+    &.-secondary {
+        border: 1px solid $secondary1;
+        background: $secondary1;
+        color: $white;
+        &:hover {
+            border: 1px solid $secondary1;
+            color: $gray;
+            background: $white;
+        }
+    }
+    &.-secondary-2 {
+        background: $secondary2;
+        color: $white;
+        &:hover {
+            background: $secondary2_hover;
+        }
+    }
+    &.-gray-2 {
+        background: $gray-2;
+        color: $white ;
+        &:hover {
+            background: $secondary1;
+        }
+    }
+    &.-text-1 {
+        background: $text-1;
+        color: $white ;
+        &:hover {
+            background: $text-1_hover;
+        }
+    }
+    @media (max-width: 1199px){
+        &.-size-xlg{
+            padding: 10px 20px;
+        }
+    }
+}

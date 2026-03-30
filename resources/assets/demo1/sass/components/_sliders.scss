@@ -1,0 +1,349 @@
+/*-----------------------------------------
+* SLICK VARIABLE - Arrow
+-----------------------------------------*/
+.slick-arrow-variables{
+    .slick-arrow{
+        position: absolute;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        color: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background-color: rgba(0,0,0,0);
+        outline: none;
+
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+
+        @include transitionData(.1s);
+        cursor: pointer;
+
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            color: $gray;
+            font-size: 27px;
+            font-weight: 900;
+            text-shadow: 0px 0px 4px #e0e0e0;
+        }
+        &:hover{
+            &.slick-prev{
+                left: 10px;
+            }
+            &.slick-next{
+                right: 10px;
+            }
+        }
+    }
+    .slick-prev{
+        left: 15px;
+        z-index: 1;
+        &:before{
+            content: "\f104";
+            float: left;
+            padding-right: 3px;
+        }
+    }
+
+    .slick-next{
+        right: 15px;
+        z-index: 1;
+        &:before{
+            content: "\f105";
+            float: right;
+            padding-left: 3px;
+        }
+    }
+}
+
+/*-----------------------------------------
+* SLICK VARIABLE - dots
+-----------------------------------------*/
+.slick-dots-variables{
+    .slider-controls{
+        text-align: center;
+        .slide-m-dots{
+            width: auto;
+            max-width: 100%;
+            display: inline-block;
+            position: relative;
+            padding: 0 37px;
+            .slick-arrow{
+                position: absolute;
+                background-color: rgba(0,0,0,0);
+                color: transparent;
+                border: 0;
+                width: 37px;
+                height: 50px;
+                &:before{
+                    font-family: 'Font Awesome 5 Free';
+                    color: #fff;
+                    font-size: 34px;
+                    font-weight: 900;
+                }
+            }
+            .slide-m-prev{
+                left: 0;
+                &:before{
+                    content: "\f104";
+                    float: left;
+                }
+            }
+            .slide-m-next{
+                right: 0;
+                &:before{
+                    content: "\f105";
+                    float: right;
+                }
+            }
+        }
+    }
+    .slick-dots,
+    .slick-m-dots {
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    	margin: 0;
+    	padding: 1.1rem 0;
+    	list-style-type: none;
+        li {
+            display: inline-block;
+            margin: 0 0.25rem;
+        }
+        button {
+            cursor: pointer;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            background-color: #d3d3d3;
+            text-indent: -9999px;
+        }
+        li.slick-active button {
+            background-color: $primary_color1;
+        }
+    }
+}
+
+/* Home slides...
+----------------------------------------- */
+.home-slider--section{
+
+    .home-slider--form-wrap{
+        &.-mobile{
+            display: none;
+        }
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .home-slider--content{
+        bottom: 0;
+        right: 0;
+
+        z-index: 2;
+        display: block;
+
+        /*
+        ----------------------------------------- */
+        li {
+            display: inline-block;
+            width: 100%;
+            max-width: 60px;
+            margin-right: 12px;
+            .slider-progress {
+                width: 100%;
+                height: 3px;
+                background: rgb(255 255 255 / 30%);
+                .progress {
+                    width: 0%;
+                    height: 3px;
+                    background: $white;
+                }
+            }
+            
+        }
+        li.home-slider--arrow-left {
+            width: 7px;
+            .home-prev{
+                display: block;
+                width: 7px;
+                height: 13px;
+                cursor: pointer;
+            }
+        }
+        li.home-slider--arrow-right {
+            width: 7px;
+            .home-next{
+                display: block;
+                width: 7px;
+                height: 13px;
+                cursor: pointer;
+            }
+        }
+    }
+
+   
+
+
+    .home-slider--slick{
+        .home-slider--image-wrap{
+            //z-index: -1;
+        }
+        .home-slider--image{
+            height: 560px;
+            background-color: white;
+            img{
+                @include OpacityPWi(1);
+                filter: brightness(0.75);
+            }
+        }
+        .home-slider--sn{
+            position: absolute;
+            top: 25%;
+            right: 0;
+            width: 100%;
+            .vertical-sn{
+                position: relative;
+                right: -60px;
+            }
+        }
+
+        @media(max-width: 1300px){
+            .home-slider--sn{
+                .vertical-sn{
+                    right: 0;
+                }
+            }
+        }
+        @media(max-width: 1199px){
+            .home-slider--content{
+                bottom: 0;
+            }
+            .home-slider--controllers{
+                position: relative;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+        }
+        @media(max-width: 767px){
+            .home-slider--image {
+                height: 555px;
+            }
+        }
+        @media(max-width: 575px){
+            .home-slider--controllers{
+                bottom: 150px;
+                .home-slider--controller{
+                    //margin-bottom: 10px;
+                    margin-bottom: 0;
+                }
+                .home-slider--arrow-left,
+                .home-slider--arrow-right{
+                    display: none;
+                }
+                .home-slider--dot{
+                    &.-mobile{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        @media(max-width: 500px){
+            .home-slider--image {
+                //height: 515px;
+
+            }
+            .home-slider--title{
+
+            }
+        }
+    }
+    .home-slider--controllers{
+        .home-slider--controller{
+            margin-bottom: 28px;
+        }
+        .home-slider--arrow-left,
+        .home-slider--arrow-right{
+            display: inline-block;
+            width: 7px;
+            height: 13px;
+            position: relative;
+            top: 5px;
+        }
+        .home-slider--arrow-left{
+            background-image: url('/public/assets/demo1/images/conrad-images/slide-arrow-left.png');
+            margin-right: 6px;
+        }
+        .home-slider--arrow-right{
+            background-image: url('/public/assets/demo1/images/conrad-images/slide-arrow-right.png');
+        }
+        .home-slider--dot{
+            display: inline-block;
+            width: 100%;
+            max-width: 75px;
+            height: 2px;
+            //background-color: $white;
+            margin-right: 12px;
+            &.-mobile{
+                display: none;
+            }
+        }
+    }
+    @media(max-width: 991px){
+        .home-slider--form-wrap{
+            &.-mobile{
+                display: block;
+            }
+            &.-desktop{
+                display: none;
+            }
+        }
+    }
+}
+
+/* Destination Slide
+-----------------------------------------*/
+.destination-slider .slick-track > * {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+/* Property Slide
+-----------------------------------------*/
+.cSlider--single{
+    @extend .slick-arrow-variables;
+    .slick-arrow{
+        @include transitionData(.2s);
+        @include OpacityPW(.5);
+        &:hover{
+            @include OpacityPW(1);
+        }
+    }
+    .slick-arrow:before{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background-size: 56px;
+        background-position: center;
+        font-family: none !important;
+        color: transparent !important;
+    }
+    .slick-prev:before{
+        background-image: url('/public/assets/demo1/images/svg/arrow-left.svg');
+    }
+    .slick-next:before{
+        background-image: url('/public/assets/demo1/images/svg/arrow-right.svg');
+    }
+}

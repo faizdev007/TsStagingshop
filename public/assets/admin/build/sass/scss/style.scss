@@ -1,0 +1,33 @@
+/*
+  Author: Terezaestates
+  Version: 0.0.1
+*/
+
+/**********************************************************
+* BASE - Base styles
+**********************************************************/
+
+@import '_variables.scss';
+@import '_base.scss';
+@import '_mixin.scss';
+@import '_normalize.scss';
+
+/**********************************************************
+* MODULES - Modules styles
+**********************************************************/
+
+@import '_components.scss';
+@import '_forms.scss';
+@import '_sections.scss';
+@import '_animation.scss';
+@import '_pages.scss';
+
+/**********************************************************
+* LAYOUT - Layout styles
+**********************************************************/
+
+@import '_header.scss';
+@import '_utils.scss';
+@import '_footer.scss';
+@import '_responsive-login.scss';
+@import '_responsive-admin.scss';

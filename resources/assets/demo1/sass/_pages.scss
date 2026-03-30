@@ -1,0 +1,95 @@
+.search-page{
+    .inner-hero.property-hero{
+        padding: 5px 0 45px 0;
+        .search-form-home--container{
+            margin-top: 10px;
+        }
+    }
+    #mapToggle{
+        display: none;
+        // margin-top: 3rem;
+        // padding-top: 1rem;
+    }
+    .search--map{
+        height: 300px;
+    }
+    @media(max-width: 1199px){
+        .inner-hero.property-hero {
+            height: 350px;
+        }
+    }
+    @media(max-width: 991px){
+        .inner-hero.property-hero {
+            height: 350px;
+        }
+    }
+    @media(max-width: 767px){
+        .inner-hero.property-hero .search-form-home--container{
+            margin-top: -10px;
+        }
+        .product-wrp {
+            padding: 40px 0 0;
+        }
+        .inner-hero.property-hero {
+            //margin-bottom: 38px;
+            height: 350px;
+            padding: 3px 0 20px 0;
+        }
+        .inner-hero .search-form-home--container {
+            //position: relative;
+        }
+        #mapToggle{
+            // margin-top: 0.25rem;
+            padding-top: 0rem;
+        }
+    }
+    @media (max-width: 447px){
+        .inner-hero.property-hero {
+            margin: 0;
+        }
+    }
+}
+
+.page-detail{
+    .bread-block {
+        padding: 4px 0 7px 0;
+    }
+
+    @media (max-width: 500px){
+        .mobile-floating--cta{
+            z-index: 100;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.single-additional a.-primary.button.download-pdf{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.prod-data-slider-head {
+    display: flex;
+    justify-content: space-between;
+}
+    abbr[title]{
+        text-decoration: none;
+            padding: 0 6px;
+    }
+
+    select.select-pw {
+            border: none;
+    width: 96%;
+    line-height: 26px;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #252525;
+    }
+    .selling-hide{
+    display:none;
+    }

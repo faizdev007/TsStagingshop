@@ -1,0 +1,73 @@
+{
+  "_bootstrap-DL_yJSkE.js": {
+    "file": "assets/bootstrap-DL_yJSkE.js",
+    "name": "bootstrap",
+    "imports": [
+      "_vendor-B-7LdcQl.js"
+    ]
+  },
+  "_fancybox-Cc2EA-Iu.js": {
+    "file": "assets/fancybox-Cc2EA-Iu.js",
+    "name": "fancybox"
+  },
+  "_jquery-B2VgV-Nj.js": {
+    "file": "assets/jquery-B2VgV-Nj.js",
+    "name": "jquery"
+  },
+  "_vendor-B-7LdcQl.js": {
+    "file": "assets/vendor-B-7LdcQl.js",
+    "name": "vendor",
+    "imports": [
+      "_jquery-B2VgV-Nj.js"
+    ]
+  },
+  "public/assets/demo1/images/conrad-images/banners/inner-hero.png": {
+    "file": "assets/inner-hero-BZRnxGpA.png",
+    "src": "public/assets/demo1/images/conrad-images/banners/inner-hero.png"
+  },
+  "public/assets/demo1/images/conrad-images/join-us-bg.jpg": {
+    "file": "assets/join-us-bg-BpMDGMvP.jpg",
+    "src": "public/assets/demo1/images/conrad-images/join-us-bg.jpg"
+  },
+  "public/assets/demo1/images/conrad-images/slide-arrow-left.png": {
+    "file": "assets/slide-arrow-left-DHOw6yJR.png",
+    "src": "public/assets/demo1/images/conrad-images/slide-arrow-left.png"
+  },
+  "public/assets/demo1/images/conrad-images/slide-arrow-right.png": {
+    "file": "assets/slide-arrow-right-DBrUnPOr.png",
+    "src": "public/assets/demo1/images/conrad-images/slide-arrow-right.png"
+  },
+  "public/assets/demo1/images/conrad-images/testimonial-bg.jpg": {
+    "file": "assets/testimonial-bg-4wY2YmMc.jpg",
+    "src": "public/assets/demo1/images/conrad-images/testimonial-bg.jpg"
+  },
+  "public/assets/demo1/images/svg/arrow-left.svg": {
+    "file": "assets/arrow-left-CUU_qkrn.svg",
+    "src": "public/assets/demo1/images/svg/arrow-left.svg"
+  },
+  "public/assets/demo1/images/svg/arrow-right.svg": {
+    "file": "assets/arrow-right--hB_wCnA.svg",
+    "src": "public/assets/demo1/images/svg/arrow-right.svg"
+  },
+  "resources/assets/demo1/js/app.js": {
+    "file": "assets/app-DnNz09kT.js",
+    "name": "app",
+    "src": "resources/assets/demo1/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery-B2VgV-Nj.js",
+      "_vendor-B-7LdcQl.js",
+      "_fancybox-Cc2EA-Iu.js",
+      "_bootstrap-DL_yJSkE.js"
+    ]
+  },
+  "resources/assets/demo1/sass/app.scss": {
+    "file": "assets/app-BIz2qgoY.css",
+    "src": "resources/assets/demo1/sass/app.scss",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  }
+}

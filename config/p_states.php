@@ -1,0 +1,30 @@
+<?php
+
+return [
+    //    -2 => 'Removed',
+
+    -1 => 'Inactive',
+    0 => 'Available',
+    1 => 'Archived',
+    2 => 'Request Availability',
+    3 => 'New Development',
+    4 => 'Resale',
+    5 => 'Post Handover Payment Plan',
+    6 => 'Featured',
+    7 => 'Exclusive',
+    8 => 'Premium',
+    9 => 'Signature',
+    10 => 'Price on Application',
+    11 => 'Ready to Move In',
+    12 => 'Coming Soon',
+    13 => 'Under Offer',
+    14 => 'For Rent',
+    15 => 'International',
+    16 => 'Sold / Request Similar',
+    17 => 'Rented / Request Similar',
+    18 => 'Handover Soon',
+    19 => 'Vacant on Transfer',
+    20 => 'Ras Al Khaimah',
+    21 => 'Under Contract',
+    22 => 'Abu Dhabi',
+];

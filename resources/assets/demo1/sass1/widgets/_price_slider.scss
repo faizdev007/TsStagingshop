@@ -1,0 +1,92 @@
+
+/* PRICE RANGE
+-----------------------------------------*/
+
+.search-price-range{
+    position: relative;
+    .price_toggle{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 80;
+    }
+}
+
+.top-search {
+    .search-price-range .price-range-container{
+        background-color: $secondary_color1;
+        position: absolute;
+        width:350px;
+        margin-left: 0;
+        margin-top: 5px;
+        z-index: 1;
+        height: auto;
+        display: none;
+        right: 0;
+        padding: 16px 10px 16px 10px;
+    }
+
+    @media (max-width: 500px){
+        .search-price-range{
+            .price-range-container{
+                width: 280px;
+                padding: 16px 3px;
+            }
+            .price-slider{
+                float: none;
+                width: 92%;
+                margin: 6px 10px 7px 10px;
+            }
+            .min-price-slider,
+            .max-price-slider {
+               font-size: 11px;
+               float: none;
+               width: 100%;
+            }
+
+        }
+    }
+
+}
+.search-price-range{
+    .price-range-container .price-range-hide{
+        display: none;
+    }
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default{
+        background-color: #fff;
+        width: 5px;
+        border-radius: 0;
+        margin-left: -1px;
+        border:0;
+        height: 20px;
+        outline:none;
+        cursor: pointer;
+    }
+    .ui-slider-horizontal .ui-slider-handle {
+        top: -8px;
+    }
+    a:hover,
+    a:focus,
+    a:active{
+        text-decoration: none;
+    }
+    .min-price-slider,
+    .max-price-slider{
+        float: left;
+        width: 25%;
+        color: #fff;
+        font-size:14px;
+        text-align: center;
+    }
+    .price-slider{
+        float: left;
+        width: 43%;
+        height: 4px;
+        border-radius: 0;
+        margin: 6px 10px 0 10px;
+    }
+}

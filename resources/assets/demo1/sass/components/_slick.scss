@@ -1,0 +1,79 @@
+.slick {
+    &-dots {
+        display        : flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin         : 0 !important;
+
+        @media (max-width:992px) {
+            justify-content: center;
+        }
+
+        li {
+            margin: 0 3px;
+
+            &.slick-active {
+                button {
+                    background: $primary_color1;
+                }
+            }
+
+            button {
+                font-size    : 0;
+                height       : 14px;
+                width        : 14px;
+                border-radius: 50%;
+                border       : 1px solid $gray-9;
+                background   : $gray-9;
+            }
+        }
+    }
+
+    &-arrow {
+        position  : absolute;
+        top       : 50%;
+        transform : translateY(-50%);
+        border    : 0;
+        font-size : 0;
+        width     : 33px;
+        height    : 33px;
+        z-index   : 1;
+        cursor    : pointer;
+        background: transparent;
+
+        &:before {
+          /*  position     : absolute;
+            content      : '';
+            height       : 19px;
+            width        : 19px;
+            border       : 3px solid $gray;
+            border-left  : 0;
+            border-bottom: 0;
+            transform    : rotate(45deg);
+            border-radius: 2px;
+            left         : 1px;
+            top          : 8px;
+            */
+        }
+    }
+
+    &-prev {
+        left : 0;
+        right: auto;
+
+        &:before {
+           // transform: rotate(-135deg);
+        }
+    }
+
+    &-next {
+        left : auto;
+        right: 0;
+    }
+
+    &-disabled {
+        opacity: 0.2;
+    }
+
+
+}

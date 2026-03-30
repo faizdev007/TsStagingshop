@@ -1,0 +1,504 @@
+body{
+  font-family: $font1;
+  -webkit-font-smoothing: antialiased;
+  color:#252525;
+}
+
+.clear{
+  clear:both;
+}
+
+span.primary-color{
+    color: $primary_color1;
+}
+
+section {
+
+}
+
+button {
+    border: none;
+}
+
+.border-style{
+    height: 2px;
+    background: $white;
+    width: 100%;
+    max-width: 104px;
+    margin: 16px auto auto;
+    &.-thicker {
+        height: 4px;
+        max-width: 60px;
+    }
+}
+
+button[type='submit'],
+input[type='submit'],
+a{
+    @include transitionData(.1s);
+}
+
+.pw-datepicker{
+    cursor: pointer;
+}
+
+/*-----------------------------------------
+* FULL WIDTH IMAGE
+-----------------------------------------*/
+.fill{
+    span{
+        //display: none;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ----------------------------------------
+*   FORMS
+----------------------------------------- */
+
+/* ----------------------------------------
+*   FORMS
+----------------------------------------- */
+.form-group {
+    &.has-error {
+        input, textarea {
+            border: 1px solid $red !important;
+            box-shadow: none;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+    &.has-success {
+        input, textarea {
+            border: 1px solid $green !important;
+            box-shadow: none;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+    &.-has-label {
+        .form-control-feedback {
+            top: 40px;
+        }
+    }
+}
+
+.has-error .form-control-feedback {
+    color: $red;
+}
+.has-success .form-control-feedback {
+    color: $green;
+}
+.form-control-feedback {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+#ajax-form-property-alert-form {
+    .form-control-feedback {
+        top: 12px;
+    }
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+
+
+/*-----------------------------------------
+* IMAGE HOVER
+-----------------------------------------*/
+.image-hover{
+    img{
+        @include transitionData(.2s);
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
+
+/*-----------------------------------------
+* FORCE FIX ONE LINE
+-----------------------------------------*/
+.fix-line{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*-----------------------------------------
+* GO CENTER
+-----------------------------------------*/
+.go-center{
+    white-space: nowrap;
+    //margin: 0;
+    text-align: center;
+    filter: brightness(0.7);
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        margin: 0 0 0 -6px;
+    }
+    img, h1, h2, > div{
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*-----------------------------------------
+* Vertical align
+-----------------------------------------*/
+.pw-aligner{
+    display: flex;
+    align-items: center;
+}
+
+.pw-aligner-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------------------------------------
+* clear
+-----------------------------------------*/
+.clear-float{
+    &:before,
+    &:after{
+        content: " ";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+/*-----------------------------------------
+* SLICK LOADER
+-----------------------------------------*/
+img.slick-lazyload-error,
+img.slick-loading {
+    background: transparent url('../images/loader-75px.gif') no-repeat center;
+    height: 75px;
+    color: transparent;
+}
+
+/*-----------------------------------------
+* SLICK VARIABLE - Arrow
+-----------------------------------------*/
+.slick-arrow-variables{
+    .slick-arrow{
+        position: absolute;
+        top:0;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        color: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background-color: rgba(0,0,0,0);
+        outline: none;
+
+        font-family: "Font Awesome 5 Free";
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+
+        @include transitionData(.1s);
+        cursor: pointer;
+
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            font-size: 40px;
+            font-weight: 900;
+            color: #fff;
+
+        }
+        &:hover{
+            &.slick-prev{
+                left: 10px;
+            }
+            &.slick-next{
+                right: 10px;
+            }
+        }
+    }
+
+    .slick-prev{
+        left: 15px;
+        z-index: 1;
+        &:before{
+            content: "\f053";
+            float: left;
+        }
+    }
+
+    .slick-next{
+        right: 15px;
+        z-index: 1;
+        &:before{
+            content: "\f054";
+            float: right;
+        }
+    }
+}
+
+/*-----------------------------------------
+* SLICK VARIABLE - dots
+-----------------------------------------*/
+.slick-dots-variables{
+    .slider-controls{
+        text-align: center;
+        .slide-m-dots{
+            width: auto;
+            max-width: 100%;
+            display: inline-block;
+            position: relative;
+            padding: 0 37px;
+            .slick-arrow{
+                position: absolute;
+                background-color: rgba(0,0,0,0);
+                color: transparent;
+                border: 0;
+                width: 37px;
+                height: 50px;
+                &:before{
+                    font-family: 'Font Awesome 5 Free';
+                    color: #fff;
+                    font-size: 34px;
+                    font-weight: 900;
+                }
+            }
+            .slide-m-prev{
+                left: 0;
+                &:before{
+                    content: "\f104";
+                    float: left;
+                }
+            }
+            .slide-m-next{
+                right: 0;
+                &:before{
+                    content: "\f105";
+                    float: right;
+                }
+            }
+        }
+    }
+    .slick-dots,
+    .slick-m-dots {
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    	margin: 0;
+    	padding: 1.1rem 0;
+    	list-style-type: none;
+        li {
+            display: inline-block;
+            margin: 0 0.25rem;
+        }
+        button {
+            cursor: pointer;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            background-color: #d3d3d3;
+            text-indent: -9999px;
+            color: transparent;
+        }
+        li.slick-active button {
+            background-color: $white;
+        }
+    }
+}
+
+/*-----------------------------------------
+* LIST VARIABLE
+-----------------------------------------*/
+.ul-attr{
+    padding: 0;
+    margin: 0;
+}
+
+ul.ul-col{
+    padding: 0;
+    margin: 0;
+    > li{
+        float: left;
+        display: inline-block;
+    }
+}
+
+/*-----------------------------------------
+* FIELD VARIABLE
+-----------------------------------------*/
+.input-fields{
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea{
+      outline: transparent;
+      width: 100%;
+      border: 0;
+      padding: 0px 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    select{
+      height: 42px;
+    }
+    button, input[submit]{
+      border:0;
+    }
+}
+
+/*-----------------------------------------
+* ICONS
+-----------------------------------------*/
+.icon-play{
+    font-style: normal;
+    .path1:before {
+        color: rgb(255, 255, 255);
+        font-style: normal;
+    }
+    .path2:before {
+        color: rgb(255, 255, 255);
+        font-style: normal;
+    }
+}
+
+/*-----------------------------------------
+* InfoWindow
+-----------------------------------------*/
+button.gm-ui-hover-effect{
+    opacity: 1 !important;
+    background-color: $secondary_color1 !important;
+    border-radius: 100%;
+    color: $white;
+    &:hover{
+        background-color: $secondary_color1_hover !important;
+    }
+    >img{
+        display: none !important;
+    }
+    &:before{
+        font-style: normal;
+        position: relative;
+        font-family: 'Font Awesome 5 Free';
+        content: "\f00d";
+        color: $white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+}
+.gm-style .gm-style-iw-c{
+    overflow: visible !important;
+}
+.info-window{
+    .divider{
+        border-bottom: 1px solid #c9c9c9;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+    .iw-icon{
+        overflow: hidden;
+    }
+    @media (max-width: 414px){
+        width: 150px !important;
+        overflow-x: hidden;
+        .iw-icon img {
+            max-width: 100% !important;
+        }
+    }
+}
+
+/*-----------------------------------------
+* Container style 1
+-----------------------------------------*/
+.container-style-1{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    max-width: 1560px;
+    @media (max-width: 1590px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media (max-width: 500px){
+        //padding-left: 15px;
+        //padding-right: 15px;
+    }
+}
+
+.article-page .article-banner img {
+    width: 100%;
+}
+
+/*-----------------------------------------
+* HIDE SHOW
+-----------------------------------------*/
+.hide{
+    display: none !important;
+}
+
+@media (max-width: 1199px) {
+    .show-1199{
+        display: block !important;
+    }
+    .hide-1199{
+        display: none !important;
+    }
+}
+
+@media (max-width: 1129px) {
+    .show-1129-table-cell{
+        display: table-cell !important;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .show-991{
+        display: block !important;
+    }
+    .show-991-i{
+        display: inline-block !important;
+    }
+    .hide-991{
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .show-767{
+        display: block !important;
+    }
+    .hide-767{
+        display: none !important;
+    }
+}

@@ -1,0 +1,199 @@
+/*-------------------------------
+* TABLES
+--------------------------------*/
+.pw-table{
+    table{
+        tbody{
+            tr{
+                td{
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    &.table-responsive{
+        padding: 10px 5px;
+        table{
+            min-width: 856px;
+        }
+        .pagination {
+            min-width: 460px;
+        }
+    }
+}
+
+
+.required{
+    color: #fd0000;
+}
+
+/*-------------------------------
+* BREADCRUMBS
+--------------------------------*/
+.breadcrumbs{
+    text-align: right;
+    a{
+        font-weight: 700;
+    }
+}
+
+
+/*-------------------------------
+* VIDEO DISPLAY
+--------------------------------*/
+.video-display{
+    text-align: center;
+    background-color: #eaeaea;
+    //padding: 30px;
+    iframe{
+        width: 100%;
+        margin: auto;
+        height: 500px;
+    }
+}
+
+/*-------------------------------
+* THUMBNAIL
+--------------------------------*/
+.thumbnail.pw{
+    height: 268px;
+    position: relative;
+    .pw-checkbox{
+        text-align: right;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        padding: 5px 8px 0px 5px;
+        .icheckbox_flat-green,
+        .iradio_flat-green{
+        //  background: url('../../../vendors/iCheck/skins/flat/green-1.png') no-repeat;
+        }
+    }
+    .image {
+        @extend .go-center;
+        height: 170px;
+        background-color: #f7f7f7;
+        &.view .tools {
+            margin: 72px 0 0 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        img{
+            margin: auto;
+            cursor: move;
+            height: 100%;
+        }
+        i{
+            font-size: 50px;
+        }
+    }
+    .caption{
+        min-height: 87px;
+        padding: 9px 9px 0px 9px;
+        textarea{
+            width: 100%;
+            height: 57px;
+            border: 0;
+            &:active,
+            &:focus{
+                border: 1px solid #b1b1b1;
+                outline-style: solid;
+                outline-width: 0;
+            }
+        }
+        .pmc-loading{
+            display: none;
+            text-align: right;
+            color: #c3c3c3;
+            font-weight: 300;
+        }
+    }
+}
+
+/*-------------------------------
+* MCE EDITOR
+--------------------------------*/
+.mceEditor{
+    height: 200px;
+    &.description{
+        height: 250px;
+    }
+}
+
+/*-------------------------------
+* TAG EDITOR
+--------------------------------*/
+.tagEditor-style-1.style-1{
+    &+.tag-editor{
+        padding: 5px 3px;
+        .tag-editor-tag{
+            border-radius: 10px 0 0 10px;
+            padding: 5px 5px 5px 16px;
+        }
+        .tag-editor-delete{
+            border-radius: 0 10px 10px 0;
+            padding: 5px 16px 5px 5px;
+        }
+    }
+}
+
+/*-------------------------------
+* DROPZONE
+--------------------------------*/
+.dropzone.v1{
+    min-height: 76px;
+    .dz-message {
+        margin: 1em 0;
+    }
+    .dz-preview .dz-error-message {
+        top: 150px!important;
+    }
+}
+
+
+/*-------------------------------
+* STICK BUTTONS
+--------------------------------*/
+.sticky-buttons {
+    position: fixed;
+    bottom: 50px;
+    right: 16px;
+    margin: 0;
+    padding: 16px;
+    z-index: 10000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background: #fff;
+    .btn{
+        margin-bottom: 0 !important;
+    }
+}
+
+/*-------------------------------
+* SELECT2
+--------------------------------*/
+.select2.select2-container{
+    width: 100% !important;
+}
+/*-------------------------------
+* TABS
+--------------------------------*/
+
+ul.bar_tabs{
+    >li{
+        &.active a {
+            border-bottom: none;
+        }
+        a{
+            span.counter{
+                background-color: #3a85bf;
+                color: #fff;
+                padding: 2px 6px;
+                font-size: 11px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

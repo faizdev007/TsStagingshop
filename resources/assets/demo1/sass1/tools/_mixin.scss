@@ -1,0 +1,164 @@
+@mixin linearGradient($left, $right, $leftP, $rightP){
+  background: -moz-linear-gradient(90deg,  $left $leftP,  $right $rightP, $right 80%);
+  background: -webkit-linear-gradient(90deg, $left $leftP,  $right $rightP, $right 80%);
+  background: linear-gradient(90deg, $left $leftP,  $right $rightP, $right 80%);
+}
+
+@mixin hozizontalGradient($color1, $p1, $color2, $p2){
+  background: -webkit-linear-gradient($color1 $p1, $color2 $p2);
+  background: -o-linear-gradient($color1 $p1, $color2 $p2);
+  background: linear-gradient($color1 $p1, $color2 $p2);
+}
+@mixin objectRotate($degree){
+  -ms-transform: rotate($degree); /* IE 9 */
+  -webkit-transform: rotate($degree); /* Chrome, Safari, Opera */
+  transform: rotate($degree);
+}
+
+@mixin placeholderStyle1($color, $size, $weight){
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    opacity: 1;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    opacity: 1;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    opacity: 1;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    opacity: 1;
+  }
+}
+
+@mixin placeholderStyle2($color, $size){
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $size;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $size;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $size;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $size;
+  }
+}
+
+
+@mixin placeholderStyle3($color, $size, $uppercase: true){
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $size;
+    font-weight: 300;
+    @if $uppercase {
+        text-transform: uppercase;
+    }
+  }
+}
+
+@mixin transitionData($seconds){
+  -webkit-transition: all $seconds ease-in-out;
+  -moz-transition: all $seconds ease-in-out;
+  -o-transition: all $seconds ease-in-out;
+  transition: all $seconds ease-in-out;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin text-shadow($x1:2px, $y1:2px, $blur1:5px, $color1:black, $x2:null, $y2:null, $blur2:null, $color2:null){
+  @if ($x2) {
+   text-shadow: $x1 $y1 $blur1 $color1, $x2 $y2 $blur2 $color2;
+  }
+  @else {
+    text-shadow: $x1 $y1 $blur1 $color1;
+  }
+}
+
+
+@mixin setWidth($width) {
+  -ms-flex: $width;
+  flex: $width;
+  max-width: $width;
+}
+
+@mixin OpacityPW($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin BlurryPW($value){
+    -webkit-filter: blur($value);
+    -moz-filter: blur($value);
+    -o-filter: blur($value);
+    -ms-filter: blur($value);
+    filter: blur($value);
+}
+
+@mixin scalePW($transforms) {
+    -webkit-transform: scale($transforms);
+    -moz-transform: scale($transforms);
+    -ms-transform: scale($transforms);
+    transform: scale($transforms);
+
+}
+
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
