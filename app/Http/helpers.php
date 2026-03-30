@@ -250,7 +250,7 @@ if (! function_exists('tidy_commas')) {
 if (! function_exists('admin_url')) {
     function admin_url($string='')
     {
-        $url = url('admin/'.$string);
+        $url = url('public/admin/'.$string);
         return $url;
     }
 }
@@ -392,7 +392,7 @@ if (! function_exists('storage_url')) {
         }elseif(preg_match('/^https?\:\/\//i', $string)){ // absolute url
             $url = $string;
         }else{
-            $url = url('storage/'.$string);
+            $url = url('public/storage/'.$string);
         }
         return $url;
     }
