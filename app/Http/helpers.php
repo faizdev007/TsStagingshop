@@ -66,7 +66,7 @@ if (! function_exists('themeAssets')) {
 
         $uri = implode('/', $a);
         $uri = ($uri != '' ? '/'.$uri : '');
-        $url = url('assets/'.$themeOptions.$uri);
+        $url = url('public/assets/'.$themeOptions.$uri);
 
         return $url;
     }
