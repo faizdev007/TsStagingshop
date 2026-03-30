@@ -66,7 +66,7 @@ if (! function_exists('themeAssets')) {
 
         $uri = implode('/', $a);
         $uri = ($uri != '' ? '/'.$uri : '');
-        $url = url('public/assets/'.$themeOptions.$uri);
+        $url = url(env('ASSET_URL').'assets/'.$themeOptions.$uri);
 
         return $url;
     }
@@ -250,7 +250,7 @@ if (! function_exists('tidy_commas')) {
 if (! function_exists('admin_url')) {
     function admin_url($string='')
     {
-        $url = url('public/admin/'.$string);
+        $url = url(env('ASSET_URL').'admin/'.$string);
         return $url;
     }
 }
@@ -392,7 +392,7 @@ if (! function_exists('storage_url')) {
         }elseif(preg_match('/^https?\:\/\//i', $string)){ // absolute url
             $url = $string;
         }else{
-            $url = url('public/storage/'.$string);
+            $url = url(env('ASSET_URL').'storage/'.$string);
         }
         return $url;
     }
