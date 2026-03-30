@@ -392,7 +392,7 @@ if (! function_exists('storage_url')) {
         }elseif(preg_match('/^https?\:\/\//i', $string)){ // absolute url
             $url = $string;
         }else{
-            $url = url('/public/storage/'.$string);
+            $url = url('public/storage/'.$string);
         }
         return $url;
     }
