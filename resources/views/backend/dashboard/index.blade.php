@@ -4,7 +4,7 @@
 @php $counters = get_top_counter(); @endphp
     <div class="row">
       <div class="col-md-12">
-        <h2>Last 5 Login Users</h2>
+        <h2>Last 5 Login User</h2>
       </div>
     </div>
     <div class="row">
