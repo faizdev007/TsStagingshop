@@ -149,7 +149,7 @@ Route::controller(PropertiesController::class)->group(function () {
     
     Route::get('/property/{property}/{propertyId}', 'property');
     Route::get('/property/{property}/{propertyId}/{currencytype}', 'propertysearchprice');
-    Route::get('/property-pdf/{property}/{propertyId}', 'property_pdf');
+    Route::get('/property-pdf/{property}/{propertyId}', 'generate_pdf');
     Route::get('/generate-pdf/{property}/{propertyId}', 'generate_pdf');
     Route::get('/property-primary-photo/{propertyId}', 'propertyPrimaryPhoto');
     
