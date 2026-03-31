@@ -901,7 +901,7 @@ class PropertiesController extends Controller
 
     }
 
-    public function generate_pdf(Request $request, $propertyUrl, $propertyId){
+    public function generate_pdf(Request $request, $propertyId){
         $property = Property::findOrFail($propertyId);
 
         $url = url('');
