@@ -155,10 +155,10 @@ var bLazy = new Blazy({
     selector: '.b-lazy-slick',
     error: function(ele, msg){
         if(msg === 'missing'){
-            ele.src = 'assets/demo1/images/placeholder/large.jpg'; // set placeholder image source if data-src is missing
+            ele.src = 'public/assets/demo1/images/placeholder/large.jpg'; // set placeholder image source if data-src is missing
         }
         else if(msg === 'invalid'){
-            ele.src = 'assets/demo1/images/placeholder/large.jpg'; // set placeholder image source if data-src is invalid
+            ele.src = 'public/assets/demo1/images/placeholder/large.jpg'; // set placeholder image source if data-src is invalid
         }
     }
 });
