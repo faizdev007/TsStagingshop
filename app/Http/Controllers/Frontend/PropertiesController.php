@@ -924,7 +924,7 @@ class PropertiesController extends Controller
             ->setPaper('A4', 'portrait');
 
         // ✅ Save PDF
-        $path = Storage::put('/properties/' . $property->id . '/propertybrochure.pdf', $pdf->output());
+        Storage::put('/properties/' . $property->id . '/propertybrochure.pdf', $pdf->output());
         $property->property_pdf_path = '/properties/' . $property->id . '/propertybrochure.pdf';
         $property->save();
         return $pdf->stream('propertybrochure.pdf');
