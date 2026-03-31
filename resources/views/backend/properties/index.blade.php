@@ -245,7 +245,7 @@
 
                                     @if($property->status != -1)
                                         @if(settings('pdf_view') == 1)
-                                            <a style="width: 100%;flex: inherit;" href="{{ url('property-pdf/view/'.$property->id) }}" target="_blank" class="btn btn-small btn-success download-pdf">PDF</a>
+                                            <a style="width: 100%;flex: inherit;" href="{{ url('generate-pdf/view/'.$property->id) }}" target="_blank" class="btn btn-small btn-success download-pdf">PDF</a>
                                         @endif
                                     @elseif(Auth::user()->role_id == 1 && $property->user_id != Auth::id() && $property->admin_approval == 0)
                                         <a style="width: 100%;flex: inherit;" onclick="return confirm('Are you sure you want to approve the property {{ $property->ref }} that was listed by {{ $property->user->name }}?')" href="{{ admin_url('approve-property/'.$property->id) }}" class="btn btn-small btn-success">Approve</a>

@@ -23,6 +23,7 @@ use App\Traits\PropertyBaseTrait;
 use App\Traits\HelperTrait;
 use App\Models\Community;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Validator;
 
@@ -898,6 +899,36 @@ class PropertiesController extends Controller
             return redirect(url('property/'.$propertyUrl.'/'.$propertyId));
         }
 
+    }
+
+    public function generate_pdf(Request $request, $propertyUrl, $propertyId){
+        $property = Property::findOrFail($propertyId);
+
+        $url = url('');
+        $asset = themeAsset();
+
+        $data['property'] = $property;
+        $data['url'] = $url;
+        $data['asset'] = $asset;
+
+        $html = view('frontend.shared.pdf.property-pdf')
+            ->with($data)
+            ->render();
+
+        $pdf = Pdf::setOptions([
+                'isHtml5ParserEnabled' => true,
+                'isRemoteEnabled' => true
+            ])
+            ->loadHTML($html)
+            ->setWarnings(false)
+            ->setPaper('A4', 'portrait');
+
+        // ✅ Save PDF
+        Storage::put('/properties/' . $property->id . '/propertybrochure.pdf', $pdf->output());
+
+        return response()->json([
+            'html' => $html
+        ]);
     }
 
 
