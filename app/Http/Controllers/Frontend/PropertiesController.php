@@ -923,11 +923,21 @@ class PropertiesController extends Controller
             ->setWarnings(false)
             ->setPaper('A4', 'portrait');
 
-        // ✅ Save PDF
-        Storage::put('/properties/' . $property->id . '/propertybrochure.pdf', $pdf->output());
-        $property->property_pdf_path = 'properties/' . $property->id . '/propertybrochure.pdf';
-        $property->pdf_created_at = $property->updated_at;
-        $property->save();
+        $path = 'properties/' . $property->id . '/propertybrochure.pdf';
+
+        Storage::disk('public')->put($path, $pdf->output());
+
+        // store original updated_at value
+        $originalUpdatedAt = $property->updated_at;
+
+        // disable timestamp update
+        $property->timestamps = false;
+
+        $property->update([
+            'property_pdf_path' => $path,
+            'pdf_created_at'   => $originalUpdatedAt,
+        ]);
+        
         return $pdf->stream('propertybrochure.pdf');
     }
 
