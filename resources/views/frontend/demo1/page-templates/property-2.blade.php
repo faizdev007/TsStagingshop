@@ -373,7 +373,7 @@
                             <div class="property-share-container">
                                 <ul class="-layout">
                                     @if(settings('pdf_view') == 1)
-                                    <li class="-psc-pdf f-three"><a href="{{ $property->pdf_url }}" target="_blank">DOWNLOAD PDF</a></li>@endif
+                                    <li class="-psc-pdf f-three"><a href="{{ isset($property->property_pdf_path) ? storage_url($property->property_pdf_path) : $property->pdf_url }}" target="_blank">DOWNLOAD PDF</a></li>@endif
                                     <li class="-psc-label f-three ">Share this listing</li>
                                     <li class="-psc-share"><a href="mailto:?Subject={{$property->details_headline_v2}}&amp;Body={{$property->url}}" class="-icon" target="_blank"><i class="fas fa-envelope"></i></a></li>
                                     <li class="-psc-share"><a href="https://twitter.com/share?url={{$property->url}}" class="-icon" target="_blank"><i class="fab fa-twitter"></i></a></li>

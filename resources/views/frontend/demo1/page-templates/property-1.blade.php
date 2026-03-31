@@ -170,7 +170,7 @@
 <!-- /.single-additional -->
                         @if(settings('pdf_view') == 1)
                             <div class="single-additional" style="margin-top: 30px;">
-                                <a href="{{ $property->pdf_url }}" class="-primary button download-pdf" target="_blank">
+                                <a href="{{ isset($property->property_pdf_path) ? storage_url($property->property_pdf_path) : $property->pdf_url }}" class="-primary button download-pdf" target="_blank">
                                     Download PDF
                                 </a>
                             </div>
