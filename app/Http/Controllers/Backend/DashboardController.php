@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Backend;
 
-use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Property;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -28,13 +29,15 @@ class DashboardController extends Controller
         {
             // Find The User's Role....
             $role_id = Auth::user()->role_id;
-
+            $login_history = User::whereNot('role_id',4)->select('id', 'role_id', 'name', 'email', 'last_login_at','last_login_ip')->orderBy('last_login_at', 'DESC')->take(5)->get();
+            
             // Do Dashboard Checks (Super Admin / Agents / Admin's can access this)....
             if($role_id <= 3)
             {
                 $data = array(
                     'bodyClass'=>'dashboard-index',
                     'pageTitle'=>'Dashboard',
+                    'login_history'=>$login_history
                 );
 
                 return view('backend.dashboard.index')->with($data);

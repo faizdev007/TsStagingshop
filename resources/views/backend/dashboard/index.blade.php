@@ -4,7 +4,25 @@
 @php $counters = get_top_counter(); @endphp
     <div class="row">
       <div class="col-md-12">
-        <h2>Last 5 Login User</h2>
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Last 5 Login User</h2>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <div class="">
+              <ul class="to_do pw">
+                @foreach($login_history as $history)
+                  <li>
+                    <div style="display: flex; justify-content: space-between;">
+                      <div><b>{{ $history->name }}</b> ( {{ $history->email }} )</div> <div> <strong> {{ \Carbon\Carbon::parse($history->last_login_at)->diffForHumans() }} </strong></div>
+                    </div>
+                  </li>
+                @endforeach
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
