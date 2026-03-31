@@ -933,9 +933,11 @@ class PropertiesController extends Controller
         // disable timestamp update
         $property->timestamps = false;
 
-        $property->update([
+        DB::table('properties')
+        ->where('id', $property->id)
+        ->update([
             'property_pdf_path' => $path,
-            'pdf_created_at'   => $originalUpdatedAt,
+            'pdf_created_at'   => $property->updated_at,
         ]);
         
         return $pdf->stream('propertybrochure.pdf');
