@@ -926,6 +926,7 @@ class PropertiesController extends Controller
         // ✅ Save PDF
         Storage::put('/properties/' . $property->id . '/propertybrochure.pdf', $pdf->output());
         $property->property_pdf_path = 'properties/' . $property->id . '/propertybrochure.pdf';
+        $property->pdf_created_at = $property->updated_at;
         $property->save();
         return $pdf->stream('propertybrochure.pdf');
     }
