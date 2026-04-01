@@ -1,5 +1,5 @@
 @php
-    $mainurl = url('/');
+    $mainurl = url('/').'/public';
 @endphp
 
 <!DOCTYPE html>

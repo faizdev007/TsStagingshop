@@ -153,6 +153,25 @@ class UserLoginController extends Controller
                 ->withInput();
         }
 
+        $finduser = User::where('email', $request->email)->first();
+        
+        if(!$finduser){
+            return response()->json([
+                'flag'     => 3,
+                'message'  => 'User not found.',
+            ]);
+        }
+
+        // 6️⃣ Admin redirect (role_id !== 4)
+        if ($finduser->role_id !== 4) {
+            return response()->json([
+                'flag'     => 1,
+                'message'  => 'Please use the admin login.',
+                'redirect' => url('/admin'),
+            ]);
+        }
+
+
         // 2️⃣ Fetch user safely
         $user = Auth::attempt([
             'email'    => $request->email,
@@ -176,15 +195,6 @@ class UserLoginController extends Controller
 
         // 5️⃣ Regenerate session (security)
         $request->session()->regenerate();
-
-        // 6️⃣ Admin redirect (role_id !== 4)
-        if ($currentuser->role_id !== 4) {
-            return response()->json([
-                'flag'     => 1,
-                'message'  => 'Login successful! Welcome back.',
-                'redirect' => url('/admin'),
-            ]);     
-        }
 
         // 7️⃣ Optional: Add property to favourites
         if ($request->filled('property_id')) {
