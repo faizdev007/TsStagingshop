@@ -19,7 +19,7 @@
             overflow: hidden;
             page-break-after: auto;
         }
-        
+
         .page:not(:first-child) {
             page-break-after: always;
         }
@@ -35,7 +35,8 @@
             width: 100%;
             height: 60px;
             display: flex;
-            justify-content: flex-end; /* push logo to right */
+            justify-content: flex-end;
+            /* push logo to right */
             align-items: center;
         }
 
@@ -108,9 +109,8 @@
     <!-- - - - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - -
         PAGE 1 - Cover page   -page-1
     !- - - - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - -->
-    <div class="page">
+    <div class="page -page-1">
         <div class="content">
-
             <div class="main-img {{ ($property->PrimaryPhotoOrientation == 'portrait') ? 'portrait':'' }}">
                 <img src="{{ $property->PrimaryPhoto }}" style="width:100%; max-height:400px;">
             </div>
@@ -144,115 +144,117 @@
                 </table>
             </div>
 
-            <div class="title-pricing-row" style="margin: 5px 0;">
-                <table width="100%" cellspacing="0" cellpadding="5" style="table-layout:fixed;">
-                    <tr>
-                        <!-- LEFT SIDE -->
-                        <td width="70%" valign="top" style="overflow:hidden;">
+            <div class="page -page-1">
+                <div class="title-pricing-row" style="margin: 5px 0;">
+                    <table width="100%" cellspacing="0" cellpadding="5" style="table-layout:fixed;">
+                        <tr>
+                            <!-- LEFT SIDE -->
+                            <td width="70%" valign="top" style="overflow:hidden;">
 
-                            <h1 style="font-size:22px; margin:0; word-break:break-word;">
-                                {{$property->details_headline_v2}}
-                            </h1>
+                                <h1 style="font-size:22px; margin:0; word-break:break-word;">
+                                    {{$property->details_headline_v2}}
+                                </h1>
 
-                            <h2 style="font-size:14px; margin:5px 0; word-break:break-word;">
-                                {{$property->DisplayPropertyAddress}}
-                            </h2>
+                                <h2 style="font-size:14px; margin:5px 0; word-break:break-word;">
+                                    {{$property->DisplayPropertyAddress}}
+                                </h2>
 
-                        </td>
+                            </td>
 
-                        <!-- RIGHT SIDE -->
-                        <td width="30%" valign="top" align="right" style="overflow:hidden;">
+                            <!-- RIGHT SIDE -->
+                            <td width="30%" valign="top" align="right" style="overflow:hidden;">
 
-                            <h2 style="margin:0; font-size:18px;">
-                                {!! $property->display_price !!}
-                            </h2>
+                                <h2 style="margin:0; font-size:18px;">
+                                    {!! $property->display_price !!}
+                                </h2>
 
-                            <h3 style="margin-top:5px; font-size:12px;">
-                                Ref: {!! $property->ref !!}
-                            </h3>
+                                <h3 style="margin-top:5px; font-size:12px;">
+                                    Ref: {!! $property->ref !!}
+                                </h3>
 
-                        </td>
-                    </tr>
-                </table>
+                            </td>
+                        </tr>
+                    </table>
 
-                <div class="add-info-container" style="page-break-inside: avoid;">
+                    <div class="add-info-container" style="page-break-inside: avoid;">
 
-                    <ul style="list-style: none; text-align: left;padding-left: 0px;">
-                        <?php
-    $additionalarray = [];
+                        <ul style="list-style: none; text-align: left;padding-left: 0px;">
+                            <?php
+                            $additionalarray = [];
 
-    // Define icons
-    $fieldtype = '<img src="https://terezaestates.com/assets/demo1/images/svg/Property%20Feild%20Type.png" alt="Field Type" style="width: 21px; height: 19px;">';
-    $Propertystatus = '<img src="https://terezaestates.com/assets/demo1/images/svg/Property%20Status.png" alt="Property Status" style="width: 21px; height: 19px;">';
-    $Propertytype = '<img src="https://terezaestates.com/assets/demo1/images/svg/Property%20Type.png" alt="Property Type" style="width: 21px; height: 19px;">';
-    $bedroomsIcon = '<img src="https://terezaestates.com/assets/demo1/images/svg/pro-in-ic1.jpg" alt="Bedrooms Icon">';
-    $bathroomsIcon = '<img src="https://terezaestates.com/assets/demo1/images/svg/pro-in-ic2.jpg" alt="Bathrooms Icon">';
-    $areaicon = '<img src="https://terezaestates.com/assets/demo1/images/svg/pro-in-ic3.jpg" alt="Area Icon">';
-    $terraceicon = '<img src="https://terezaestates.com/assets/demo1/images/svg/Balcony-03.jpg" alt="Terrace Icon" style="width: 21px; height: 19px;">';
+                            // Define icons
+                            $fieldtype = '<img src="https://terezaestates.com/assets/demo1/images/svg/Property%20Feild%20Type.png" alt="Field Type" style="width: 21px; height: 19px;">';
+                            $Propertystatus = '<img src="https://terezaestates.com/assets/demo1/images/svg/Property%20Status.png" alt="Property Status" style="width: 21px; height: 19px;">';
+                            $Propertytype = '<img src="https://terezaestates.com/assets/demo1/images/svg/Property%20Type.png" alt="Property Type" style="width: 21px; height: 19px;">';
+                            $bedroomsIcon = '<img src="https://terezaestates.com/assets/demo1/images/svg/pro-in-ic1.jpg" alt="Bedrooms Icon">';
+                            $bathroomsIcon = '<img src="https://terezaestates.com/assets/demo1/images/svg/pro-in-ic2.jpg" alt="Bathrooms Icon">';
+                            $areaicon = '<img src="https://terezaestates.com/assets/demo1/images/svg/pro-in-ic3.jpg" alt="Area Icon">';
+                            $terraceicon = '<img src="https://terezaestates.com/assets/demo1/images/svg/Balcony-03.jpg" alt="Terrace Icon" style="width: 21px; height: 19px;">';
 
 
-    $additionalarray[] = $fieldtype . '&nbsp;&nbsp;&nbsp;Field Type: ' . $property->ModeDisplay;
-    if (!empty($property->state_display)) {
-        $additionalarray[] =  $Propertystatus . '&nbsp;&nbsp;&nbsp;Property Status: ' . $property->state_display;
-    }
+                            $additionalarray[] = $fieldtype . '&nbsp;&nbsp;&nbsp;Field Type: ' . $property->ModeDisplay;
+                            if (!empty($property->state_display)) {
+                                $additionalarray[] =  $Propertystatus . '&nbsp;&nbsp;&nbsp;Property Status: ' . $property->state_display;
+                            }
 
-    if (!empty($property->PropertyTypeName)) {
-        $additionalarray[] = $Propertytype . '&nbsp;&nbsp;&nbsp;Property Type: ' . $property->PropertyTypeName;
-    }
+                            if (!empty($property->PropertyTypeName)) {
+                                $additionalarray[] = $Propertytype . '&nbsp;&nbsp;&nbsp;Property Type: ' . $property->PropertyTypeName;
+                            }
 
-    if (!empty($property->beds)) {
-        $additionalarray[] = $bedroomsIcon . '&nbsp;&nbsp;&nbsp;Number of Bedrooms: ' . $property->beds;
-    }
+                            if (!empty($property->beds)) {
+                                $additionalarray[] = $bedroomsIcon . '&nbsp;&nbsp;&nbsp;Number of Bedrooms: ' . $property->beds;
+                            }
 
-    if (!empty($property->baths)) {
-        $additionalarray[] = $bathroomsIcon . '&nbsp;&nbsp;&nbsp;Number of Bathrooms: ' . $property->baths;
-    }
+                            if (!empty($property->baths)) {
+                                $additionalarray[] = $bathroomsIcon . '&nbsp;&nbsp;&nbsp;Number of Bathrooms: ' . $property->baths;
+                            }
 
-    if (!empty($property->Subtype)) {
-        $additionalarray[] = 'Subtype: ' . $property->Subtype;
-    }
+                            if (!empty($property->Subtype)) {
+                                $additionalarray[] = 'Subtype: ' . $property->Subtype;
+                            }
 
-    if (!empty($property->Community)) {
-        $additionalarray[] = 'Community: ' . $property->Community;
-    }
+                            if (!empty($property->Community)) {
+                                $additionalarray[] = 'Community: ' . $property->Community;
+                            }
 
-    if (!empty($property->internal_area)) {
-        $additionalarray[] = $areaicon . '&nbsp;&nbsp;&nbsp;Area: ' . $property->displayInternal;
-    }
+                            if (!empty($property->internal_area)) {
+                                $additionalarray[] = $areaicon . '&nbsp;&nbsp;&nbsp;Area: ' . $property->displayInternal;
+                            }
 
-    if (!empty($property->land_area)) {
-        $additionalarray[] = 'Land Area: ' . $property->displayland;
-    }
+                            if (!empty($property->land_area)) {
+                                $additionalarray[] = 'Land Area: ' . $property->displayland;
+                            }
 
-    if (!empty($property->terrace_area)) {
-        $additionalarray[] = $terraceicon . '&nbsp;&nbsp;&nbsp;Terrace: ' . $property->terrace_area . ' sq ft';
-    }
+                            if (!empty($property->terrace_area)) {
+                                $additionalarray[] = $terraceicon . '&nbsp;&nbsp;&nbsp;Terrace: ' . $property->terrace_area . ' sq ft';
+                            }
 
-    $ctrFt = 0;
-    $ctrFtt = 0;
-    ?>
-                        @foreach ($additionalarray as $info)
-                        @php $ctrFt++; $ctrFtt++; @endphp
-                        <li class="item-ai text-left">
-                            <div class="item-ai-inners">
-                                {!! $info !!}
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
+                            $ctrFt = 0;
+                            $ctrFtt = 0;
+                            ?>
+                            @foreach ($additionalarray as $info)
+                            @php $ctrFt++; $ctrFtt++; @endphp
+                            <li class="item-ai text-left">
+                                <div class="item-ai-inners">
+                                    {!! $info !!}
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
             </div>
         </div>
     </div>
-
+    <div style="page-break-after: always;"></div>
     <!-- - - - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - -
             PAGE 2 - Gallery page
         !- - - - - - - - - -  -  - - - - - - - - - - - - - - - -  - - - - - - - -->
     @if(count($property->propertyMediaPhotos))
-    <div class="page">
-        <div class="content">
-            <h2 class="page-heading -page-margin">Gallery</h2>
+    <div class="page -page-1">
+        <div class="content -page-margin">
+            <h2 class="page-heading">Gallery</h2>
             <div class="property-gallery">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper photos">
                     @php $ctrFt=0; $ctrFtt=0; @endphp
@@ -272,15 +274,16 @@
             </div>
         </div>
     </div>
+    <div style="page-break-after: always;"></div>
     @endif
 
     <!-- - - - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - -
             PAGE 3 - Description page
         !- - - - - - - - - -  -  - - - - - - - - - - - - - - - -  - - - - - - - -->
-    <div class="page">
-        <div class="content">
-            <h2 class="page-heading -page-margin">Property Description</h2>
-            <div class="-page-margin">
+    <div class="page -page-1">
+        <div class="content -page-margin">
+            <h2 class="page-heading">Property Description</h2>
+            <div>
                 <div class="tab-property-location">
                     <strong>Location:</strong> {{ $property->DisplayPropertyAddress }}
                 </div>
@@ -291,13 +294,14 @@
         </div>
     </div>
 
+    <div style="page-break-after: always;"></div>
     <!-- - - - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - -
             PAGE 4 - Additional Information
         !- - - - - - - - - -  -  - - - - - - - - - - - - - - - -  - - - - - - - -->
-    <div class="page">
-        <div class="content">
-            <h2 class="page-heading -page-margin">Additional Info</h2>
-            <div class="add-info-container -page-margin">
+    <div class="page -page-1">
+        <div class="content -page-margin">
+            <h2 class="page-heading">Additional Info</h2>
+            <div class="add-info-container" style="margin: 0px -5px;">
 
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                     @php
@@ -309,8 +313,8 @@
                     @endphp
                     @foreach( $ArrayAddInfo as $info )
                     @php $ctrFt++; $ctrFtt++; @endphp
-                    <?php if($ctrFt==1){ ?>
-                    <tr>
+                    <?php if ($ctrFt == 1) { ?>
+                        <tr>
                         <?php } ?>
                         <td valig="top" width="50%" align="center">
                             <div class="item-ai">
@@ -319,20 +323,21 @@
                                 </div>
                             </div>
                         </td>
-                        <?php if($ctrFt==3){ $ctrFt=0; ?>
-                    </tr>
+                        <?php if ($ctrFt == 3) {
+                            $ctrFt = 0; ?>
+                        </tr>
                     <?php } ?>
                     @endforeach
                 </table>
-
-                <h2 class="page-heading -page-margin">Amenities</h2>
-
+            </div>
+            <h2 class="page-heading">Amenities</h2>
+            <div class="add-info-container" style="margin: 0px -5px;">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                     @php $ctrFt=0; $ctrFtt=0; @endphp
                     @foreach ($property->DisplayAmenitiesArray as $info)
                     @php $ctrFt++; $ctrFtt++; @endphp
-                    <?php if($ctrFt==1){ ?>
-                    <tr>
+                    <?php if ($ctrFt == 1) { ?>
+                        <tr>
                         <?php } ?>
                         <td valig="top" width="50%" align="center">
                             <div class="item-ai">
@@ -341,19 +346,21 @@
                                 </div>
                             </div>
                         </td>
-                        <?php if($ctrFt==3){ $ctrFt=0; ?>
-                    </tr>
+                        <?php if ($ctrFt == 3) {
+                            $ctrFt = 0; ?>
+                        </tr>
                     <?php } ?>
                     @endforeach
                 </table>
             </div>
         </div>
 
+        <div style="page-break-after: always;"></div>
         <!-- - - - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - -
             PAGE 5 - FloorPlan
         !- - - - - - - - - -  -  - - - - - - - - - - - - - - - -  - - - - - - - -->
         @if( count($property->propertyMediaFloorplans) )
-        <div class="page">
+        <div class="page -page-1">
             <div class="content">
                 <h2 class="page-heading -page-margin">FloorPlans</h2>
                 <div class="property-gallery -page-margin">
@@ -381,8 +388,8 @@
             </div>
         </div>
         @endif
-    
-    @include('frontend.shared.pdf.property-pdf-footer')
+
+        @include('frontend.shared.pdf.property-pdf-footer')
 
 </body>
 

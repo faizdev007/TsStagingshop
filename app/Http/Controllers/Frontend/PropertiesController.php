@@ -915,6 +915,8 @@ class PropertiesController extends Controller
             ->with($data)
             ->render();
 
+        return $html;
+
         $pdf = Pdf::setOptions([
                 'isHtml5ParserEnabled' => true,
                 'isRemoteEnabled' => true
