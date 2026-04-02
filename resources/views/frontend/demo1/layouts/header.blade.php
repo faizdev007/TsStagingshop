@@ -13,9 +13,18 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
 <head>
     <meta charset="utf-8">
     
+    <!-- ✅ Minimal preconnect (ONLY fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"  crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Fonts -->
-    <link rel="preload" href="{{asset('assets/demo1/css/googlefontTS.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('assets/demo1/css/googlefontTS.css')}}"></noscript>
+    <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Cormorant:wght@400;600&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+    
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Cormorant:wght@400;600&display=swap" rel="stylesheet">
+    </noscript>
     
     @stack('frontend_scripts')
     
