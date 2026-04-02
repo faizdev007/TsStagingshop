@@ -175,7 +175,7 @@
                 headers: {
                     'X-CSRF-TOKEN': token.getAttribute('content')
                 },
-                url: base_url+"/users/get/filtercommunities",
+                url: base_url+"users/get/filtercommunities",
                 dataType: 'json',
                 type: 'POST',
                 delay: 250,

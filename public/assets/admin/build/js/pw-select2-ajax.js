@@ -90,7 +90,7 @@ $(function(){
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: base_url+"/properties/get/locations",
+            url: base_url+"properties/get/locations",
             dataType: 'json',
             type: 'POST',
             delay: 250,
