@@ -3,14 +3,6 @@ window.$ = window.jQuery = $;
 
 $(function () {
 // Initialize
-var defaults = {
-  backFocus : true,
-};
-// $('[data-fancybox]').fancybox(defaults);
-// jQuery.fn.rotate = function(degrees) {
-//     $(this).css({'transform' : 'rotate('+ degrees +'deg)'});
-//     return $(this);
-// };
 
 /*-----------------------------------------
 * SUBMENU

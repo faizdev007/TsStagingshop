@@ -19,7 +19,7 @@
                                             <div class="cSlider__item">
                                                 <div class="big-img-bx">
                                                     <div class="big-img-bx--inner go-center fill">
-                                                        <a href="{{ storage_url($media)  }}" data-thumb="{{$media}}" data-fancybox="gallery" data-type="image">
+                                                        <a href="{{ storage_url($media)  }}" data-thumb="{{$media}}" data-fancybox="community" data-type="image">
                                                             <img src="{{ blankImg() }}" data-lazy="{{ storage_url($media)  }}" alt="Photo thumbs - {{$i}}">
                                                         </a>
                                                     </div>
@@ -45,7 +45,7 @@
                                             <div class="cSlider__item">
                                                 <div class="big-img-bx">
                                                     <div class="big-img-bx--inner go-center fill">
-                                                        <a href="{{ storage_url($community->photo) }}" data-thumb="{{$community->photo}}" data-fancybox="gallery" data-type="image">
+                                                        <a href="{{ storage_url($community->photo) }}" data-thumb="{{storage_url($community->photo)}}" data-fancybox="community" data-type="image">
                                                             <img src="{{ storage_url($community->photo) }}" data-lazy="{{ storage_url($community->photo)  }}" alt="Photo thumbs">
                                                         </a>
                                                     </div>

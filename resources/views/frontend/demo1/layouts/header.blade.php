@@ -85,14 +85,16 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
         'resources/assets/demo1/sass/app.scss'
     ])
     
-    <!-- Optional (for legacy jQuery support) -->
-    <link rel="stylesheet" href="{{asset('assets/demo1/css/all.min.css')}}" onload="this.media='all'">
+
+    <link rel="preload" href="{{asset('assets/demo1/css/all.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('assets/demo1/css/all.min.css')}}"></noscript>
+
+    <link rel="preload" href="{{asset('assets/demo1/css/fancybox.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('assets/demo1/css/fancybox.css')}}"></noscript>
+
+    <link rel="preload" href="{{asset('assets/demo1/css/intlTelInput.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('assets/demo1/css/intlTelInput.css')}}"></noscript>
     
-    <link rel="stylesheet" href="{{asset('assets/demo1/css/fancybox.css')}}" onload="this.media='all'">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('assets/demo1/css/intlTelInput.css')}}" onload="this.media='all'">
-
     @stack('frontend_css')
 
     <!-- Google tag (gtag.js) -->

@@ -34,6 +34,10 @@ export default defineConfig({
                             return 'bootstrap';
                         }
 
+                        if (id.includes('@fancyapps')) {
+                            return 'fancybox';
+                        }
+
                         // fallback (other libs)
                         return 'vendor';
                     }

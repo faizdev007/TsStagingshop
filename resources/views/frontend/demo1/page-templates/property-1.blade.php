@@ -82,7 +82,7 @@
                                         <div class="cSlider__item">
                                             <div class="big-img-bx">
                                                 <div class="big-img-bx--inner go-center fill">
-                                                    <a href="{{ storage_url($media->photo_display)  }}" data-thumb="{{$media->photo_display}}" data-fancybox="community" data-type="image">
+                                                    <a href="{{ storage_url($media->photo_display)  }}" data-thumb="{{$media->photo_display}}" data-fancybox="gallery" data-type="image">
                                                         <img loading="lazy" src="{{ blankImg() }}" data-lazy="{{ storage_url($media->photo_display)  }}" alt="Photo thumbs - {{$i}}" sizes="(max-width:768px) 400px, (max-width:1200px) 700px, 1200px"
                                                         srcset="
                                                             {{ storage_url('small/'.$media->photo_display) }} 400w,

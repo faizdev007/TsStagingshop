@@ -17,9 +17,8 @@ import select2 from 'select2';
 import 'blazy';
 import 'masonry-layout';
 import { Fancybox } from '@fancyapps/ui';
-// import 'wowjs';
 
-window.fancybox = Fancybox;
+window.Fancybox = Fancybox;
 
 new select2();
 
@@ -352,4 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+});
+
+$(() => {
+    Fancybox.bind('[data-fancybox]', {
+        backFocus: true,
+    });
 });
