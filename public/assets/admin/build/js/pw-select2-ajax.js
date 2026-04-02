@@ -35,7 +35,7 @@ $(function(){
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: base_url+"/users/get/agents",
+            url: base_url+"users/get/agents",
             dataType: 'json',
             type: 'POST',
             delay: 250,

@@ -12,7 +12,7 @@
     <style>
         /* ================= PAGE SETUP ================= */
         @page {
-          margin: 80px 30px 100px 30px;
+          margin: 80px 30px 50px 30px;
         }
         
         body {
@@ -104,9 +104,10 @@
         }
         
         .main-img img {
-          width: 100%;
-          max-height: 400px;
-          object-fit: cover;
+            width: 100%;
+            height: auto;        /* ✅ no stretch */
+            max-height: 400px;
+            object-fit: cover;
         }
         
         .property-img {
@@ -132,9 +133,20 @@
           text-align: center;
         }
         
-        .property-gallery .property-img-box .property-img {
+        .property-gallery .property-img {
           max-height: 150px;
           margin-bottom: 15px;
+        }
+        
+        .property-img-box {
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .property-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .property-img-box{
@@ -179,6 +191,18 @@
         .page:last-child {
           padding-bottom: 120px;
         }
+        
+        .thumb-box {
+            width: 100%;
+            height: 140px;   /* fixed height */
+            overflow: hidden;
+        }
+        
+        .thumb-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* ✅ crop, no stretch */
+        }
     </style>
 </head>
 
@@ -204,21 +228,21 @@
                             <td width="33.33%">
                                 <div
                                     class="thumb-box {{ ( $property->SecondaryPhotoOrientation == 'portrait' ) ?'portrait':'' }}">
-                                    <img src="{{ storage_url($property->SecondaryPhoto) }}" class="property-img"
+                                    <img src="{{ storage_url($property->SecondaryPhoto) }}" class=""
                                         alt="Property photo 1">
                                 </div>
                             </td>
                             <td width="33.33%">
                                 <div
                                     class="thumb-box {{ ( $property->ThirdPhotoOrientation == 'portrait' ) ?'portrait':'' }}">
-                                    <img src="{{ storage_url($property->ThirdPhoto) }}" class="property-img"
+                                    <img src="{{ storage_url($property->ThirdPhoto) }}" class=""
                                         alt="Property photo 2">
                                 </div>
                             </td>
                             <td width="33.33%">
                                 <div
                                     class="thumb-box {{ ( $property->FourthPhotoOrientation == 'portrait' ) ?'portrait':'' }}">
-                                    <img src="{{ storage_url($property->FourthPhoto) }}" class="property-img"
+                                    <img src="{{ storage_url($property->FourthPhoto) }}" class=""
                                         alt="Property photo 3">
                                 </div>
                             </td>
@@ -337,19 +361,26 @@
                 <h2 class="page-heading">Gallery</h2>
                 <div class="property-gallery">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper photos">
-                        @php $ctrFt=0; $ctrFtt=0; @endphp
-                        @foreach( $property->propertyMediaPhotos as $media )
-                        @php $ctrFt++; $ctrFtt++; @endphp
-                        @php if($ctrFt==1){ @endphp <tr> @php } @endphp
-                            <td valig="top" width="30%" align="center">
-                                <div class="property-img-box">
-                                    <img src="{{ storage_url($media->path) }}" style="width:100%; max-height:200px;">
-                                </div>
-                            </td>
-                            @php if($ctrFt==3){ $ctrFt=0; @endphp
-                        </tr> @php } @endphp
-                        @php if($ctrFtt==15) { break; } @endphp
-                        @endforeach
+                        @php 
+                            $photos = $property->propertyMediaPhotos;
+                            $total = count($photos);
+                        @endphp
+                        
+                        @for($i = 0; $i < $total; $i += 3)
+                            <tr>
+                                @for($j = 0; $j < 3; $j++)
+                                    @if(isset($photos[$i + $j]))
+                                        <td width="33.33%" align="center">
+                                            <div class="property-img-box thumb-box">
+                                                <img src="{{ storage_url($photos[$i + $j]->path) }}">
+                                            </div>
+                                        </td>
+                                    @else
+                                        <td width="33.33%"></td>
+                                    @endif
+                                @endfor
+                            </tr>
+                        @endfor
                     </table>
                 </div>
             </div>
@@ -437,41 +468,34 @@
         </div>
             </div>
         </div>
-    </div>
-    
-    @if( count($property->propertyMediaFloorplans) )
-    <!-- LAST PAGE -->
-    <div class="page">
-        <!-- PAGE 5 -->
-        <div class="content-block">
-            <div class="box">
-                <h2 class="page-heading -page-margin">FloorPlans</h2>
-                <div class="property-gallery -page-margin">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
-                        class="wrapper photos">
-                        @php $ctrFt=0; $ctrFtt=0; @endphp
-                        @foreach( $property->propertyMediaFloorplans as $media )
-                        @php $ctrFt++; $ctrFtt++; @endphp
-                        @php if($ctrFt==1){ @endphp<tr>@php } @endphp
-                            <td valig="top" width="30%" align="center">
-                                <div class="property-img-box">
-                                    @if($media->extension == 'pdf')
-                                    <a href="{{ $media->photo_display }}" target="_blank" class="pdf-icon">PDF</a>
-                                    @else
-                                    <img src="{{ $media->photo_display }}" class="property-img" alt="Property photo">
-                                    @endif
-                                </div>
-                            </td>
-                            @php if($ctrFt==3){ $ctrFt=0; @endphp
-                        </tr>@php } @endphp
-                        @php if($ctrFtt==15){ break; } @endphp
-                        @endforeach
-                    </table>
-                </div>
+        @if( count($property->propertyMediaFloorplans) )
+        <div class="box">
+            <h2 class="page-heading">FloorPlans</h2>
+            <div class="property-gallery">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
+                    class="wrapper photos">
+                    @php $ctrFt=0; $ctrFtt=0; @endphp
+                    @foreach( $property->propertyMediaFloorplans as $media )
+                    @php $ctrFt++; $ctrFtt++; @endphp
+                    @php if($ctrFt==1){ @endphp<tr>@php } @endphp
+                        <td valig="top" width="30%" align="center">
+                            <div class="property-img-box">
+                                @if($media->extension == 'pdf')
+                                <a href="{{ $media->photo_display }}" target="_blank" class="pdf-icon">PDF</a>
+                                @else
+                                <img src="{{ $media->photo_display }}" class="property-img" alt="Property photo">
+                                @endif
+                            </div>
+                        </td>
+                        @php if($ctrFt==3){ $ctrFt=0; @endphp
+                    </tr>@php } @endphp
+                    @php if($ctrFtt==15){ break; } @endphp
+                    @endforeach
+                </table>
             </div>
         </div>
+        @endif
     </div>
-    @endif
     <!-- ✅ FOOTER INSIDE LAST PAGE -->
     <div class="last-footer">
         <table border="0" width="100%">

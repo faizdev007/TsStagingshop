@@ -18,7 +18,7 @@ $(function(){
 		}).addTo(map);
 
 		var myIcon = L.icon({
-		    iconUrl: '/assets/admin/build/images/pw-theme/map/map-pin.png',
+		    iconUrl: '/public/assets/admin/build/images/pw-theme/map/map-pin.png',
 		    iconSize: [39, 47],
 		    iconAnchor: [20, 47]
 		});
