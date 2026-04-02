@@ -12,9 +12,6 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     
     <!-- ✅ Minimal preconnect (ONLY fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com"  crossorigin>
@@ -89,12 +86,12 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
     ])
     
     <!-- Optional (for legacy jQuery support) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" onload="this.media='all'">
+    <link rel="stylesheet" href="{{asset('assets/demo1/css/all.min.css')}}" onload="this.media='all'">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" onload="this.media='all'">
+    <link rel="stylesheet" href="{{asset('assets/demo1/css/fancybox.css')}}" onload="this.media='all'">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css">
+    <link rel="stylesheet" href="{{asset('assets/demo1/css/intlTelInput.css')}}" onload="this.media='all'">
 
     @stack('frontend_css')
 
