@@ -904,13 +904,12 @@ class PropertiesController extends Controller
     public function generate_pdf(Request $request, $propertyId){
         $property = Property::findOrFail($propertyId);
         
-
-        if(isset($property->property_pdf_path) && !empty($property->property_pdf_path[get_current_currency()])){
-            $exist_brochure = Storage::disk('public')->exists($property->property_pdf_path);
-            
+        if(isset($property->property_pdf_path) && !empty(json_decode($property->property_pdf_path, true)[get_current_currency()])){
+            $curretfileRequest = json_decode($property->property_pdf_path, true)[get_current_currency()];
+            $exist_brochure = Storage::disk('public')->exists($curretfileRequest);
             if($exist_brochure){
                 // Return existing brochure
-                return response()->download(storage_path('app/public/' . $property->property_pdf_path[get_current_currency()]));
+                return response()->file(storage_path('app/public/' . $curretfileRequest));
             }
         }
 
@@ -925,19 +924,24 @@ class PropertiesController extends Controller
         $html = view('frontend.shared.pdf.property-pdf')
             ->with($data)
             ->render();
-
+            
+            
         $pdf = Pdf::setOptions([
-                'isHtml5ParserEnabled' => true,
-                'isRemoteEnabled' => true
-            ])
-            ->loadHTML($html)
-            ->setWarnings(false)
-            ->setPaper('A4', 'portrait');
-
-        $path = 'properties/brochure/' . $property->id . '/'.get_current_currency().'_base_propertybrochure.pdf';
-
-        Storage::disk('public')->put($path, $pdf->output());
-
+            'isHtml5ParserEnabled' => true,
+            'isRemoteEnabled' => true
+        ])
+        ->loadHTML($html)
+        ->setWarnings(false)
+        ->setPaper('A4', 'portrait');
+        
+        // Generate output ONCE
+        $output = $pdf->output();
+        
+        $path = 'properties/' . $property->id . '/brochure/'.get_current_currency().'_base_propertybrochure.pdf';
+        
+        // Save
+        Storage::disk('public')->put($path, $output);
+        
         // disable timestamp update
         $property->timestamps = false;
 
@@ -950,7 +954,10 @@ class PropertiesController extends Controller
             'pdf_created_at'   => $property->updated_at,
         ]);
         
-        return $pdf->stream('propertybrochure.pdf');
+        // Return SAME output (no re-render)
+        return response($output, 200)
+            ->header('Content-Type', 'application/pdf')
+            ->header('Content-Disposition', 'inline; filename="propertybrochure.pdf"');
     }
 
 
