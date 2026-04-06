@@ -13,6 +13,7 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
 <head>
     <meta charset="utf-8">
     
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <!-- ✅ Minimal preconnect (ONLY fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com"  crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,8 +93,8 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
     <link rel="preload" href="{{asset('assets/demo1/css/fancybox.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{asset('assets/demo1/css/fancybox.css')}}"></noscript>
 
-    <link rel="preload" href="{{asset('assets/demo1/css/intlTelInput.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('assets/demo1/css/intlTelInput.css')}}"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css"></noscript>
     
     @stack('frontend_css')
 
