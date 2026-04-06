@@ -5769,7 +5769,7 @@ label.error {
 }
 
 .inner-hero {
-    background-image: url(/build/assets/inner-hero-BZRnxGpA.png);
+    background-image: url(public/build/assets/inner-hero-BZRnxGpA.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -8620,11 +8620,11 @@ select.select-pw {
 }
 
 .property-grid-thumb--slick .slick-prev:before {
-    background-image: url(/build/assets/arrow-left-CUU_qkrn.svg)
+    background-image: url(public/build/assets/arrow-left-CUU_qkrn.svg)
 }
 
 .property-grid-thumb--slick .slick-next:before {
-    background-image: url(/build/assets/arrow-right--hB_wCnA.svg)
+    background-image: url(public/build/assets/arrow-right--hB_wCnA.svg)
 }
 
 .property-grid-thumb--slick .main.img {
@@ -8947,12 +8947,12 @@ span#select2--container {
 }
 
 .home-slider--section .home-slider--controllers .home-slider--arrow-left {
-    background-image: url(/build/assets/slide-arrow-left-DHOw6yJR.png);
+    background-image: url(public/build/assets/slide-arrow-left-DHOw6yJR.png);
     margin-right: 6px
 }
 
 .home-slider--section .home-slider--controllers .home-slider--arrow-right {
-    background-image: url(/build/assets/slide-arrow-right-DBrUnPOr.png)
+    background-image: url(public/build/assets/slide-arrow-right-DBrUnPOr.png)
 }
 
 .home-slider--section .home-slider--controllers .home-slider--dot {
@@ -8995,11 +8995,11 @@ span#select2--container {
 }
 
 .cSlider--single .slick-prev:before {
-    background-image: url(/build/assets/arrow-left-CUU_qkrn.svg)
+    background-image: url(public/build/assets/arrow-left-CUU_qkrn.svg)
 }
 
 .cSlider--single .slick-next:before {
-    background-image: url(/build/assets/arrow-right--hB_wCnA.svg)
+    background-image: url(public/build/assets/arrow-right--hB_wCnA.svg)
 }
 
 .slick-dots {
@@ -9068,7 +9068,7 @@ span#select2--container {
 }
 
 .testimonial--section .testimonial--wrap {
-    background-image: url(/build/assets/testimonial-bg-4wY2YmMc.jpg);
+    background-image: url(public/build/assets/testimonial-bg-4wY2YmMc.jpg);
     background-position: center;
     background-size: cover;
     height: 385px;
@@ -9127,7 +9127,7 @@ span#select2--container {
 }
 
 .join-us--section {
-    background-image: url(/build/assets/join-us-bg-BpMDGMvP.jpg);
+    background-image: url(public//build/assets/join-us-bg-BpMDGMvP.jpg);
     background-size: cover;
     background-position: center
 }
@@ -9202,7 +9202,7 @@ span#select2--container {
 .testimonials .tm_shadow {
     margin: 0 0 40px;
     max-width: 990px;
-    background: url(/build/assets/testimonial-bg-4wY2YmMc.jpg);
+    background: url(public/build/assets/testimonial-bg-4wY2YmMc.jpg);
     height: 32px;
     background-size: contain;
     background-repeat: no-repeat
