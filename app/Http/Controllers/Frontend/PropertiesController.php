@@ -904,12 +904,16 @@ class PropertiesController extends Controller
     public function generate_pdf(Request $request, $propertyId){
         $property = Property::findOrFail($propertyId);
         
-        $exist_brochure = Storage::disk('public')->exists($property->property_pdf_path);
-        
-        if($exist_brochure){
-            // Return existing brochure
-            return response()->download(storage_path('app/public/' . $property->property_pdf_path[get_current_currency()]));
+
+        if(isset($property->property_pdf_path) && !empty($property->property_pdf_path[get_current_currency()])){
+            $exist_brochure = Storage::disk('public')->exists($property->property_pdf_path);
+            
+            if($exist_brochure){
+                // Return existing brochure
+                return response()->download(storage_path('app/public/' . $property->property_pdf_path[get_current_currency()]));
+            }
         }
+
 
         $url = url('');
         $asset = themeAsset();
