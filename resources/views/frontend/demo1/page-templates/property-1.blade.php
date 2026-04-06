@@ -130,7 +130,7 @@
                 <div id="property-form-wrap" class="pro-inqury-frm">
                     <div class="d-lg-block d-xl-block d-xxl-block">
                         <h3>Enquire about this property</h3>
-                       @include('frontend.demo1.forms.property-enquiry-sidebar')
+                        @include('frontend.demo1.forms.property-enquiry-sidebar')
                     </div>
                     <div class="d-md-block">
                         @include('frontend.demo1.partials.front.properties.property-attributes')
@@ -170,7 +170,7 @@
 <!-- /.single-additional -->
                         @if(settings('pdf_view') == 1)
                             <div class="single-additional" style="margin-top: 30px;">
-                                <a href="{{ $property->property_pdf_path != null && $property->pdf_created_at == $property->updated_at ? storage_url($property->property_pdf_path) : url('/DownloadPdf/'.$property->id) }}" class="-primary button download-pdf" target="_blank">
+                                <a href="{{url('/DownloadPdf/'.$property->id)}}" class="-primary button download-pdf" target="_blank">
                                     Download PDF
                                 </a>
                             </div>

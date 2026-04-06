@@ -934,20 +934,19 @@ class PropertiesController extends Controller
             ->setWarnings(false)
             ->setPaper('A4', 'portrait');
 
-        $path[get_current_currency()] = 'properties/brochure/' . $property->id . '/'.get_current_currency().'_base_propertybrochure.pdf';
+        $path = 'properties/brochure/' . $property->id . '/'.get_current_currency().'_base_propertybrochure.pdf';
 
         Storage::disk('public')->put($path, $pdf->output());
-
-        // store original updated_at value
-        $originalUpdatedAt = $property->updated_at;
 
         // disable timestamp update
         $property->timestamps = false;
 
+        $pdf_paths[get_current_currency()] = $path;
+
         DB::table('properties')
         ->where('id', $property->id)
         ->update([
-            'property_pdf_path' => $path,
+            'property_pdf_path' => $pdf_paths,
             'pdf_created_at'   => $property->updated_at,
         ]);
         
