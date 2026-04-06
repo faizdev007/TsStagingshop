@@ -18,7 +18,7 @@ $mainurl = url('/').'/public';
         
         body {
             margin: 0;
-            padding-top: 50px; /* space for header */
+            padding-top: 100px; /* space for header */
             font-family: "Roboto", DejaVu Sans, sans-serif;
             font-size: 12px;
         }
@@ -33,7 +33,7 @@ $mainurl = url('/').'/public';
         }
 
         .header img {
-            height: 50px;
+            height: 80px;
         }
 
         /* ================= PAGE CONTROL ================= */
@@ -228,57 +228,62 @@ $mainurl = url('/').'/public';
     <div class="header">
         <img src="{{ themeAsset('images/logos/logo.png') }}" alt="Logo">
     </div>
-
+    
+    <div class="main-img {{ ($property->PrimaryPhotoOrientation == 'portrait') ? 'portrait':'' }}">
+        <img src="{{ $property->PrimaryPhoto }}" style="width:100%; padding-left:-40px; padding-right:-40px;">
+    </div>
     <!-- PAGE 1 -->
-    <div class="page">
+    <div class="page" style="padding-top:0px!important;">
         <div class="content-block">
             <div class="box">
-                <div class="main-img {{ ($property->PrimaryPhotoOrientation == 'portrait') ? 'portrait':'' }}">
-                    <img src="{{ $property->PrimaryPhoto }}" style="width:100%; max-height:400px;">
-                </div>
-
-                <div class="property-images">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper photos"
-                        style="table-layout:fixed;">
-                        <tr class="property-img-wrap">
-                            <td width="33.33%">
-                                <div
-                                    class="thumb-box {{ ( $property->SecondaryPhotoOrientation == 'portrait' ) ?'portrait':'' }}">
-                                    <img src="{{ storage_url($property->SecondaryPhoto) }}" class=""
-                                        alt="Property photo 1">
-                                </div>
-                            </td>
-                            <td width="33.33%">
-                                <div
-                                    class="thumb-box {{ ( $property->ThirdPhotoOrientation == 'portrait' ) ?'portrait':'' }}">
-                                    <img src="{{ storage_url($property->ThirdPhoto) }}" class=""
-                                        alt="Property photo 2">
-                                </div>
-                            </td>
-                            <td width="33.33%">
-                                <div
-                                    class="thumb-box {{ ( $property->FourthPhotoOrientation == 'portrait' ) ?'portrait':'' }}">
-                                    <img src="{{ storage_url($property->FourthPhoto) }}" class=""
-                                        alt="Property photo 3">
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <!--<div class="property-images">-->
+                <!--    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper photos"-->
+                <!--        style="table-layout:fixed;">-->
+                <!--        <tr class="property-img-wrap">-->
+                <!--            <td width="33.33%">-->
+                <!--                <div-->
+                <!--                    class="thumb-box {{ ( $property->SecondaryPhotoOrientation == 'portrait' ) ?'portrait':'' }}">-->
+                <!--                    <img src="{{ storage_url($property->SecondaryPhoto) }}" class=""-->
+                <!--                        alt="Property photo 1">-->
+                <!--                </div>-->
+                <!--            </td>-->
+                <!--            <td width="33.33%">-->
+                <!--                <div-->
+                <!--                    class="thumb-box {{ ( $property->ThirdPhotoOrientation == 'portrait' ) ?'portrait':'' }}">-->
+                <!--                    <img src="{{ storage_url($property->ThirdPhoto) }}" class=""-->
+                <!--                        alt="Property photo 2">-->
+                <!--                </div>-->
+                <!--            </td>-->
+                <!--            <td width="33.33%">-->
+                <!--                <div-->
+                <!--                    class="thumb-box {{ ( $property->FourthPhotoOrientation == 'portrait' ) ?'portrait':'' }}">-->
+                <!--                    <img src="{{ storage_url($property->FourthPhoto) }}" class=""-->
+                <!--                        alt="Property photo 3">-->
+                <!--                </div>-->
+                <!--            </td>-->
+                <!--        </tr>-->
+                <!--    </table>-->
+                <!--</div>-->
                 
                 <table width="100%" cellspacing="0" cellpadding="5" style="table-layout:fixed;">
                     <tr>
                         <!-- LEFT SIDE -->
-                        <td width="70%" valign="top" style="overflow:hidden;">
+                        <td width="100%" valign="top" style="overflow:hidden;">
 
                             <h1 style="font-size:22px; margin:0; word-break:break-word;">
                                 {{$property->details_headline_v2}}
                             </h1>
 
                         </td>
-
+                    </tr>
+                    <tr>
+                        <h2 style="font-size:14px; margin:5px; word-break:break-word;">
+                            {{$property->DisplayPropertyAddress}}
+                        </h2>
+                    </tr>
+                    <tr>
                         <!-- RIGHT SIDE -->
-                        <td width="30%" valign="top" align="right" style="overflow:hidden;">
+                        <td width="100%" valign="top" style="overflow:hidden; display:flex; justfiy-content:between;">
 
                             <h2 style="margin:0; font-size:18px;">
                                 {!! $property->display_price !!}
@@ -292,73 +297,108 @@ $mainurl = url('/').'/public';
                     </tr>
                 </table>
                 
-                <h2 style="font-size:14px; margin:5px; word-break:break-word;">
-                    {{$property->DisplayPropertyAddress}}
-                </h2>
+                <div style="margin-top:20px;">
 
-                <div class="add-info-container">
-
-                    <ul style="list-style: none; text-align: left;padding-left: 0px;">
+                    <!-- CARD CONTAINER -->
+                    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:8px;">
+                        
                         @php
-                        $additionalarray = [];
-
-                        // Define icons
-                        $fieldtype = '<img src="' . $mainurl . '/assets/demo1/images/svg/Property%20Feild%20Type.png" alt="Field Type" style="width: 21px; height: 19px;">';
-                        $Propertystatus = '<img src="' . $mainurl . '/assets/demo1/images/svg/Property%20Status.png" alt="Property Status" style="width: 21px; height: 19px;">';
-                        $Propertytype = '<img src="' . $mainurl . '/assets/demo1/images/svg/Property%20Type.png" alt="Property Type" style="width: 21px; height: 19px;">';
-                        $bedroomsIcon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic1.jpg" alt="Bedrooms Icon">';
-                        $bathroomsIcon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic2.jpg" alt="Bathrooms Icon">';
-                        $areaicon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic3.jpg" alt="Area Icon">';
-                        $landicon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic4.jpg" alt="Land Icon">';
-                        $terraceicon = '<img src="' . $mainurl . '/assets/demo1/images/svg/Balcony-03.jpg" alt="Terrace Icon" style="width: 21px; height: 19px;">';
-
-
-                        $additionalarray[] = $fieldtype . '&nbsp;&nbsp;&nbsp;Field Type: <strong>' . $property->ModeDisplay . '</strong>';
-                        if (!empty($property->state_display)) {
-                            $additionalarray[] =  $Propertystatus . '&nbsp;&nbsp;&nbsp;Property Status: <strong>' . $property->state_display . '</strong>';
-                        }
-
-                        if (!empty($property->PropertyTypeName)) {
-                            $additionalarray[] = $Propertytype . '&nbsp;&nbsp;&nbsp;Property Type: <strong>' . $property->PropertyTypeName . '</strong>';
-                        }
-
-                        if (!empty($property->beds)) {
-                            $additionalarray[] = $bedroomsIcon . '&nbsp;&nbsp;&nbsp;Number of Bedrooms: <strong>' . $property->beds . '</strong>';
-                        }
-
-                        if (!empty($property->baths)) {
-                            $additionalarray[] = $bathroomsIcon . '&nbsp;&nbsp;&nbsp;Number of Bathrooms: <strong>' . $property->baths . '</strong>';
-                        }
-
-                        if (!empty($property->Subtype)) {
-                            $additionalarray[] = 'Subtype: <strong>' . $property->Subtype . '</strong>';
-                        }
-
-                        if (!empty($property->Community)) {
-                            $additionalarray[] = 'Community: <strong>' . $property->Community . '</strong>';
-                        }
-
-                        if (!empty($property->internal_area)) {
-                            $additionalarray[] = $areaicon . '&nbsp;&nbsp;&nbsp;Area: <strong>' . $property->displayInternal . '</strong>';
-                        }
-
-                        if (!empty($property->land_area)) {
-                            $additionalarray[] = $landicon . '&nbsp;&nbsp;&nbsp;Area: <strong>' . $property->displayland . '</strong>';
-                        }
-
-                        if (!empty($property->terrace_area)) {
-                            $additionalarray[] = $terraceicon . '&nbsp;&nbsp;&nbsp;Terrace: <strong>' . $property->terrace_area . ' sq ft </strong>';
-                        }
-
+                            // Define icons
+                            $fieldtype = '<img src="' . $mainurl . '/assets/demo1/images/svg/Property%20Feild%20Type.png" alt="Field Type" style="width: 21px; height: 19px;">';
+                            $Propertystatus = '<img src="' . $mainurl . '/assets/demo1/images/svg/Property%20Status.png" alt="Property Status" style="width: 21px; height: 19px;">';
+                            $Propertytype = '<img src="' . $mainurl . '/assets/demo1/images/svg/Property%20Type.png" alt="Property Type" style="width: 21px; height: 19px;">';
+                            $bedroomsIcon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic1.jpg" alt="Bedrooms Icon">';
+                            $bathroomsIcon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic2.jpg" alt="Bathrooms Icon">';
+                            $areaicon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic3.jpg" alt="Area Icon">';
+                            $landicon = '<img src="' . $mainurl . '/assets/demo1/images/svg/pro-in-ic4.jpg" alt="Land Icon">';
+                            $terraceicon = '<img src="' . $mainurl . '/assets/demo1/images/svg/Balcony-03.jpg" alt="Terrace Icon" style="width: 21px; height: 19px;">';
+                            
+                            $rows = [];
+                
+                            function row($icon, $label, $value) {
+                                return compact('icon','label','value');
+                            }
+                
+                            $rows[] = row($fieldtype, 'Field Type', $property->ModeDisplay);
+                
+                            if (!empty($property->state_display)) {
+                                $rows[] = row($Propertystatus, 'Status', $property->state_display);
+                            }
+                
+                            if (!empty($property->PropertyTypeName)) {
+                                $rows[] = row($Propertytype, 'Type', $property->PropertyTypeName);
+                            }
+                
+                            if (!empty($property->beds)) {
+                                $rows[] = row($bedroomsIcon, 'Bedrooms', $property->beds);
+                            }
+                
+                            if (!empty($property->baths)) {
+                                $rows[] = row($bathroomsIcon, 'Bathrooms', $property->baths);
+                            }
+                
+                            if (!empty($property->Subtype)) {
+                                $rows[] = row('', 'Subtype', $property->Subtype);
+                            }
+                
+                            if (!empty($property->Community)) {
+                                $rows[] = row('', 'Community', $property->Community);
+                            }
+                
+                            if (!empty($property->internal_area)) {
+                                $rows[] = row($areaicon, 'Built-up Area', $property->displayInternal);
+                            }
+                
+                            if (!empty($property->land_area)) {
+                                $rows[] = row($landicon, 'Land Area', $property->displayland);
+                            }
+                
+                            if (!empty($property->terrace_area)) {
+                                $rows[] = row($terraceicon, 'Terrace', $property->terrace_area . ' sq ft');
+                            }
                         @endphp
-                        @foreach ($additionalarray as $info)
-                            <li class="item-ai text-left">
-                                <div class="item-ai-inners">
-                                    {!! $info !!}
-                                </div>
-                            </li>
+                
+                        @foreach($rows as $i => $row)
+                            @if($i % 2 == 0)
+                                <tr>
+                            @endif
+                
+                            <td width="50%" valign="top">
+                                <!-- CARD -->
+                                <table width="100%" cellpadding="8" cellspacing="0"
+                                    style="
+                                        border:1px solid #e6e6e6;
+                                        border-radius:6px;
+                                        background:#fafafa;
+                                    ">
+                                    <tr>
+                                        <!-- TEXT -->
+                                        <td>
+                                            <div style="display:flex;">
+                                                <div style="">
+                                                    {!! $row['icon'] !!}
+                                                </div>
+                                                <div style="flex:1;">
+                                                    <div style="font-size:10px; color:#888;">
+                                                        {{ strtoupper($row['label']) }}
+                                                    </div>
+                                                    <div style="font-size:13px; font-weight:bold; color:#222;">
+                                                        {{ $row['value'] }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                
+                            @if($i % 2 == 1)
+                                </tr>
+                            @endif
                         @endforeach
-                    </ul>
+                
+                    </table>
+                
                 </div>
             </div>
         </div>
@@ -371,7 +411,7 @@ $mainurl = url('/').'/public';
             <div class="box">
                 <h2 class="page-heading">Gallery</h2>
                 <div class="property-gallery">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="wrapper photos">
+                    <table width="100%" border="0" cellspacing="4" cellpadding="8" align="center" class="wrapper photos">
                         @php
                         $photos = $property->propertyMediaPhotos;
                         $total = count($photos);
@@ -382,16 +422,16 @@ $mainurl = url('/').'/public';
                             @for($j = 0; $j < 3; $j++)
                                 @if(isset($photos[$i + $j]))
                                 <td width="33.33%" align="center">
-                                <div class="property-img-box thumb-box">
-                                    <img src="{{ storage_url($photos[$i + $j]->path) }}">
-                                </div>
+                                    <div class="property-img-box thumb-box">
+                                        <img src="{{ storage_url($photos[$i + $j]->path) }}">
+                                    </div>
                                 </td>
                                 @else
                                 <td width="33.33%"></td>
                                 @endif
-                                @endfor
-                                </tr>
-                                @endfor
+                            @endfor
+                            </tr>
+                        @endfor
                     </table>
                 </div>
             </div>
@@ -423,61 +463,79 @@ $mainurl = url('/').'/public';
             <div class="box">
                 <div style="margin-top:50px">
                     <div class="content">
-                        <h2 class="page-heading">Additional Info</h2>
-                        <div class="add-info-container" style="margin: 0px -5px;">
-
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <h2 class="page-heading">Key Features</h2>
+                        <div>
+                            <table width="100%" cellpadding="6" cellspacing="0" style="border-collapse:collapse;">
                                 @php
-                                $additionalarray = [];
-                                $additionalarray[] = $property->ModeDisplay;
-
-                                $ArrayAddInfo = array_merge($additionalarray,$property->ArrayAddInfo);
-                                $ctrFt=0; $ctrFtt=0;
+                                    $additionalarray = [];
+                                    $additionalarray[] = $property->ModeDisplay;
+                        
+                                    $ArrayAddInfo = array_merge($additionalarray, $property->ArrayAddInfo);
+                                    $chunks = array_chunk($ArrayAddInfo, 3); // 3 column layout
                                 @endphp
-                                @foreach( $ArrayAddInfo as $info )
-                                @php $ctrFt++; $ctrFtt++; @endphp
-                                <?php if ($ctrFt == 1) { ?>
+                        
+                                @foreach($chunks as $row)
                                     <tr>
-                                    <?php } ?>
-                                    <td valig="top" width="50%" align="center">
-                                        <div class="item-ai">
-                                            <div class="item-ai-inner">
-                                                {!!$info!!}
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <?php if ($ctrFt == 3) {
-                                        $ctrFt = 0; ?>
+                                        @foreach($row as $info)
+                                            <td width="50%" valign="top" style="padding:6px 4px;">
+                        
+                                                <!-- ITEM -->
+                                                <table width="100%" cellpadding="4" cellspacing="0">
+                                                    <tr>
+                                                        <!-- ICON -->
+                                                        <td width="10%" valign="top" style="color:#fff; background:#000; border-radius:4px; padding:2px 10px; display:flex; align-content-item:center; justify-content:center; text-align:center; font-size:12px;">
+                                                            ✓
+                                                        </td>
+                        
+                                                        <!-- TEXT -->
+                                                        <td width="90%" style="font-size:12px; color:#333;">
+                                                            {!! $info !!}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                        
+                                            </td>
+                                        @endforeach
                                     </tr>
-                                <?php } ?>
                                 @endforeach
                             </table>
+                        
                         </div>
                         @if(count($property->DisplayAmenitiesArray) > 0)
                         <h2 class="page-heading">Amenities</h2>
-                        <div class="add-info-container" style="margin: 0px -5px;">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                @php $ctrFt=0; $ctrFtt=0; @endphp
-                                @foreach ($property->DisplayAmenitiesArray as $info)
-                                @php $ctrFt++; $ctrFtt++; @endphp
-                                <?php if ($ctrFt == 1) { ?>
-                                    <tr>
-                                    <?php } ?>
-                                    <td valig="top" width="50%" align="center">
-                                        <div class="item-ai">
-                                            <div class="item-ai-inner">
-                                                {!!$info!!}
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <?php if ($ctrFt == 3) {
-                                        $ctrFt = 0; ?>
-                                    </tr>
-                                <?php } ?>
-                                @endforeach
-                            </table>
-                        </div>
-                        @endif
+
+                            <div>
+                            
+                                <table width="100%" cellpadding="6" cellspacing="0" style="border-collapse:collapse;">
+                                    @php
+                                        $chunks = array_chunk($property->DisplayAmenitiesArray, 3);
+                                    @endphp
+                            
+                                    @foreach($chunks as $row)
+                                        <tr>
+                                            @foreach($row as $info)
+                                                <td width="50%" valign="top" style="padding:6px 4px;">
+                            
+                                                    <table width="100%" cellpadding="4">
+                                                        <tr>
+                                                            <td width="10%" valign="top" style="color:#fff; background:#000; border-radius:4px; padding:4px 10px; display:flex; align-content-item:center; justify-content:center; text-align:center; font-size:12px;">
+                                                                ✓
+                                                            </td>
+                                                            <td width="90%" style="font-size:12px; color:#333;">
+                                                                {!! $info !!}
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                            
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            
+                            </div>
+                            
+                            @endif
                     </div>
                 </div>
             </div>
