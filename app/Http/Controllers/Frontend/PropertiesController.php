@@ -903,6 +903,13 @@ class PropertiesController extends Controller
 
     public function generate_pdf(Request $request, $propertyId){
         $property = Property::findOrFail($propertyId);
+        
+        $exist_brochure = Storage::disk('public')->exists($property->property_pdf_path);
+        
+        if($exist_brochure){
+            // Return existing brochure
+            return response()->download(storage_path('app/public/' . $property->property_pdf_path[get_current_currency()]));
+        }
 
         $url = url('');
         $asset = themeAsset();
@@ -923,7 +930,7 @@ class PropertiesController extends Controller
             ->setWarnings(false)
             ->setPaper('A4', 'portrait');
 
-        $path = 'properties/' . $property->id . '/propertybrochure.pdf';
+        $path[get_current_currency()] = 'properties/brochure/' . $property->id . '/'.get_current_currency().'_base_propertybrochure.pdf';
 
         Storage::disk('public')->put($path, $pdf->output());
 
