@@ -13,12 +13,12 @@ $mainurl = url('/').'/public';
     <style>
         /* ================= PAGE SETUP ================= */
         @page {
-            margin: 50px 30px 60px 30px;
+            margin: 30px;
         }
         
         body {
             margin: 0;
-            padding-top: 100px; /* space for header */
+            padding-top: 80px; /* space for header */
             font-family: "Roboto", DejaVu Sans, sans-serif;
             font-size: 12px;
         }
@@ -33,7 +33,7 @@ $mainurl = url('/').'/public';
         }
 
         .header img {
-            height: 80px;
+            height: 60px;
         }
 
         /* ================= PAGE CONTROL ================= */
@@ -226,7 +226,7 @@ $mainurl = url('/').'/public';
 
     <!-- HEADER -->
     <div class="header">
-        <img src="{{ themeAsset('images/logos/logo.png') }}" alt="Logo">
+        <img src="{{ asset('/assets/demo1/images/logos/logo.png') }}" alt="Logo">
     </div>
     
     <div class="main-img {{ ($property->PrimaryPhotoOrientation == 'portrait') ? 'portrait':'' }}">
@@ -367,7 +367,7 @@ $mainurl = url('/').'/public';
                                 <!-- CARD -->
                                 <table width="100%" cellpadding="8" cellspacing="0"
                                     style="
-                                        border:1px solid #e6e6e6;
+                                        border:1px solid #d9b483;
                                         border-radius:6px;
                                         background:#fafafa;
                                     ">
