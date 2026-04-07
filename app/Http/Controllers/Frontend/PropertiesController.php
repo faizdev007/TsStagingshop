@@ -907,7 +907,7 @@ class PropertiesController extends Controller
         if(isset($property->property_pdf_path) && !empty(json_decode($property->property_pdf_path, true)[get_current_currency()])){
             $curretfileRequest = json_decode($property->property_pdf_path, true)[get_current_currency()];
             $exist_brochure = Storage::disk('public')->exists($curretfileRequest);
-            if($exist_brochure){
+            if($exist_brochure && $property->updated_at == $property->pdf_created_at){
                 // Return existing brochure
                 return response()->file(storage_path('app/public/' . $curretfileRequest));
             }
@@ -944,8 +944,13 @@ class PropertiesController extends Controller
         
         // disable timestamp update
         $property->timestamps = false;
-
-        $pdf_paths[get_current_currency()] = $path;
+        
+        if($property->updated_at !== $property->pdf_created_at){
+            $pdf_paths[get_current_currency()] = $path;
+        }else{
+            $pdf_paths = json_decode($property->property_pdf_path, true);
+            $pdf_paths[get_current_currency()] = $path;
+        }
 
         DB::table('properties')
         ->where('id', $property->id)
