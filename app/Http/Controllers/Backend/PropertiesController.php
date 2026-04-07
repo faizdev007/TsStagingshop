@@ -27,6 +27,7 @@ use Barryvdh\DomPDF\PDF;
 use DB;
 use File;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 use Image;
 
@@ -1502,7 +1503,7 @@ class PropertiesController extends Controller
                                 HTML;
                                 // send to inquiries@terezaestates.com only settings('from_email')
                                 $message = ['sub'=>$subject,'msg'=>$msg];
-                                SendEnquiryEmail::dispatch(null,$message,'faizdev007@gmail.com');
+                                SendEnquiryEmail::dispatch(null,$message,Config::get('mail.from.address'));
                             }
                         }
                     }elseif ($status['claim'] == 'false' && $query->exists()) {
@@ -1632,7 +1633,7 @@ class PropertiesController extends Controller
             <p>We’re pleased to inform you that your property listing with reference
             <strong>{$findP->first()->ref}</strong> has been approved by the Super Admin.</p>
             HTML;
-            // send to inquiries@terezaestates.com only settings('from_email')
+            // send to user to inform settings('from_email')
             $message = ['sub'=>$subject,'msg'=>$msg];
             SendEnquiryEmail::dispatch(null,$message,$findP->first()->user->email);
            return back()->with('success',$findP->first()->ref.' Property Listing Successfully Approved');
@@ -1657,7 +1658,7 @@ class PropertiesController extends Controller
             <p>Your property listing with reference
             <strong>{$propertyRef}</strong> has been rejected. Please contact the Super Admin for further clarification</p>
             HTML;
-            // send to inquiries@terezaestates.com only settings('from_email')
+            // send to user to inform property rejection
             $message = ['sub'=>$subject,'msg'=>$msg];
             SendEnquiryEmail::dispatch(null,$message,$email);
 
@@ -1681,7 +1682,7 @@ class PropertiesController extends Controller
             <p>We’re pleased to inform you that your property claim with reference
             <strong>{$propertyRef}</strong> has been approved by the Super Admin and is now available on your profile page.</p>
             HTML;
-            // send to inquiries@terezaestates.com only settings('from_email')
+            // send to user to inform claim approval
             $message = ['sub'=>$subject,'msg'=>$msg];
             SendEnquiryEmail::dispatch(null,$message,$findP->first()->user->email);
             return back()->with('success',$findP->first()->property->ref.' Property Claim Request Successfully Approved!');
@@ -1701,7 +1702,7 @@ class PropertiesController extends Controller
             $msg = <<<HTML
             <p>Your property claim with reference <strong>{$ref}</strong> has been rejected. Please contact the Super Admin for further clarification.</p>
             HTML;
-            // send to inquiries@terezaestates.com only settings('from_email')
+            // send to user to inform claim rejection
             $message = ['sub'=>$subject,'msg'=>$msg];
             SendEnquiryEmail::dispatch(null,$message,$email);
             return back()->with('success',$ref.' Property Claim Request Successfully Rejected!');
@@ -1720,7 +1721,7 @@ class PropertiesController extends Controller
             $msg = <<<HTML
             <p>We regret to inform you that your property claim with reference <strong>{$ref}</strong> has been revoked and is no longer visible on your profile. For further clarification, please contact the Super Admin.</p>
             HTML;
-            // send to inquiries@terezaestates.com only setting('from_email')
+            // send to user to inform claim revocation, but if the user is admin or superadmin do not send email
             if($user->role_id == 1 || $user->role_id == 2){
                 // if the user is admin , superadmin do not send email
                 return back()->with('success',$ref.' Property Claim Successfully Revoke!');

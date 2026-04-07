@@ -6,10 +6,10 @@ return [
     |--------------------------------------------------------------------------
     | FROM details
     |--------------------------------------------------------------------------
-    |
+    |inquiries@terezaestates.com
     */
-    'from' => ['address' => env('APP_EMAILFROM', 'inquiries@terezaestates.com'), 'name' => env('APP_EMAILFROM_NAME', 'Tereza Estates')],
-    'reply_to' => ['address' => env('APP_EMAILREPLYTO', 'inquiries@terezaestates.com'), 'name' => env('APP_EMAILREPLYTO_NAME', 'Tereza Estates')],
+    'from' => ['address' => env('APP_EMAILFROM', 'tykoonpunk@gmail.com'), 'name' => env('APP_EMAILFROM_NAME', 'Tereza Estates')],
+    'reply_to' => ['address' => env('APP_EMAILREPLYTO', 'tykoonpunk@gmail.com'), 'name' => env('APP_EMAILREPLYTO_NAME', 'Tereza Estates')],
 
     /*
     |--------------------------------------------------------------------------

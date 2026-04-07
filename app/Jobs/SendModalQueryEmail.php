@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
 
 class SendModalQueryEmail implements ShouldQueue
@@ -21,7 +22,7 @@ class SendModalQueryEmail implements ShouldQueue
     {
         //
         $this->enquiry = $enquiry;
-        $this->tomailId = $tomailId;
+        $this->tomailId = Config::get('mail.from.address');
     }
 
     /**

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\User;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Config;
 
 class LoginController extends Controller
 {
@@ -127,7 +128,7 @@ class LoginController extends Controller
                     'last_login_ip' => $request->getClientIp()
                 ]);
                 
-                SendEnquiryEmail::dispatch(null,$message,'faizdev007@gmail.com');
+                SendEnquiryEmail::dispatch(null,$message,Config::get('mail.from.address'));
                 
                 return response()->json(['success' => true]);
             }else{

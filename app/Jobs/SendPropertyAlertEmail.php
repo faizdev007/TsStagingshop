@@ -38,7 +38,7 @@ class SendPropertyAlertEmail implements ShouldQueue
             Mail::to( $this->alert->email )->send(new PropertyAlertCronMail($this->properties, $this->alert));
         }else{
             // Config::get('mail.from.address')
-            Mail::to('faizdev007@gmail.com')->send(new PropertyAlertMail($this->properties));
+            Mail::to(Config::get('mail.from.address'))->send(new PropertyAlertMail($this->properties));
         }
     }
 }
