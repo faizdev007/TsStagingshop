@@ -32,8 +32,7 @@ class SendValuationAcceptedEmail implements ShouldQueue
         //
 
         // Send Accepted Valuation to Site Admin....
-        // Config::get('mail.from.address')
-        Mail::to('faizdev007@gmail.com')
+        Mail::to(Config::get('mail.from.address'))
             ->send(new ValuationAccepted($this->valuation));
     }
 }

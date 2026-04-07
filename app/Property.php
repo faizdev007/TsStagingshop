@@ -608,9 +608,9 @@ class Property extends Model
     {
         if(settings('overseas') == 1)
         {
-            $value = implode(', ', array_filter([$this->complex_name, $this->town, $this->city, $this->region]));
+            $value = implode(', ', array_filter([$this->country,$this->town,$this->street,$this->complex_name]));
         }else{
-            $value = implode(', ', array_filter([$this->town, $this->city, $this->region]));
+            $value = implode(', ', array_filter([$this->country,$this->town,$this->street,$this->complex_name]));
         }
 
         return $value;
