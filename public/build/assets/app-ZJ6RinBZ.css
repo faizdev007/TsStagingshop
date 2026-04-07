@@ -10820,3 +10820,16 @@ input[type=text].search--ref-id::placeholder {
 .search-page .search-form-home--container {
     max-width: 920px
 }
+
+.checkboxblack {
+    border-color: #000 !important;
+    background-color: #000 !important;
+    padding: 10px !important;
+    border-radius: 6px !important
+}
+
+.checkboxtext {
+    margin-left: 10px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important
+}

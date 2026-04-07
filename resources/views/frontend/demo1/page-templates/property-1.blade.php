@@ -180,32 +180,36 @@
                     @if($property->add_info)
                     <div class="pro-description feature-lst">
                         <h3>Key Features</h3>
-                        <ul>
+                        <div class="row mb-3 mt-4">
                             @foreach($property->DisplayAddInfoArray as $feature)
-                            <li>
-                                <div class="customcheck">
-                                    <input class="styled-checkbox" id="ch-{{$loop->iteration}}" type="checkbox" value="value" checked>
-                                    <label for="ch-{{$loop->iteration}}"><span>{{ $feature }}</span></label>
+                                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input checkboxblack" type="checkbox" checked id="ch-{{$loop->iteration}}">
+                                        <label class="fontstyle checkboxtext" for="ch-{{$loop->iteration}}">
+                                            {{ $feature }}
+                                        </label>
+                                    </div>
                                 </div>
-                            </li>
                             @endforeach
-                        </ul>
+                        </div>
                     </div>
                     @endif
 
                     @if($property->add_amenities)
                     <div class="pro-description feature-lst">
                         <h3>Amenities</h3>
-                        <ul>
+                        <div class="row mb-3 mt-4">
                             @foreach($property->DisplayAmenistiesInfoArray as $feature)
-                            <li>
-                                <div class="customcheck">
-                                    <input class="styled-checkbox" id="ch-{{$loop->iteration}}" type="checkbox" value="value" checked>
-                                    <label for="ch-{{$loop->iteration}}"><span>{{ $feature }}</span></label>
+                                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input checkboxblack" type="checkbox" checked id="ch-{{$loop->iteration}}">
+                                        <label class="fontstyle checkboxtext" for="ch-{{$loop->iteration}}">
+                                            {{ $feature }}
+                                        </label>
+                                    </div>
                                 </div>
-                            </li>
                             @endforeach
-                        </ul>
+                        </div>
                     </div>
                     @endif
 
