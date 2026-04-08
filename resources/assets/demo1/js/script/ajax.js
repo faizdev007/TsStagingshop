@@ -2,103 +2,98 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 
 $(function(){
-  function ajaxForm(id){
-    var formObject = $("#ajax-form-"+id);
-    formObject.submit(function(e){
-      e.preventDefault();
-      var data = $(this).serialize()+'&url='+window.location.href;
-      var url = $(this).attr("action");
-      var button_txt = $("#btn-"+id).html();
-      var widgetId = '';
+  function ajaxForm(id) {
+  var formObject = $("#ajax-form-" + id);
 
-      $("#btn-"+id).html('loading...');
-      $("#response-"+id).html('');
-      formObject.find('input, select, textarea').removeClass('error-feild');
+  formObject.submit(function (e) {
+    e.preventDefault();
 
-      $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: url,
-        data:data,
-        success: function(e){
+    const SITE_KEY = document.querySelector('meta[name="recaptcha-key"]').content;
 
-          // we apply red border to fields now
-          if(e.invalidFeilds){
-            var _invalidFeilds = JSON.parse(e.invalidFeilds);
-            for (var i = 0; i < _invalidFeilds.length; i++) {
-              var _feild = _invalidFeilds[i];
-              formObject.find('[name="'+_feild+'"]').addClass('error-feild');
-            }
-          }
-         if(e.flag==3){ 
-         //RECAPTCHA ALERT
-              $("#response-"+id).html(e.alert);              
-              // var gObject = $("#ajax-form-"+id).find(".g-recaptcha-pw");
-              // var grId = gObject.attr('id');
-              // var ajaxsitekey = gObject.data('sitekeypw');
-              // var ajaxcallback = gObject.data('callbackpw');
-              // var ajaxcounter = gObject.attr('data-counterpw');
+    var url = $(this).attr("action");
+    var button_txt = $("#btn-" + id).html();
 
-              // if ( ajaxcounter == '' ){
-              //     widgetId = grecaptcha.render(grId, {
-              //      'sitekey' : ajaxsitekey,
-              //      'callback' : ajaxcallback,
-              //      'size' : "invisible"
-              //      });
+    $("#btn-" + id).html('loading...');
+    $("#response-" + id).html('');
+    formObject.find('input, select, textarea').removeClass('error-feild');
 
-              //     gObject.attr('data-counterpw',widgetId);
-              //     grecaptcha.reset(widgetId);
-              //     grecaptcha.execute(widgetId);
-              // }else{
-              //     grecaptcha.reset(ajaxcounter);
-              //     grecaptcha.execute(ajaxcounter);
-              // }
-            return false;
-          }else{
-              if(e.flag){
-                $("#response-"+id).html(e.alert);
-                $("#ajax-form-"+id).find("input[type=email],input[type=tel],input[type=text],textarea,select").val("");
-              }
-          }
-
-            if(id == "property-alert-form")
-            {
-                if(e.flag == 1)
-                {
-                    // Give it 2 seconds then hide the modal...
-                    setTimeout(function()
-                    {
-                        // Hide Modal Manually as having issues loading BS4 JS....?
-                        $('.property-alert-modal').fadeOut();
-                        $('.modal-backdrop').hide();
-                        $('body').removeClass('modal-open');
-                    }, 2000)
-                }
-         }
-
-          setTimeout(() => {
-              fetch('/runJobs').catch(() => {});
-          }, 10000);
-         
-          //console.log(e);
-          $("#btn-"+id).html(button_txt);
-        },
-        complete: function(e){
-          //console.log(e);
-          $("#btn-"+id).html(button_txt);
-
-            return false;
-
-        },
-        fail: function(e){
-          //console.log(e);
-        }
-      });
-
+    // ✅ STEP 1: Generate token FIRST
+    if (typeof grecaptcha === 'undefined') {
+      console.error('reCAPTCHA not loaded');
       return false;
+    }
+
+    grecaptcha.ready(function () {
+      grecaptcha.execute(SITE_KEY, { action: 'submit' }).then(function (token) {
+
+        // ✅ STEP 2: Attach token to form
+        if (!formObject.find('[name="recaptcha_token"]').length) {
+          formObject.append('<input type="hidden" name="recaptcha_token">');
+        }
+
+        formObject.find('[name="recaptcha_token"]').val(token);
+
+        // ✅ STEP 3: Prepare data AFTER token
+        var data = formObject.serialize() + '&url=' + window.location.href;
+
+        // ✅ STEP 4: AJAX call
+        $.ajax({
+          type: "POST",
+          dataType: "json",
+          url: url,
+          data: data,
+
+          success: function (e) {
+
+            if (e.invalidFeilds) {
+              var _invalidFeilds = JSON.parse(e.invalidFeilds);
+              for (var i = 0; i < _invalidFeilds.length; i++) {
+                var _feild = _invalidFeilds[i];
+                formObject.find('[name="' + _feild + '"]').addClass('error-feild');
+              }
+            }
+
+            if (e.flag == 3) {
+              $("#response-" + id).html(e.alert);
+              return false;
+            } else {
+              if (e.flag) {
+                $("#response-" + id).html(e.alert);
+                formObject.find("input[type=email],input[type=tel],input[type=text],textarea,select").val("");
+              }
+            }
+
+            if (id == "property-alert-form" && e.flag == 1) {
+              setTimeout(function () {
+                $('.property-alert-modal').fadeOut();
+                $('.modal-backdrop').hide();
+                $('body').removeClass('modal-open');
+              }, 2000);
+            }
+
+            setTimeout(() => {
+              fetch('/runJobs').catch(() => {});
+            }, 10000);
+
+            $("#btn-" + id).html(button_txt);
+          },
+
+          complete: function () {
+            $("#btn-" + id).html(button_txt);
+          },
+
+          error: function (err) {
+            console.error(err);
+            $("#btn-" + id).html(button_txt);
+          }
+        });
+
+      });
     });
 
-  }
+    return false;
+  });
+}
 
 
   /** AJAX FORM **/

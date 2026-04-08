@@ -433,6 +433,9 @@
             loadRecaptcha(() => {
                 ensureTokenInputs();
                 updateAllFormsToken();
+
+                // ✅ Start interval only when ready
+                setInterval(updateAllFormsToken, 60 * 1000); // every 1 min
             });
         }
     
@@ -449,9 +452,7 @@
         });
     
         setTimeout(lazyInit, 10000);
-    
     });
-    setInterval(updateAllFormsToken, 10 * 60 * 1000);
 </script>
 @endif
 <script async type="text/javascript">
