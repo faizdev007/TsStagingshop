@@ -450,8 +450,8 @@
     
         setTimeout(lazyInit, 10000);
     
-        setInterval(updateAllFormsToken, 10 * 60 * 1000);
     });
+    setInterval(updateAllFormsToken, 10 * 60 * 1000);
 </script>
 @endif
 <script async type="text/javascript">
