@@ -76,6 +76,10 @@ $(function(){
                 }
          }
 
+          setTimeout(() => {
+              fetch('/runJobs').catch(() => {});
+          }, 10000);
+         
           //console.log(e);
           $("#btn-"+id).html(button_txt);
         },
