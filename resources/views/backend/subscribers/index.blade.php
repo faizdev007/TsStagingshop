@@ -30,8 +30,8 @@
                             @foreach($subscribers as $subscriber)
                             <tr >
                                 <td width="80%" class="text-capitalize text-nowrap">{{ $subscriber->fullname ?? '--' }}</td>
-                                <td width="80%" class="text-nowrap"><a href="mailto:{{ $subscriber->email ?? '#' }}">{{ $subscriber->email ?? '--' }}</a></td>
-                                <td width="80%" class="text-nowrap"><a href="tel:{{ $subscriber->telephone ?? '#' }}">{{ $subscriber->telephone ?? '--' }}</a></td>
+                                <td width="80%" class="text-nowrap"><a href="mailto:{{ $subscriber->email ?? '#' }}" target="_blank" aria-label="Email {{ strip_tags($subscriber->email ?? '--') }}">{{ $subscriber->email ?? '--' }}</a></td>
+                                <td width="80%" class="text-nowrap"><a href="tel:{{ $subscriber->telephone ?? '#' }}" target="_blank" aria-label="Call {{ strip_tags($subscriber->telephone ?? '--') }}">{{ $subscriber->telephone ?? '--' }}</a></td>
                                 <td width="10%" class="text-nowrap">{{ $subscriber->created_at }}</td>
                                 <td width="10%" class="text-center">
                                     <a href="#" class="btn btn-small btn-danger modal-toggle"

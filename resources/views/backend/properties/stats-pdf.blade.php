@@ -408,8 +408,8 @@
                 <img src="{{ themeAsset('images/logos/logo.png') }}" width="300px">
             </td>
             <td class="f-info" width="50%">
-                <p>Mobile: <a href="tel:{{ settings('telephone') }}" class="text-red">{{ settings('telephone') }}</a></p>
-                <p>Email: <a href="mailto:{{ settings('email') }}">{{ settings('email') }}</a></p>
+                <p>Mobile: <a href="tel:{{ settings('telephone') }}" aria-label="Call {{ strip_tags(settings('telephone')) }}" class="text-red">{{ settings('telephone') }}</a></p>
+                <p>Email: <a href="mailto:{{ settings('email') }}" aria-label="Email {{ strip_tags(settings('email')) }}">{{ settings('email') }}</a></p>
                 <p>{!! settings('footer_address') !!} <br/>  {{ url('/') }} </p>
             </td>
             

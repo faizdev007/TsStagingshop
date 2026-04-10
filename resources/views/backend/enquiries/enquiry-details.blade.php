@@ -15,11 +15,13 @@
                         <th scope="row">Name:</th>
                         <td>{{ ucwords($enquiry->name) ?? '--' }}</td>
                         <th scope="row">Email:</th>
-                        <td><a href="mailto:{{$enquiry->email ?? '#'}}">{{ $enquiry->email ?? '--' }}</a></td>
+                        <td><a href="mailto:{{$enquiry->email ?? '#'}}" target="_blank" aria-label="Email {{ strip_tags($enquiry->email ?? '--') }}">
+                            {{ $enquiry->email ?? '--' }}
+                        </a></td>
                     </tr>
                     <tr>
                         <th scope="row">Telephone:</th>
-                        <td><a href="tel:{{$enquiry->telephone ?? '#'}}"> {{$enquiry->telephone ?? '--'}} </a></td>
+                        <td><a href="tel:{{$enquiry->telephone ?? '#'}}" target="_blank" aria-label="Call {{ strip_tags($enquiry->telephone ?? '--') }}"> {{$enquiry->telephone ?? '--'}} </a></td>
                         <th scope="row">Status:</th>
                         <td>{{$enquiry->e_status ?? '--'}}</td>
                     </tr>

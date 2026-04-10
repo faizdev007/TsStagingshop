@@ -14,24 +14,24 @@
                
                 @if( !empty(settings('telephone')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                    <a href="tel:{{ settings('telephone') }}" class="u-hover-opacity-70" target="_blank"><img src="{{ themeAsset('images/svg/phone.png') }}" alt="{{ settings('site_name') }}" ></a>
+                    <a href="tel:{{ settings('telephone') }}" class="u-hover-opacity-70" target="_blank" aria-label="Call {{ strip_tags(settings('telephone')) }}"><img src="{{ themeAsset('images/svg/phone.png') }}" alt="{{ settings('site_name') }}" ></a>
                 </div>
                 @endif
                 @if( !empty(settings('instagram_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                <a href="{{settings('instagram_url')}}" class="u-hover-opacity-70" target="_blank" ><img src="{{ themeAsset('images/svg/instagram.png') }}" alt="{{ settings('site_name') }}" ></a>
+                <a href="{{settings('instagram_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Instagram"><img src="{{ themeAsset('images/svg/instagram.png') }}" alt="{{ settings('site_name') }}" ></a>
                 </div>
                 @endif
                 @if( !empty(settings('facebook_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                <a href="{{settings('facebook_url')}}" class="u-hover-opacity-70" target="_blank" >
+                <a href="{{settings('facebook_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Facebook">
                     <img src="{{ themeAsset('images/svg/facebook.png') }}" alt="{{ settings('site_name') }}" ></a>
                 </div>
                 @endif
 
                  @if( !empty(settings('tiktok_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                <a href="{{settings('tiktok_url')}}" class="u-hover-opacity-70" target="_blank" >
+                <a href="{{settings('tiktok_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on TikTok">
                     <img src="{{ themeAsset('images/svg/tiktok.png') }}" alt="{{ settings('site_name') }}" >
                     </a>
                 </div>
@@ -39,7 +39,7 @@
 
                 @if( !empty(settings('youtube_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                    <a href="{{settings('youtube_url')}}" class="u-hover-opacity-70" target="_blank" >
+                    <a href="{{settings('youtube_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on YouTube">
                         <img src="{{ themeAsset('images/svg/youtube.png') }}" alt="{{ settings('site_name') }}" >
                     </a>
                 </div>
@@ -47,19 +47,19 @@
                 
                 @if( !empty(settings('twitter_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                    <a href="{{settings('twitter_url')}}" class="u-hover-opacity-70" target="_blank" > <img src="{{ themeAsset('images/svg/twitter.png') }}" alt="{{ settings('site_name') }}" >
+                    <a href="{{settings('twitter_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Twitter"> <img src="{{ themeAsset('images/svg/twitter.png') }}" alt="{{ settings('site_name') }}" >
                         </a>
                 </div>
                 @endif
 
                 @if( !empty(settings('linkedin_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                    <a href="{{settings('linkedin_url')}}" class="u-hover-opacity-70" target="_blank" ><img src="{{ themeAsset('images/svg/linkedin.png') }}" alt="{{ settings('site_name') }}" >
+                    <a href="{{settings('linkedin_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on LinkedIn"><img src="{{ themeAsset('images/svg/linkedin.png') }}" alt="{{ settings('site_name') }}" >
                         </a></div>@endif
 
                 @if( !empty(settings('pinterest_url')) )
                 <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                    <a href="{{settings('pinterest_url')}}" class="u-hover-opacity-70" target="_blank" >
+                    <a href="{{settings('pinterest_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Pinterest">
                     <img src="{{ themeAsset('images/svg/pinterest.png') }}" alt="{{ settings('site_name') }}" >
                     </a>
                 </div>
@@ -67,7 +67,9 @@
 
                 @if( !empty(settings('email')) )
                     <div class="footer-sn--item" style="display: inline-block; margin: 0 5px;">
-                        <a href="mailto:{{ settings('email') }}" target="_blank"><img src="{{ themeAsset('images/svg/email.png') }}" alt="{{ settings('site_name') }}" ></a>
+                        <a href="mailto:{{ settings('email') }}" target="_blank" aria-label="Email {{ settings('email') }}">
+                            <img src="{{ themeAsset('images/svg/email.png') }}" alt="{{ settings('site_name') }}" >
+                        </a>
                     </div>
                 @endif
 

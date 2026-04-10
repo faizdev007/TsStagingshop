@@ -223,7 +223,7 @@
                         <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>We'd love to help you with your property search!</strong></p>
                         <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;">If you can’t find exactly what you are looking for then give us a call and we will research the market to find you your perfect property. Let us do the hard work.</p>
                         @if( settings('telephone') )
-                            <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;">Call us on: <a href="tel:{{ settings('telephone') }}">{{ settings('telephone') }}</a></p>
+                            <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;">Call us on: <a href="tel:{{ settings('telephone') }}" aria-label="Call {{ strip_tags(settings('telephone')) }}">{{ settings('telephone') }}</a></p>
                         @endif
                     </td>
                 </tr>
@@ -239,12 +239,12 @@
 
                 <tr>
                     <td>
-                        <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>Web:</strong> <a target="_blank" href="{{ env('APP_URL') }}">{{ env('APP_URL') }}</a></p>
+                        <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>Web:</strong> <a target="_blank" href="{{ env('APP_URL') }}" aria-label="Visit {{ env('APP_URL') }}">{{ env('APP_URL') }}</a></p>
                         @if( settings('email') )
-                            <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>E-Mail:</strong> <a href="mailto:{{ settings('email') }}">{{ settings('email') }}</a></p>
+                            <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>E-Mail:</strong> <a href="mailto:{{ settings('email') }}" aria-label="Email {{ settings('email') }}">{{ settings('email') }}</a></p>
                         @endif
                         @if( settings('telephone') )
-                            <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>Tel:</strong> {{ settings('telephone') }}</p>
+                            <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>Tel:</strong> <a href="tel:{{ settings('telephone') }}" aria-label="Call {{ strip_tags(settings('telephone')) }}">{{ settings('telephone') }}</a></p>
                         @endif
                         <p style="font-family:Arial, sans-serif;font-size:16px;line-height:18px;color:#333333;"><strong>Address:</strong> {!! settings('contact_address') !!}</p>
                     </td>

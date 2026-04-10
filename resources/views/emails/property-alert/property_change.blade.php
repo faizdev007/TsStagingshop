@@ -93,7 +93,7 @@
                                                 ?>
                                                 <?php if ( !empty($city) ) { ?> near <br />
                                                 <a target="_blank" style="color: #000000; text-decoration: underline"
-                                                   href="{{ url('property-'.$tenure_url.'/in/'.$city) }}"><?=$property->city?></a>
+                                                   href="{{ url('property-'.$tenure_url.'/in/'.$city) }}" aria-label="View properties in <?=$property->city?>"><?=$property->city?></a>
                                                 <?php } ?>
                                             </td>
                                         </tr>

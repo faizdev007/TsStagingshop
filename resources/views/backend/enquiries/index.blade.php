@@ -140,13 +140,13 @@
                                                     </td>
 
                                                     <td>
-                                                        <a href="mailto:{{ $enquiry->email ?? '#' }}">
+                                                        <a href="mailto:{{ $enquiry->email ?? '#' }}" aria-label="Email {{ strip_tags($enquiry->email ?? '--') }}"  >
                                                             {{ strip_tags($enquiry->email ?? '--') }}
                                                         </a>
                                                     </td>
 
                                                     <td>
-                                                        <a href="tel:{{ $enquiry->telephone ?? '#' }}">
+                                                        <a href="tel:{{ $enquiry->telephone ?? '#' }}"  aria-label="Call {{ strip_tags($enquiry->telephone ?? '--') }}">
                                                             {{ strip_tags($enquiry->telephone ?? '--') }}
                                                         </a>
                                                     </td>
@@ -173,6 +173,7 @@
                                                         <a
                                                             href="{{ admin_url('enquiries/'.$enquiry->id.'/edit') }}"
                                                             class="btn btn-small {{ empty($enquiry->reply_message) ? 'btn-primary' : 'btn-info' }}"
+                                                            aria-label="{{ empty($enquiry->reply_message) ? 'Take Action on this enquiry' : 'Review this enquiry' }}"
                                                         >
                                                             {{ empty($enquiry->reply_message) ? 'Action' : 'Review' }}
                                                         </a>
@@ -182,6 +183,7 @@
                                                             <a
                                                                 href="{{ admin_url('enquiries/'.$enquiry->id.'/reactivate') }}"
                                                                 class="confirm-action btn btn-small btn-info"
+                                                                aria-label="Reactivate this enquiry"
                                                             >
                                                                 Reactivate
                                                             </a>
