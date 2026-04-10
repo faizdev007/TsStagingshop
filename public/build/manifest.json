@@ -25,6 +25,10 @@
     "file": "assets/inner-hero-BZRnxGpA.png",
     "src": "public/assets/demo1/images/conrad-images/banners/inner-hero.png"
   },
+  "public/assets/demo1/images/conrad-images/down-arrow.png": {
+    "file": "assets/down-arrow-DqJwglxm.png",
+    "src": "public/assets/demo1/images/conrad-images/down-arrow.png"
+  },
   "public/assets/demo1/images/conrad-images/join-us-bg.jpg": {
     "file": "assets/join-us-bg-BpMDGMvP.jpg",
     "src": "public/assets/demo1/images/conrad-images/join-us-bg.jpg"
@@ -62,7 +66,7 @@
     ]
   },
   "resources/assets/demo1/sass/app.scss": {
-    "file": "assets/app-ZJ6RinBZ.css",
+    "file": "assets/app-CXfAqGQW.css",
     "src": "resources/assets/demo1/sass/app.scss",
     "isEntry": true,
     "name": "app",
