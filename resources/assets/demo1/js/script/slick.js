@@ -42,7 +42,7 @@ if(!window.mobileCheck()) {
         dotsClass: 'list-unstyled home-slider--controller order-1',
         customPaging: function(slick, index) {
             let active = index == 0 ? 'active' : '';
-            return `<a class="home-slider--dot slider-progress"><span class="progress ${active}"></span></a>`;
+            return `<a class="home-slider--dot slider-progress" aria-label="Go to slide ${index + 1}"><span class="progress ${active}"></span></a>`;
         }})
         .on('beforeChange', function($event, {
         slideCount: count  

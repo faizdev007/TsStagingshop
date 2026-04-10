@@ -220,7 +220,9 @@
 
                 @if( !empty(settings('telephone')) )
                 <li>
-                    <a href="tel:{{ settings('telephone') }}" target="_blank"><i class="fa fa-phone"></i></a>
+                    <a href="tel:{{ settings('telephone') }}" target="_blank" aria-label="Call us at {{ settings('telephone') }}">
+                        <i class="fa fa-phone"></i>
+                    </a>
                 </li>
                 @endif
                 @if( !empty(settings('whatsapp_url')) )
