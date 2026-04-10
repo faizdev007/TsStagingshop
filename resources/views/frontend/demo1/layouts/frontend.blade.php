@@ -140,7 +140,7 @@
     
                                                     @if( !empty(settings('telephone')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="tel:{{ settings('telephone') }}" target="_blank" ><i class="fa fa-phone"></i></a>
+                                                        <a href="tel:{{ settings('telephone') }}" target="_blank" aria-label="Call us"><i class="fa fa-phone"></i></a>
                                                     </div>
                                                     @endif
                                                     @if( !empty(settings('whatsapp_url')) )
