@@ -8,6 +8,9 @@ export default defineConfig({
                 'resources/assets/demo1/js/app.js',
                 'resources/assets/demo1/sass/app.scss',
             ],
+            build: {
+                cssMinify: true,   // ✅ ensure enabled
+            },
             refresh: true,
         }),
     ],
