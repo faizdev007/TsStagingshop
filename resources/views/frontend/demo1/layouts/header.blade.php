@@ -29,7 +29,7 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
     
     @stack('frontend_scripts')
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     {{-- META --}}
     <title>{{ !empty($meta->title) ? $meta->title : settings('site_name', config('app.name')) }}</title>
     @if (!empty($meta->description))
