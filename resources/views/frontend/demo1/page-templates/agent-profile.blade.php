@@ -123,7 +123,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                 <!-- Broker -->
                 <div class="d-flex justify-content-center justify-content-md-start gap-2">
                     <a href="https://api.whatsapp.com/send?phone={{$page->team_member_phone}}" class="align-items-center btn d-flex flex-1 gap-1 justify-content-center whatsapp-btn" aria-label="Chat on WhatsApp"> <span class="d-md-block d-none"><i class="fab align-content-around fa-whatsapp"></i></span> Whatsapp</a>
-                    <a href="https://terezaestates.com/property-for-sale" class="-secondary align-items-center button d-flex flex-1 gap-1 justify-content-center">
+                    <a href="https://terezaestates.com/property-for-sale"  class="-secondary align-items-center button d-flex flex-1 gap-1 justify-content-center" aria-label="View Properties">
                         <span class="d-md-block d-none">View</span>Properties
                     </a>
                 </div>
@@ -135,7 +135,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
             <div class="border-top justify-content-around row text-center">
                 @if(isset($counts['sale']))
                 <div class="col-lg-2 col-sm-4 col-6 p-3">
-                    <a class="text-decoration-none" href="https://terezaestates.com/property-for-sale">
+                    <a class="text-decoration-none"  href="https://terezaestates.com/property-for-sale" aria-label="View Properties for Sale">
                         <h5 class="fw-bold mb-0">{{$counts['sale']}}</h5>
                     </a>
                     <small class="text-muted">For Sale</small>
@@ -143,7 +143,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                 @endif
                 @if(isset($counts['rent']))
                 <div class="col-lg-2 col-sm-4 border-x col-6 p-3">
-                    <a class="text-decoration-none" href="https://terezaestates.com/property-for-rent">
+                    <a class="text-decoration-none" href="https://terezaestates.com/property-for-rent" aria-label="View Properties for Rent">
                         <h5 class="fw-bold mb-0">{{$counts['rent']}}</h5>
                     </a>
                     <small class="text-muted">For Rent</small>
@@ -323,7 +323,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                                     {!! $detail->content !!}
                                 </div>
 
-                                <a href="javascript:void(0)" class="read-more" data-target="content-{{ $detail->id }}">
+                                <a href="javascript:void(0)"  class="read-more" data-target="content-{{ $detail->id }}" aria-label="Read more">
                                     Read more
                                 </a>
                             </div>
@@ -369,7 +369,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                 @endphp
                 <div class="card mb-4 border-0 shadow-sm">
                     <div class="row g-0">
-                        <a href="{{lang_url($single->url)}}" class="col-md-4 position-relative">
+                        <a href="{{lang_url($single->url)}}"  class="col-md-4 position-relative" aria-label="View Property Details">
                             <span class="property-grid--featured-ribbon position-absolute p-1 mt-2 bg-light-brown text-white">{{p_states()[$single->status]}}</span>
                             <img src="{{ asset('/storage/'.$images[0]) ?? 'https://placehold.co/600x400' }}"
                                 class="img-fluid rounded-start h-100 property-img"
@@ -419,17 +419,17 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
 
                                 <div class="d-flex justify-content-center justify-content-md-start gap-2">
                                     @if( !empty(setting('telephone')) )
-                                    <a href="tel:{{ setting('telephone') }}" class="d-flex gap-2 text-decoration-none button -secondary f-14 f-sm-12" target="_blank">
+                                    <a href="tel:{{ setting('telephone') }}"  class="d-flex gap-2 text-decoration-none button -secondary f-14 f-sm-12" target="_blank" aria-label="Call">
                                         <i class="fa align-content-around fa-phone"> </i> <span class="d-none d-lg-block">Call</span>
                                     </a>
                                     @endif
                                     @if( !empty(setting('email')) )
-                                    <button onclick='agentEmail({{$single}})' class="d-flex gap-2 text-decoration-none button -default f-14 f-sm-12">
+                                    <button onclick='agentEmail({{$single}})' class="d-flex gap-2 text-decoration-none button -default f-14 f-sm-12" aria-label="Email Agent">
                                         <i class="far align-content-around fa-envelope"></i> <span class="d-none d-lg-block">Email</span>
                                     </button>
                                     @endif
                                     @if( !empty(setting('whatsapp_url')) )
-                                    <button onclick='agentwhatsapp({{$single}})' type="button" class="d-flex gap-2 text-decoration-none button -default f-14 f-sm-12">
+                                    <button onclick='agentwhatsapp({{$single}})' type="button" class="d-flex gap-2 text-decoration-none button -default f-14 f-sm-12" aria-label="Chat on Whatsapp">
                                         <i class="fab align-content-around fa-whatsapp"></i> <span class="d-none d-lg-block">Whatsapp</span>
                                     </button>
                                     @endif
@@ -483,7 +483,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownCurrency">
                                                     @foreach($all_currencies as $currency => $symbol)
                                                         @if( get_current_currency() != $currency)
-                                                            <a href="{{lang_url('properties/set/currency/'.$currency)}}" rel="nofollow" class="dropdown-item hover-tick">
+                                                            <a href="{{lang_url('properties/set/currency/'.$currency)}}" rel="nofollow" class="dropdown-item hover-tick" aria-label="Change Currency">
                                                                 {{$currency}}
                                                             </a>
                                                         @endif

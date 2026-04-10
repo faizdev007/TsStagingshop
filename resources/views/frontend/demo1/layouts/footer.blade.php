@@ -32,7 +32,7 @@
 
                 @if( !empty(settings('telephone')) )
                 <div class="footer-sn--item">
-                    <a href="tel:{{ settings('telephone') }}" class="u-hover-opacity-70" target="_blank"><i class="fa fa-phone"></i></a>
+                    <a href="tel:{{ settings('telephone') }}" aria-label="Call us at {{ settings('telephone') }}" class="u-hover-opacity-70" target="_blank"><i class="fa fa-phone"></i></a>
                 </div>
                 @endif
                 @if( !empty(settings('whatsapp_url')) )
@@ -42,18 +42,18 @@
                 @endif
                 @if( !empty(settings('instagram_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('instagram_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="{{settings('instagram_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 @endif
                 @if( !empty(settings('facebook_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('facebook_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{settings('facebook_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
                 @endif
 
                 @if( !empty(settings('tiktok_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('tiktok_url')}}" class="u-hover-opacity-70" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
+                    <a href="{{settings('tiktok_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
                             <path fill="white" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
                         </svg></a>
                 </div>
@@ -61,26 +61,26 @@
 
                 @if( !empty(settings('youtube_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('youtube_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                    <a href="{{settings('youtube_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Subscribe to our YouTube channel"><i class="fab fa-youtube-square"></i></a>
                 </div>@endif
                 @if( !empty(settings('twitter_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('twitter_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="{{settings('twitter_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
                 </div>@endif
 
                 @if( !empty(settings('linkedin_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('linkedin_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{settings('linkedin_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>@endif
 
                 @if( !empty(settings('pinterest_url')) )
                 <div class="footer-sn--item">
-                    <a href="{{settings('pinterest_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="{{settings('pinterest_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Follow us on Pinterest"><i class="fab fa-pinterest-p"></i></a>
                 </div>@endif
 
                 @if( !empty(settings('email')) )
                 <div class="footer-sn--item">
-                    <a href="mailto:{{ settings('email') }}" target="_blank"><i class="far fa-envelope"></i></a>
+                    <a href="mailto:{{ settings('email') }}" target="_blank" aria-label="Email us"><i class="far fa-envelope"></i></a>
                 </div>@endif
 
 
@@ -98,31 +98,31 @@
                                     </div>
                                     <div class="footer-link--header-content footer-link-content-info">
                                         <div class="">
-                                            <a href="{{ url('/property-for-sale') }}" class="c-white-link f-13 f-regular u-hover-opacity-70">
+                                            <a href="{{ url('/property-for-sale') }}" class="c-white-link f-13 f-regular u-hover-opacity-70" aria-label="View our properties for sale">
                                                 Sales</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('/property-for-rent') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('/property-for-rent') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View our properties for rent">
                                                 Rentals</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('property-for-development') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('property-for-development') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View our new developments">
                                                 New Developments</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('property-for-sale/in/international/') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('property-for-sale/in/international/') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View our international properties">
                                                 International</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('about-us') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('about-us') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="Learn more about us">
                                                 About</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('blog') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('blog') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="Read our blog">
                                                 Blog</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('contact-us') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('contact-us') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="Contact us">
                                                 Contact</a>
                                         </div>
 
@@ -140,23 +140,23 @@
                                         </div>
                                         <div class="footer-link--header-content footer-link-content-properties">
                                             <div>
-                                                <a href="{{ url('property-for-sale/area/Palm+Jumeirah') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale/area/Palm+Jumeirah') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View properties in Palm Jumeirah">
                                                     Palm Jumeirah</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale/area/Jumeirah+Beach+Residence') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale/area/Jumeirah+Beach+Residence') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View properties in Jumeirah Beach Residence (JBR)">
                                                     Jumeirah Beach Residence (JBR)</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale/area/bluewaters') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale/area/bluewaters') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View properties in Bluewaters">
                                                     Bluewaters</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('/property-for-sale/area/Dubai+Harbour+Beachfront') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('/property-for-sale/area/Dubai+Harbour+Beachfront') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View properties in Dubai Harbour Beachfront">
                                                     Dubai Harbour Beachfront</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('/property-for-sale/area/Downtown+%26+Burj+Khalifa+District') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('/property-for-sale/area/Downtown+%26+Burj+Khalifa+District') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View properties in Downtown & Business Bay">
                                                     Downtown & Business Bay</a>
                                             </div>
 
@@ -170,27 +170,27 @@
                                     </div>
                                     <div class="footer-link--header-content footer-link-content-blog mb-4">
                                         <div>
-                                            <a href="{{ url('apartment-for-sale/in/dubai%2C+united+arab+emirates') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('apartment-for-sale/in/dubai%2C+united+arab+emirates') }}"  class="c-white-link f-13 u-hover-opacity-70" aria-label="View apartments in Dubai">
                                                 Apartments In Dubai</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('villa-for-sale/in/dubai%2C+united+arab+emirates') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('villa-for-sale/in/dubai%2C+united+arab+emirates') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View villas in Dubai">
                                                 Villas In Dubai</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('development-for-sale-in-dubai') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('development-for-sale-in-dubai') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View new developments in Dubai">
                                                 New Developments In Dubai</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('privacy-policy') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('privacy-policy') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View privacy policy">
                                                 Privacy Policy</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('terms') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('terms') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View terms and conditions">
                                                 Terms & Conditions</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('cookie-policy') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('cookie-policy') }}" class="c-white-link f-13 u-hover-opacity-70" aria-label="View cookie policy">
                                                 Cookie Policy</a>
                                         </div>
                                     </div>
@@ -230,18 +230,18 @@
                 @endif
                 @if( !empty(settings('instagram_url')) )
                 <li>
-                    <a href="{{settings('instagram_url')}}" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="{{settings('instagram_url')}}" aria-label="Follow us on Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                 </li>
                 @endif
                 @if( !empty(settings('facebook_url')) )
                 <li>
-                    <a href="{{settings('facebook_url')}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{settings('facebook_url')}}" aria-label="Follow us on Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </li>
                 @endif
 
                 @if( !empty(settings('tiktok_url')) )
                 <li>
-                    <a href="{{settings('tiktok_url')}}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
+                    <a href="{{settings('tiktok_url')}}" aria-label="Follow us on TikTok" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
                             <path fill="white" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
                         </svg></a>
                 </li>
@@ -249,27 +249,27 @@
 
                 @if( !empty(settings('youtube_url')) )
                 <li>
-                    <a href="{{settings('youtube_url')}}" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                    <a href="{{settings('youtube_url')}}" aria-label="Subscribe to our YouTube channel" target="_blank"><i class="fab fa-youtube-square"></i></a>
                 </li>@endif
                 @if( !empty(settings('linkedin_url')) )
                 <li>
-                    <a href="{{settings('linkedin_url')}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{settings('linkedin_url')}}" aria-label="Follow us on LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </li>
                 @endif
                 @if( !empty(settings('twitter_url')) )
                 <li>
-                    <a href="{{settings('twitter_url')}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="{{settings('twitter_url')}}" aria-label="Follow us on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                 </li>
                 @endif
 
                 @if( !empty(settings('pinterest_url')) )
                 <li>
-                    <a href="{{settings('pinterest_url')}}" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="{{settings('pinterest_url')}}" aria-label="Follow us on Pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                 </li>@endif
 
                 @if( !empty(settings('email')) )
                 <li>
-                    <a href="mailto:{{ settings('email') }}" target="_blank"><i class="far fa-envelope"></i></a>
+                    <a href="mailto:{{ settings('email') }}" aria-label="Send us an email" target="_blank"><i class="far fa-envelope"></i></a>
                 </li>
                 @endif
             </ul>

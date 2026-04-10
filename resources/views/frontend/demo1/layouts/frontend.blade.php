@@ -151,7 +151,7 @@
     
                                                     @if( !empty(settings('tiktok_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('tiktok_url')}}" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
+                                                        <a href="{{settings('tiktok_url')}}" target="_blank" aria-label="Follow us on TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
                                                                 <path fill="white" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
                                                             </svg></a>
                                                     </div>
@@ -159,37 +159,37 @@
     
                                                     @if( !empty(settings('linkedin_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('linkedin_url')}}" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                                                        <a href="{{settings('linkedin_url')}}" target="_blank" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                                                     </div>
                                                     @endif
     
                                                     @if( !empty(settings('instagram_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('instagram_url')}}" target="_blank" ><i class="fab fa-instagram"></i></a>
+                                                        <a href="{{settings('instagram_url')}}" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
                                                     </div>
                                                     @endif
     
                                                     @if( !empty(settings('facebook_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('facebook_url')}}" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                                                        <a href="{{settings('facebook_url')}}" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
                                                     </div>
                                                     @endif
                                                     @if( !empty(settings('youtube_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('youtube_url')}}" target="_blank" ><i class="fab fa-youtube-square"></i></a>
+                                                        <a href="{{settings('youtube_url')}}" target="_blank" aria-label="Subscribe to our YouTube channel"><i class="fab fa-youtube-square"></i></a>
                                                     </div>@endif
                                                     @if( !empty(settings('twitter_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('twitter_url')}}" target="_blank" ><i class="fab fa-twitter"></i></a>
+                                                        <a href="{{settings('twitter_url')}}" target="_blank" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
                                                     </div>@endif
                                                     @if( !empty(settings('pinterest_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="{{settings('pinterest_url')}}" target="_blank" ><i class="fab fa-pinterest-p"></i></a>
+                                                        <a href="{{settings('pinterest_url')}}" target="_blank" aria-label="Follow us on Pinterest"><i class="fab fa-pinterest-p"></i></a>
                                                     </div>@endif
     
                                                     @if( !empty(settings('email')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="mailto:{{ settings('email') }}" target="_blank" ><i class="far fa-envelope"></i></a>
+                                                        <a href="mailto:{{ settings('email') }}" target="_blank" aria-label="Send us an email"><i class="far fa-envelope"></i></a>
                                                     </div>@endif
                                                 </div>
                                             </div>
@@ -208,7 +208,7 @@
 
             <div class="mobile-nav mobile-nav-menu-trigger position-absolute">
                 <div class="mobile-nav--burger burger-icon">
-                    <a href="#" class="burger-icon burger-icon--style d-block c-gray-link u-hover-opacity-70">
+                    <a href="#" class="burger-icon burger-icon--style d-block c-gray-link u-hover-opacity-70" aria-label="Toggle navigation">
                         <img src="{{ asset('assets/demo1/images/conrad-images/burger-menu.png') }}" alt="burger menu" width="26px" height="14px">
                         <div class="f-9 f-semibold">MENU</div>
                     </a>
