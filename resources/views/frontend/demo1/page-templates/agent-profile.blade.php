@@ -122,7 +122,7 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                 @if(isset($page->team_member_languages) || isset($page->team_member_experience))<p class="text-muted mb-1">{{ $page->team_member_languages ?? ''}} @if(isset($page->team_member_languages) && isset($page->team_member_experience)),@endif {{ $page->team_member_experience ?? ''}}</p>@endif
                 <!-- Broker -->
                 <div class="d-flex justify-content-center justify-content-md-start gap-2">
-                    <a href="https://api.whatsapp.com/send?phone={{$page->team_member_phone}}" class="align-items-center btn d-flex flex-1 gap-1 justify-content-center whatsapp-btn"> <span class="d-md-block d-none"><i class="fab align-content-around fa-whatsapp"></i></span> Whatsapp</a>
+                    <a href="https://api.whatsapp.com/send?phone={{$page->team_member_phone}}" class="align-items-center btn d-flex flex-1 gap-1 justify-content-center whatsapp-btn" aria-label="Chat on WhatsApp"> <span class="d-md-block d-none"><i class="fab align-content-around fa-whatsapp"></i></span> Whatsapp</a>
                     <a href="https://terezaestates.com/property-for-sale" class="-secondary align-items-center button d-flex flex-1 gap-1 justify-content-center">
                         <span class="d-md-block d-none">View</span>Properties
                     </a>

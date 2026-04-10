@@ -10,27 +10,27 @@
 
             <div class="footer-sn--wrap text-center mb-5">
                 <div class="footer-sn--item">
-                    <a href="tel:+66929591299" class="u-hover-opacity-70" target="_blank">
+                    <a href="tel:+66929591299" aria-label="Call us" class="u-hover-opacity-70" target="_blank">
                         <i class="fa fa-phone"></i></a>
                 </div>
                 <div class="footer-sn--item">
-                    <a href="https://www.facebook.com/conradluxuryvillas" class="u-hover-opacity-70" target="_blank">
+                    <a href="https://www.facebook.com/conradluxuryvillas" aria-label="Visit our Facebook profile" class="u-hover-opacity-70" target="_blank">
                         <i class="fab fa-facebook-f"></i></a>
                 </div>
                 <div class="footer-sn--item">
-                    <a href="https://www.instagram.com/conradvillas/" class="u-hover-opacity-70" target="_blank">
+                    <a href="https://www.instagram.com/conradvillas/" aria-label="Visit our Instagram profile" class="u-hover-opacity-70" target="_blank">
                         <i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="footer-sn--item">
-                    <a href="https://www.linkedin.com/company/conrad-villas" class="u-hover-opacity-70" target="_blank">
+                    <a href="https://www.linkedin.com/company/conrad-villas" aria-label="Visit our LinkedIn profile" class="u-hover-opacity-70" target="_blank">
                         <i class="fab fa-linkedin-in"></i></a>
                 </div>
                 {{--<div class="footer-sn--item">
-                    <a href="https://twitter.com/Property_Conrad" class="u-hover-opacity-70" target="_blank">
+                    <a href="https://twitter.com/Property_Conrad" aria-label="Visit our Twitter profile" class="u-hover-opacity-70" target="_blank">
                         <i class="fab fa-twitter"></i></a>
                 </div>--}}
                 <div class="footer-sn--item">
-                    <a href="mailto:info@conradvillas.com" class="u-hover-opacity-70" target="_blank">
+                    <a href="mailto:info@conradvillas.com" aria-label="Send us an email" class="u-hover-opacity-70" target="_blank">
                         <i class="far fa-envelope"></i></a>
                 </div>
             </div>
@@ -47,31 +47,31 @@
                                     </div>
                                     <div class="footer-link--header-content footer-link-content-info">
                                         <div class="">
-                                            <a href="{{ url('/') }}" class="c-white-link f-13 f-regular u-hover-opacity-70">
+                                            <a href="{{ url('/') }}" aria-label="Visit our home page" class="c-white-link f-13 f-regular u-hover-opacity-70">
                                                 Home</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('aboutus') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('aboutus') }}" aria-label="Learn more about us" class="c-white-link f-13 u-hover-opacity-70">
                                                 About Us</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('buyers-guide') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('buyers-guide') }}" aria-label="View our buyers guide" class="c-white-link f-13 u-hover-opacity-70">
                                                 Guide</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('our-partners') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('our-partners') }}" aria-label="Learn more about our partners" class="c-white-link f-13 u-hover-opacity-70">
                                                 Our Partners</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('blog-news') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('blog-news') }}" aria-label="View our blog and news" class="c-white-link f-13 u-hover-opacity-70">
                                                 Blog &amp; News</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('privacy') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('privacy') }}" aria-label="View our privacy policy" class="c-white-link f-13 u-hover-opacity-70">
                                                 Privacy</a>
                                         </div>
                                         <div class="">
-                                            <a href="{{ url('terms-conditions') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('terms-conditions') }}" aria-label="View our terms and conditions" class="c-white-link f-13 u-hover-opacity-70">
                                                 Terms</a>
                                         </div>
 
@@ -89,43 +89,43 @@
                                         </div>
                                         <div class="footer-link--header-content footer-link-content-properties">
                                             <div>
-                                                <a href="{{ url('property-for-sale-in-thailand') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-in-thailand') }}" aria-label="View properties for sale in Thailand" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Thailand</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('koh-samui-property-for-sale') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('koh-samui-property-for-sale') }}" aria-label="View properties for sale in Koh Samui" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Koh Samui</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale-phuket') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-phuket') }}" aria-label="View properties for sale in Phuket" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Phuket</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale-bangkok') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-bangkok') }}" aria-label="View properties for sale in Bangkok" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Bangkok</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale-koh-phangan') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-koh-phangan') }}" aria-label="View properties for sale in Koh Phangan" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Koh Phangan</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale-chiang-mai') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-chiang-mai') }}" aria-label="View properties for sale in Chiang Mai" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Chiang Mai</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale-pattaya') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-pattaya') }}" aria-label="View properties for sale in Pattaya" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Pattaya</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('property-for-sale-bali') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('property-for-sale-bali') }}" aria-label="View properties for sale in Bali" class="c-white-link f-13 u-hover-opacity-70">
                                                     Property for Sale in Bali</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('covid-property-discounts-thailand') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('covid-property-discounts-thailand') }}" aria-label="View covid property discounts in Thailand" class="c-white-link f-13 u-hover-opacity-70">
                                                     Covid Property Discounts</a>
                                             </div>
                                             <div>
-                                                <a href="{{ url('buy-real-estate-in-thailand-with-bitcoin') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                                <a href="{{ url('buy-real-estate-in-thailand-with-bitcoin') }}" aria-label="View crypto property investments in Thailand" class="c-white-link f-13 u-hover-opacity-70">
                                                     Crypto Property Investments</a>
                                             </div>
                                         </div>
@@ -138,27 +138,27 @@
                                     </div>
                                     <div class="footer-link--header-content footer-link-content-blog mb-4">
                                         <div>
-                                            <a href="{{ url('buyers-guide/why-buy-property-koh-samui') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('buyers-guide/why-buy-property-koh-samui') }}" aria-label="Learn why to buy property on Koh Samui" class="c-white-link f-13 u-hover-opacity-70">
                                                 Why Buy Property on Koh Samui?</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('buyers-guide/thailand-property-ownership') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('buyers-guide/thailand-property-ownership') }}" aria-label="Learn about Thailand property ownership" class="c-white-link f-13 u-hover-opacity-70">
                                                 Thailand Property Ownership</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('buyers-guide/thailand-land-titles') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('buyers-guide/thailand-land-titles') }}" aria-label="Learn about Thailand land titles" class="c-white-link f-13 u-hover-opacity-70">
                                                 Thailand Land Titles</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('buyers-guide/thailand-property-taxes-fees') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('buyers-guide/thailand-property-taxes-fees') }}" aria-label="Learn about Thailand property taxes and fees" class="c-white-link f-13 u-hover-opacity-70">
                                                 Thailand Property Taxes & Fees</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('buyers-guide/thailand-land-measurements') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('buyers-guide/thailand-land-measurements') }}" aria-label="Learn about land measurements in Thailand" class="c-white-link f-13 u-hover-opacity-70">
                                                 Land Measurement in Thailand</a>
                                         </div>
                                         <div>
-                                            <a href="{{ url('/buyers-guide/property-real-estate-faq') }}" class="c-white-link f-13 u-hover-opacity-70">
+                                            <a href="{{ url('/buyers-guide/property-real-estate-faq') }}" aria-label="View Koh Samui property and real estate FAQ" class="c-white-link f-13 u-hover-opacity-70">
                                                 Koh Samui Property &amp; Real Estate FAQ</a>
                                         </div>
                                     </div>
@@ -231,12 +231,12 @@
     <div class="container">
         <div class="social-bx-fix--wrap">
             <ul>
-                <li><a href="tel:+66929591299" class="tellb" target="_blank"><i class="fa fa-phone"></i></a></li>
-                <li><a href="https://www.facebook.com/conradluxuryvillas" target="_blank" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/conradvillas/" target="_blank" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/conrad-villas" target="_blank" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                {{--<li><a href="https://twitter.com/Property_Conrad" target="_blank" target="_blank"><i class="fab fa-twitter"></i></a></li>--}}
-                <li><a href="mailto:info@conradvillas.com" target="_blank" target="_blank"><i class="far fa-envelope"></i></a></li>
+                <li><a href="tel:+66929591299" class="tellb" aria-label="Call us" target="_blank"><i class="fa fa-phone"></i></a></li>
+                <li><a href="https://www.facebook.com/conradluxuryvillas" aria-label="Visit our Facebook profile" target="_blank" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/conradvillas/" aria-label="Visit our Instagram profile" target="_blank" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/conrad-villas" aria-label="Visit our LinkedIn profile" target="_blank" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                {{--<li><a href="https://twitter.com/Property_Conrad" aria-label="Visit our Twitter profile" target="_blank" target="_blank"><i class="fab fa-twitter"></i></a></li>--}}
+                <li><a href="mailto:info@conradvillas.com" aria-label="Send us an email" target="_blank" target="_blank"><i class="far fa-envelope"></i></a></li>
             </ul>
         </div>
     </div>

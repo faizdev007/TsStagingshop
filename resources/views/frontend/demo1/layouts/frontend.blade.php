@@ -3,7 +3,7 @@
     <header id="header" data-currency="{!! settings('currency_symbol') !!}" data-theme-asset="{!! themeAsset() !!}">
         <div class="container">
             <div class="text-right">
-                <a href="tel:+971585365111"><i class="fas fa-phone"> </i> +971 585 365 111</a>
+                <a href="tel:+971585365111" aria-label="Call us at +971 585 365 111" aria-label="Call us at +971 585 365 111"><i class="fas fa-phone"> </i> +971 585 365 111</a>
             </div>
         </div>
         <div class="container position-relative px-0 px-sm-3">
@@ -145,7 +145,7 @@
                                                     @endif
                                                     @if( !empty(settings('whatsapp_url')) )
                                                     <div class="responsive-sn--item">
-                                                        <a href="https://api.whatsapp.com/send?phone={{settings('whatsapp_url')}}" target="_blank" ><i class="fab fa-whatsapp"></i></a>
+                                                        <a href="https://api.whatsapp.com/send?phone={{settings('whatsapp_url')}}" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                                                     </div>
                                                     @endif
     

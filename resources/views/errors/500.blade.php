@@ -222,7 +222,7 @@
             <div class="error-text">
                 <p>We are updating some features to make your experience even better!</p>
                 <p>You can try to refresh or <a href="{{ url('/') }}" class="home-button">Go to Home Page</a></p>
-                <p>Else, please come back later or<br>contact us directly at<br><a href="tel:+971585365111" class="contact-number"><i class="fas fa-phone phone-icon"></i>+971 585 365 111</a></p>
+                <p>Else, please come back later or<br>contact us directly at<br><a href="tel:+971585365111" class="contact-number" aria-label="Call us at +971 585 365 111"><i class="fas fa-phone phone-icon"></i>+971 585 365 111</a></p>
                 <p>Rest assured, all of our technical issues are usually solved in less than 24h</p>
                 <p>Thank You for understanding!</p>
             </div>

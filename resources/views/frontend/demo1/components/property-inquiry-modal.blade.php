@@ -213,7 +213,7 @@
                         <!-- Call and WhatsApp Buttons -->
                         <div class="mt-3">
                             <div class="custom-btn-container p-0">
-                                <a href="tel:+971585365111" class="btn custom-btn" style="margin-top:0px!important;"><i class="fas fa-phone">&nbsp;</i>Call</a>
+                                <a href="tel:+971585365111" aria-label="Call us at +971 585 365 111" class="btn custom-btn" style="margin-top:0px!important;"><i class="fas fa-phone">&nbsp;</i>Call</a>
                                 <button class="btn whatsapp-btn" style="margin-top:0px!important;" onclick="sendWhatsAppFromModal();"><i class="fab fa-whatsapp">&nbsp;</i>WhatsApp</button>
                             </div>
                         </div>

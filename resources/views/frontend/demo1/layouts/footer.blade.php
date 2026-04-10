@@ -37,7 +37,7 @@
                 @endif
                 @if( !empty(settings('whatsapp_url')) )
                 <div class="footer-sn--item">
-                    <a href="https://api.whatsapp.com/send?phone={{settings('whatsapp_url')}}" class="u-hover-opacity-70" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone={{settings('whatsapp_url')}}" class="u-hover-opacity-70" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 @endif
                 @if( !empty(settings('instagram_url')) )
@@ -225,7 +225,7 @@
                 @endif
                 @if( !empty(settings('whatsapp_url')) )
                 <li>
-                    <a href="https://api.whatsapp.com/send?phone={{settings('whatsapp_url')}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone={{settings('whatsapp_url')}}" aria-label="Chat on WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </li>
                 @endif
                 @if( !empty(settings('instagram_url')) )

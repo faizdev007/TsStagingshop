@@ -6,7 +6,7 @@
      style="position: fixed; bottom: 0; width: 100%; background: rgba(255, 255, 255, 0.7); color:#000; padding: 20px; z-index: 9999;">
     <div style="max-width: 900px; margin: auto;">
         <div class="w-full d-flex justify-content-end">
-            <button id="close-main" class="btn btn-close mb-3"></button>
+            <button id="close-main" class="btn btn-close mb-3" aria-label="Close cookie consent"></button>
         </div>
         <p class="text-justify text-center text-md-start">
             To provide the best experience, this website uses essential and optional cookies to ensure the proper functioning, performance, and personalization of our services. Optional cookies help us analyze traffic patterns, optimize user experience, and tailor advertising based on your interests. By clicking “Accept All Cookies,” you authorize us to store and process data collected through these technologies. You may manage your preferences through “Manage Preferences.” For more information, please see our <a href="/cookie-policy" class="text-nowrap" style="color:#545250;">Cookie Policy.</a>

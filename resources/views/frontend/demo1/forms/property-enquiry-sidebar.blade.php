@@ -355,7 +355,7 @@ $blockedEmails = [
     <div class="row">
       <div class="col">
         <div class="custom-btn-container gap-2">
-            <a href="tel:+971585365111" class="btn w-100 custom-btn"><i class="fas fa-phone">&nbsp;</i>Call</a>
+            <a href="tel:+971585365111" aria-label="Call us at +971 585 365 111" class="btn w-100 custom-btn"><i class="fas fa-phone">&nbsp;</i>Call</a>
           
             <form method="POST" class="w-100 flex-1" action="{{ route('insertClick') }}">
                 @csrf

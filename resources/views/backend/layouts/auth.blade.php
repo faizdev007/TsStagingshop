@@ -50,12 +50,12 @@
         <section id="footer-row">
             <div class="container">
                 <ul class="footer-social">
-                <li><a href="https://www.instagram.com/terezaestates/" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-instagramss.png')}}" style="width:36px;height:36px;"></a></li>
-                <li><a href="https://www.linkedin.com/company/87407725" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-linkedinss.png')}}" style="width:36px;height:36px;"></a></li>
-                    <li><a href="/" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-twitters.png')}}" style="width:36px;height:36px;"></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=100088111359986" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-facebooks.png')}}" style="width:36px;height:36px;"></a></li>
-                    <!-- <li><a href="https://www.instagram.com/terezaestates/" target="_blank" class="social-youtube"></a></li> -->
-                    <!-- <li><a href="https://www.instagram.com/terezaestates/" target="_blank" class="social-tiktok"></a></li> -->
+                <li><a href="https://www.instagram.com/terezaestates/" aria-label="Visit our Instagram profile" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-instagramss.png')}}" style="width:36px;height:36px;"></a></li>
+                <li><a href="https://www.linkedin.com/company/87407725" aria-label="Visit our LinkedIn profile" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-linkedinss.png')}}" style="width:36px;height:36px;"></a></li>
+                    <li><a href="/" aria-label="Visit our Twitter profile" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-twitters.png')}}" style="width:36px;height:36px;"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100088111359986" aria-label="Visit our Facebook profile" target="_blank" class="footer-social"> <img src="{{asset('assets/admin/build/images/login/social-facebooks.png')}}" style="width:36px;height:36px;"></a></li>
+                    <!-- <li><a href="https://www.instagram.com/terezaestates/" aria-label="Visit our Instagram profile" target="_blank" class="social-youtube"></a></li> -->
+                    <!-- <li><a href="https://www.instagram.com/terezaestates/" aria-label="Visit our Instagram profile" target="_blank" class="social-tiktok"></a></li> -->
                     
                   
           

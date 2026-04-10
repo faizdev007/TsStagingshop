@@ -158,23 +158,23 @@
                                     <div class="col-lg-12">
                                         <div class="responsive-sn--wrp">
                                             <div class="responsive-sn--item">
-                                                <a href="tel:+66 92-959-1299" target="_blank"><i class="fa fa-phone"></i></a>
+                                                <a href="tel:+66 92-959-1299" aria-label="Call us" target="_blank"><i class="fa fa-phone"></i></a>
                                             </div>
                                             <div class="responsive-sn--item">
-                                                <a href="https://www.facebook.com/conradluxuryvillas" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://www.facebook.com/conradluxuryvillas" aria-label="Visit our Facebook profile" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                             </div>
                                             <div class="responsive-sn--item">
-                                                <a href="https://www.instagram.com/conradvillas/ " target="_blank"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.instagram.com/conradvillas/ " aria-label="Visit our Instagram profile" target="_blank"><i class="fab fa-instagram"></i></a>
                                             </div>
                                             <div class="responsive-sn--item">
-                                                <a href="https://www.linkedin.com/company/conrad-villas/ " target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://www.linkedin.com/company/conrad-villas/ " aria-label="Visit our LinkedIn profile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                                             </div>
                                             {{--
                                             <div class="responsive-sn--item">
-                                                <a href="https://twitter.com/Property_Conrad" target="_blank"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://twitter.com/Property_Conrad" aria-label="Visit our Twitter profile" target="_blank"><i class="fab fa-twitter"></i></a>
                                             </div>--}}
                                             <div class="responsive-sn--item">
-                                                <a href="mailto:info@conradvillas.com" target="_blank"><i class="far fa-envelope"></i></a>
+                                                <a href="mailto:info@conradvillas.com" aria-label="Send us an email" target="_blank"><i class="far fa-envelope"></i></a>
                                             </div>
                                         </div>
                                     </div>

@@ -69,12 +69,12 @@
         <section id="footer-row">
             <div class="container">
                 <ul class="footer-social">
-                    <li><a href="#" target="_blank" class="social-linkedIn"></a></li>
-                    <li><a href="#" target="_blank" class="social-twitter"></a></li>
-                    <li><a href="#" target="_blank" class="social-facebook"></a></li>
-                    <li><a href="#" target="_blank" class="social-gplus"></a></li>
-                    <li><a href="#" target="_blank" class="social-pinterest"></a></li>
-                    <li><a href="https://www.instagram.com/terezaestates/" target="_blank" class="social-instagram"></a></li>
+                    <li><a href="#" target="_blank" aria-label="Visit our LinkedIn profile"  class="social-linkedIn"></a></li>
+                    <li><a href="#" target="_blank" aria-label="Visit our Twitter profile" class="social-twitter"></a></li>
+                    <li><a href="#" target="_blank" aria-label="Visit our Facebook profile" class="social-facebook"></a></li>
+                    <li><a href="#" target="_blank" aria-label="Visit our Google+ profile" class="social-gplus"></a></li>
+                    <li><a href="#" target="_blank" aria-label="Visit our Pinterest profile" class="social-pinterest"></a></li>
+                    <li><a href="https://www.instagram.com/terezaestates/" aria-label="Visit our Instagram profile" target="_blank" class="social-instagram"></a></li>
                 </ul>
                 <p>All rights reserved <?=date('Y');?>.</p>
             </div>
