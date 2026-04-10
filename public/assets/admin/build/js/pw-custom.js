@@ -133,7 +133,7 @@ function initTinymce()
         forced_root_block : "",
         force_p_newlines : true,
         entity_encoding: 'raw',
-        external_filemanager_path:"/public/assets/admin/build/vendors/tinymce-external-plugins/filemanager/",
+        external_filemanager_path:"/assets/admin/build/vendors/tinymce-external-plugins/filemanager/",
         filemanager_title:"Responsive Filemanager" ,
         menubar: 'file edit insert view tools help',
         theme: 'modern',
