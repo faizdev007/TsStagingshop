@@ -23,12 +23,12 @@ var $bar,
 
 $slick = $('.home-slider--slick');
 
-$slick.on('init', function(event, slick){
-    $('.home-slider--controller').append(`
-        <li class="d-none d-sm-inline-block home-slider--arrow-left"><button style="border:none;" class="btn home-prev" aria-label="Previous slide" tabindex="0"></button></li>
-        <li class="d-none d-sm-inline-block home-slider--arrow-right"><button style="border:none;" class="btn home-next" aria-label="Next slide" tabindex="0"></button></li>
-    `)
-});
+// $slick.on('init', function(event, slick){
+//     $('.home-slider--controller').append(`
+//         <li class="d-none d-sm-inline-block home-slider--arrow-left"><button style="border:none;" class="btn home-prev" aria-label="Previous slide" tabindex="0"></button></li>
+//         <li class="d-none d-sm-inline-block home-slider--arrow-right"><button style="border:none;" class="btn home-next" aria-label="Next slide" tabindex="0"></button></li>
+//     `)
+// });
 if(!window.mobileCheck()) {
     $slick.slick({
          lazyLoad: 'ondemand',

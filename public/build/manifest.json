@@ -29,6 +29,10 @@
     "file": "assets/down-arrow-DqJwglxm.png",
     "src": "public/assets/demo1/images/conrad-images/down-arrow.png"
   },
+  "public/assets/demo1/images/conrad-images/footer-bg.png": {
+    "file": "assets/footer-bg-2xAyg48m.png",
+    "src": "public/assets/demo1/images/conrad-images/footer-bg.png"
+  },
   "public/assets/demo1/images/conrad-images/join-us-bg.jpg": {
     "file": "assets/join-us-bg-BpMDGMvP.jpg",
     "src": "public/assets/demo1/images/conrad-images/join-us-bg.jpg"
@@ -45,6 +49,14 @@
     "file": "assets/testimonial-bg-4wY2YmMc.jpg",
     "src": "public/assets/demo1/images/conrad-images/testimonial-bg.jpg"
   },
+  "public/assets/demo1/images/discover-back.jpg": {
+    "file": "assets/discover-back-D-qI-CzO.jpg",
+    "src": "public/assets/demo1/images/discover-back.jpg"
+  },
+  "public/assets/demo1/images/page-title/banner-the-team.jpg": {
+    "file": "assets/banner-the-team-DhzsRrQ_.jpg",
+    "src": "public/assets/demo1/images/page-title/banner-the-team.jpg"
+  },
   "public/assets/demo1/images/svg/arrow-left.svg": {
     "file": "assets/arrow-left-CUU_qkrn.svg",
     "src": "public/assets/demo1/images/svg/arrow-left.svg"
@@ -54,7 +66,7 @@
     "src": "public/assets/demo1/images/svg/arrow-right.svg"
   },
   "resources/assets/demo1/js/app.js": {
-    "file": "assets/app-D3HiX-b9.js",
+    "file": "assets/app-BJEQsP7t.js",
     "name": "app",
     "src": "resources/assets/demo1/js/app.js",
     "isEntry": true,
@@ -66,7 +78,7 @@
     ]
   },
   "resources/assets/demo1/sass/app.scss": {
-    "file": "assets/app-8mkHAdb3.css",
+    "file": "assets/app-9Ho9zUcr.css",
     "src": "resources/assets/demo1/sass/app.scss",
     "isEntry": true,
     "name": "app",

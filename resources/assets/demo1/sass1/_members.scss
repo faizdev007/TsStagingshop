@@ -17,7 +17,7 @@ $tab-standard: #818181;
 -----------------------------------------*/
 .page-title.-account-area{
     background-color: $secondary_color2;
-    background-image: url('/public/assets/images/page-title/banner-the-team.jpg');
+    background-image: url('/public/assets/demo1/images/page-title/banner-the-team.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -226,7 +226,7 @@ textarea {
     justify-content: center;
     @include font-size(48);
     &.-company {
-        background: url(../images/icons/icon-brand.png) no-repeat center center $primary_color1;
+        background: $primary_color1;
     }
     @include breakpoint(sm)
     {

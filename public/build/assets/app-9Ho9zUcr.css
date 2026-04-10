@@ -5262,7 +5262,7 @@ header ul.dashboard-menu-item {
 }
 
 footer {
-    background-image: url(../conrad-images/footer-bg.png);
+    background-image: url(footer-bg-2xAyg48m.png);
     background-position: top;
     background-repeat: no-repeat
 }
@@ -7959,7 +7959,7 @@ body.generic-page.about-us section.our-office-wrp {
 .discover-property-wrp {
     padding: 130px 0;
     position: relative;
-    background-image: url(../images/discover-back.jpg);
+    background-image: url(discover-back-D-qI-CzO.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -8674,8 +8674,7 @@ span#select2--container {
     content: " ";
     width: 6px;
     height: 4px;
-    display: block;
-    background-image: url(images/select2-caret.png)
+    display: block
 }
 
 .select2.select2-container.select2-container--default.select2-style-1 .select2-selection--single .select2-selection__arrow b {
@@ -9236,7 +9235,7 @@ span#select2--container {
 
 .page-title.-account-area {
     background-color: #d9b483;
-    background-image: url(/public/assets/images/page-title/banner-the-team.jpg);
+    background-image: url(banner-the-team-DhzsRrQ_.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -9459,7 +9458,7 @@ textarea.-messaging {
 }
 
 .message__user.-company {
-    background: url(../images/icons/icon-brand.png) no-repeat center center #d9b483
+    background: #d9b483
 }
 
 @media(max-width:767px) {
