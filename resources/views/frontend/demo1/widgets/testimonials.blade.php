@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-lg-6 d-flex align-items-center">
                     <div class="generic-header--section mb-0">
                         <a href="/testimonials">
-                            <h3 class="generic-header--large f-45 f-lg-35 f-md-25 f-two c-white" data-aos="fade-left">TESTIMONIALS</h3>
+                            <h2 class="generic-header--large f-45 f-lg-35 f-md-25 f-two c-white" data-aos="fade-left">TESTIMONIALS</h2>
                         </a>
                         <div class="generic-header--small -left-liner f-16 f-md-14 c-white" data-aos="fade-right">
                             <span class="liner">WHAT OUR CLIENTS SAY</span>

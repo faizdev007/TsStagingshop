@@ -1,4 +1,4 @@
- <ul class="h-navbar-nav d-flex justify-content-end px-0 mx-0 mb-0">
+ <ul class="d-md-flex d-none justify-content-end px-0 mx-0 mb-0">
                 <li class="h-nav-item">
                     <a href="{{ url('/') }}" class="h-nav-link">Home</a>
                 </li>

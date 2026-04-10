@@ -29,7 +29,7 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
     
     @stack('frontend_scripts')
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,"/>
     {{-- META --}}
     <title>{{ !empty($meta->title) ? $meta->title : settings('site_name', config('app.name')) }}</title>
     @if (!empty($meta->description))
@@ -127,7 +127,6 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
             top: 0;
             left: 0;
             right: 0;
-            height: 130px;
             background: #fff;
             display: flex;
             align-items: center;
@@ -268,4 +267,4 @@ $meta = !empty($custom_metadata) ? $custom_metadata : $meta;
 
 <body class="@stack('body_class')">
 <input type="hidden" class="site_url" value="{{ url('') }}">
-<input type="hidden" class="site_currency" data-conversion='{!! json_encode(config('data.currencies')) !!}' value="{!! settings('currency_symbol') !!}">
+<input type="hidden" class="site_currency" data-conversion="{!! json_encode(config('data.currencies')) !!}" value="{!! settings('currency_symbol') !!}">
