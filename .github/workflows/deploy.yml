@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Laravel commands (no migrations)
         run: |
-            ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
             cd /home/stagirf4/terezaestates.stagingshop.com
 
             echo "🧹 Clear cache"
@@ -42,4 +42,4 @@ jobs:
             chmod -R 775 storage bootstrap/cache
 
             echo "✅ Done"
-            EOF
+          EOF
