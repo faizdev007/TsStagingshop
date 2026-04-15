@@ -423,16 +423,6 @@ $banner_style = !empty($banner) ? 'style="background-image:url(' . $banner . ')"
                                         <i class="fa align-content-around fa-phone"> </i> <span class="d-none d-lg-block">Call</span>
                                     </a>
                                     @endif
-                                    @if( !empty(setting('email')) )
-                                    <button onclick='agentEmail({{$single}})' class="d-flex gap-2 text-decoration-none button -default f-14 f-sm-12" aria-label="Email Agent">
-                                        <i class="far align-content-around fa-envelope"></i> <span class="d-none d-lg-block">Email</span>
-                                    </button>
-                                    @endif
-                                    @if( !empty(setting('whatsapp_url')) )
-                                    <button onclick='agentwhatsapp({{$single}})' type="button" class="d-flex gap-2 text-decoration-none button -default f-14 f-sm-12" aria-label="Chat on Whatsapp">
-                                        <i class="fab align-content-around fa-whatsapp"></i> <span class="d-none d-lg-block">Whatsapp</span>
-                                    </button>
-                                    @endif
                                 </div>
                             </div>
                         </div>
